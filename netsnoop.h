@@ -6,8 +6,16 @@
 #include <string.h>
 #include <stdbool.h>
 #include <errno.h>
+#include <sys/socket.h>
+#include <linux/if_ether.h>
+#include <linux/if_packet.h>
 
+
+
+//variable defitions
 #define BUFFER_SIZE 65536
+#define ALL_INTERFACES ETH_P_ALL 
+#define PACKETS AF_PACKET 
 
 //colors
 #define RED   "\033[1;31m"
@@ -31,6 +39,7 @@ typedef unsigned int u32;
 typedef unsigned long int u64;
 
 void error(bool with_exit,const i8*);
+void capture_packets(void);
 
 
 

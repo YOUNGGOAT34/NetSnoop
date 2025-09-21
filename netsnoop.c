@@ -11,3 +11,16 @@ void error(bool with_exit,const i8* error_message){
    
 
 }
+
+void capture_packets(void){
+  
+   i32 socket_fd=socket(PACKETS,SOCK_RAW,ALL_INTERFACES);
+
+   if(socket_fd<0){
+       error(true,"Failed to create a raw socket");
+   }
+
+   
+
+
+}
