@@ -16,6 +16,7 @@
 #define BUFFER_SIZE 65536
 #define ALL_INTERFACES ETH_P_ALL 
 #define PACKETS AF_PACKET 
+#define  SA struct sockaddr
 
 //colors
 #define RED   "\033[1;31m"
