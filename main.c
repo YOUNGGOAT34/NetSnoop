@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "netsnoop.h"
 
 int main(void){
    printf("Hello world\n");
