@@ -9,6 +9,17 @@
 #include <sys/socket.h>
 #include <linux/if_ether.h>
 #include <linux/if_packet.h>
+/*
+
+  get the ip header
+  icmp header
+  tcp header
+  udp header
+
+  declarations
+*/
+
+#include <netinet/ip.h>
 
 
 
@@ -17,6 +28,9 @@
 #define ALL_INTERFACES ETH_P_ALL 
 #define PACKETS AF_PACKET 
 #define  SA struct sockaddr
+
+//packet header definations
+#define IP struct iphdr
 
 //colors
 #define RED   "\033[1;31m"
@@ -41,6 +55,8 @@ typedef unsigned long int u64;
 
 void error(bool with_exit,const i8*);
 void capture_packets(void);
+void process_packet(i8 *,ssize_t );
+void showicmp(i8 *,ssize_t);
 
 
 

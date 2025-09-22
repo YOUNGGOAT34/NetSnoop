@@ -41,11 +41,36 @@ void capture_packets(void){
            error(false,"Error receiving packet");
       }
 
-      
+      process_packet(packet_buffer,received_bytes);
+
+
    }
 
 
 
 
 
+}
+
+
+void process_packet(i8 *data,ssize_t data_size){
+      /*
+        Extract the ip header from the received data and take action accordiing to the protocal type i.e icmp
+      */
+      IP *ip_header=(IP *)data;
+
+      switch(ip_header->protocol){
+          case 1:
+            showicmp(data,data_size);
+            break;
+          default:
+            break;
+      }
+
+
+}
+
+
+void showicmp(i8 *data,ssize_t data_size){
+   
 }
