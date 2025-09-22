@@ -49,10 +49,6 @@ void capture_packets(void){
 
    }
 
-
-
-
-
 }
 
 
@@ -62,10 +58,8 @@ void process_packet(i8 *data,ssize_t data_size){
         Extract the ip header from the received data and take action accordiing to the protocal type i.e icmp
       */
       IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
-      printf("%u\n",ip_header->protocol);
       switch(ip_header->protocol){
           case 1:
-            printf("Here\n");
             showicmp(data,data_size);
             break;
           default:
@@ -81,7 +75,7 @@ void showicmp(i8 *data,ssize_t data_size){
    IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
    u16 ipheader_len=ip_header->ihl*4;
    
-   ICMP *icmp=(ICMP *)(data+ipheader_len);
+   ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
 
    showipheader(data);
 
@@ -101,8 +95,21 @@ void showicmp(i8 *data,ssize_t data_size){
 
    printf("\tCode: %d\n", icmp->code);
    printf("\tChecksum: 0x%04x\n", ntohs(icmp->checksum));
+  
+   u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
+   ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
+
+   if(payload_size>0){
+       printf("\tPayload (%zd): ",payload_size);
+       hexdump(payload,payload_size);
 
 
+   }else{
+
+      printf("No ICMP payload\n");
+   }
+
+  
 
 
 }
@@ -135,7 +142,7 @@ void showipheader(i8 *data){
 
 
 
-void hexadump(void *buff,u16 size){
+void hexdump(void *buff,u16 size){
      const u8 *p=(const u8 *)buff;
      size_t i,j;
      
