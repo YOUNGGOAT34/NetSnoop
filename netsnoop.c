@@ -73,4 +73,30 @@ void process_packet(i8 *data,ssize_t data_size){
 
 void showicmp(i8 *data,ssize_t data_size){
    
+
+}
+
+
+void showipheader(i8 *data){
+       IP *ip_header=(IP *)data;
+       u16 ipheader_len=ip_header->ihl*4;
+       
+       struct in_addr src_ip,dst_ip;
+
+       src_ip.s_addr=ip_header->saddr;
+       dst_ip.s_addr=ip_header->daddr;
+
+       printf("\t\t\n IP header: \n");
+       printf("\tIP Version: %u\n",(u32)ip_header->version);
+       printf("\tIP header length: %u bytes\n",ipheader_len);
+       printf("\tType Of Service: %u\n",ip_header->tos);
+       printf("\tIP Total length: %u\n",ntohs(ip_header->tot_len));
+       printf("\tIdentification: %u\n",ntohs(ip_header->id));
+       printf("\tFlags + frag offset: 0x%04x\n",ntohs(ip_header->frag_off));
+       printf("\tTTL: %u\n",ip_header->ttl);
+       printf("\tProtocol: %u\n",ip_header->protocol);
+       printf("\tHeader checksum: 0x%04x\n",ntohs(ip_header->check));
+       printf("\tSource IP: %s\n",inet_ntoa(src_ip));
+       printf("\tDestination IP: %s\n",inet_ntoa(dst_ip));
+
 }

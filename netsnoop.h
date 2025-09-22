@@ -9,6 +9,7 @@
 #include <sys/socket.h>
 #include <linux/if_ether.h>
 #include <linux/if_packet.h>
+#include <arpa/inet.h>
 /*
 
   get the ip header
@@ -57,7 +58,7 @@ void error(bool with_exit,const i8*);
 void capture_packets(void);
 void process_packet(i8 *,ssize_t );
 void showicmp(i8 *,ssize_t);
-
+void showipheader(i8 *);
 
 
 #endif
