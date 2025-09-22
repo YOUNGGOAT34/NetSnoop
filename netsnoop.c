@@ -95,12 +95,17 @@ void showicmp(i8 *data,ssize_t data_size){
 
    printf("\tCode: %d\n", icmp->code);
    printf("\tChecksum: 0x%04x\n", ntohs(icmp->checksum));
-  
+   
+   if(icmp->type==8 || icmp->type==0){
+      printf("\tID: %u\n",ntohs(icmp->un.echo.id));
+      printf("\tSequence: %u\n",ntohs(icmp->un.echo.sequence));
+   }
+   
    u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
    ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
 
    if(payload_size>0){
-       printf("\tPayload (%zd): ",payload_size);
+       printf("\tPayload (%zd): \n",payload_size);
        hexdump(payload,payload_size);
 
 
