@@ -24,6 +24,8 @@
 #include <netinet/ip_icmp.h>
 
 
+#define IS_PRINTABLE_ASCII(c) (((c)>31) && ((c)<127))
+
 
 //variable defitions
 #define BUFFER_SIZE 65536
@@ -62,6 +64,8 @@ void capture_packets(void);
 void process_packet(i8 *,ssize_t );
 void showicmp(i8 *,ssize_t);
 void showipheader(i8 *);
+void hexadump(void *buff,u16 size);
+
 
 
 #endif
