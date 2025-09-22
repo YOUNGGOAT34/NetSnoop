@@ -30,6 +30,7 @@
 #define ALL_INTERFACES ETH_P_ALL 
 #define PACKETS AF_PACKET 
 #define  SA struct sockaddr
+#define ETHERNET_HEADER_SIZE 14
 
 //packet header definations
 #define IP struct iphdr
