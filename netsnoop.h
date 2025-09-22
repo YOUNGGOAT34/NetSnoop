@@ -21,6 +21,7 @@
 */
 
 #include <netinet/ip.h>
+#include <netinet/ip_icmp.h>
 
 
 
@@ -32,6 +33,7 @@
 
 //packet header definations
 #define IP struct iphdr
+#define ICMP struct icmphdr
 
 //colors
 #define RED   "\033[1;31m"

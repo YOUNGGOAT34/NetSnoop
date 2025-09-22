@@ -15,7 +15,7 @@ void error(bool with_exit,const i8* error_message){
 void capture_packets(void){
   
    //a socket that will sniff on all interfaces ,and all protocals
-   i32 socket_fd=socket(PACKETS,SOCK_RAW,ALL_INTERFACES);
+   i32 socket_fd=socket(PACKETS,SOCK_RAW,htons(ALL_INTERFACES));
 
    if(socket_fd<0){
        error(true,"Failed to create a raw socket");
@@ -34,13 +34,15 @@ void capture_packets(void){
       /* 
         receive the packet ,process it 
       */
+      
       addr_size=sizeof(saddr);
       received_bytes=recvfrom(socket_fd,packet_buffer,BUFFER_SIZE,0,&saddr,&addr_size);
-
+     
       if(received_bytes<0 || received_bytes==-1){
            error(false,"Error receiving packet");
       }
-
+       
+      
       process_packet(packet_buffer,received_bytes);
 
 
@@ -72,7 +74,33 @@ void process_packet(i8 *data,ssize_t data_size){
 
 
 void showicmp(i8 *data,ssize_t data_size){
+   printf("Here\n");
+   IP *ip_header=(IP *)data;
+   u16 ipheader_len=ip_header->ihl*4;
    
+   ICMP *icmp=(ICMP *)(data+ipheader_len);
+
+   showipheader(data);
+
+   printf("\tICMP\n");
+
+   printf("Type: %d",icmp->type);
+   
+   switch(icmp->type){
+      case 0:  printf(" (Echo Reply)\n"); break;
+      case 3:  printf(" (Destination Unreachable)\n"); break;
+      case 8:  printf(" (Echo Request)\n"); break;
+      case 11: printf(" (Time Exceeded)\n"); break;
+      case 13: printf(" (Timestamp Request)\n"); break;
+      case 14: printf(" (Timestamp Reply)\n"); break;
+      default: printf("\n"); break;
+   }
+
+   printf("\tCode: %d\n", icmp->code);
+   printf("\tChecksum: 0x%04x\n", ntohs(icmp->checksum));
+
+
+
 
 }
 

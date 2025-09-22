@@ -1,8 +1,7 @@
 #include "netsnoop.h"
 
 int main(void){
-   error(true,"Here");
-   printf("Hello world\n");
+   capture_packets();
    return 0;
 }
 
