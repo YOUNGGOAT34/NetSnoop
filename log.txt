@@ -1,0 +1,161 @@
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x33ac
+	Source IP: 192.168.100.20
+	Destination IP: 172.217.170.174
+		
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0xa262
+	ID: 35279
+	Sequence: 2
+	Payload (56): 
+			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+			
+	
+
+##############################################################################
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 0
+	Flags + frag offset: 0x0000
+	TTL: 115
+	Protocol: 1
+	Header checksum: 0xcb64
+	Source IP: 172.217.170.174
+	Destination IP: 192.168.100.20
+		
+ICMP Header 
+	Type: 0 (Echo Reply)
+	Code: 0
+	Checksum: 0xaa62
+	ID: 35279
+	Sequence: 2
+	Payload (56): 
+			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+			
+	
+
+##############################################################################
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x33ac
+	Source IP: 192.168.100.20
+	Destination IP: 172.217.170.174
+		
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0xa261
+	ID: 35279
+	Sequence: 3
+	Payload (56): 
+			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+			
+	
+
+##############################################################################
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 0
+	Flags + frag offset: 0x0000
+	TTL: 115
+	Protocol: 1
+	Header checksum: 0xcb64
+	Source IP: 172.217.170.174
+	Destination IP: 192.168.100.20
+		
+ICMP Header 
+	Type: 0 (Echo Reply)
+	Code: 0
+	Checksum: 0xaa61
+	ID: 35279
+	Sequence: 3
+	Payload (56): 
+			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+			
+	
+
+##############################################################################
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x33ac
+	Source IP: 192.168.100.20
+	Destination IP: 172.217.170.174
+		
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0xa260
+	ID: 35279
+	Sequence: 4
+	Payload (56): 
+			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+			00000030   47 47 47 4

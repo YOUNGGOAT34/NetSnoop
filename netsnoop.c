@@ -1,5 +1,8 @@
 #include "netsnoop.h"
 
+
+FILE *logfile;
+
 void error(bool with_exit,const i8* error_message){
     if(with_exit){
        fprintf(stderr,RED"%s:(%s)\n"RESET,error_message,strerror(errno));
@@ -13,6 +16,12 @@ void error(bool with_exit,const i8* error_message){
 }
 
 void capture_packets(void){
+
+   logfile=fopen("log.txt","w");
+
+   if(!logfile){
+      error(true,"Failed to create the log file");
+   }
   
    //a socket that will sniff on all interfaces ,and all protocals
    i32 socket_fd=socket(PACKETS,SOCK_RAW,htons(ALL_INTERFACES));
@@ -73,45 +82,45 @@ void showicmp(i8 *data,ssize_t data_size){
    
    ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
 
-   
-
-   printf("\t\n\n*************************************ICMP Packet*************************************\n");
+   fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
    showipheader(data);
-   printf("\t\t\nICMP Header \n");
-   printf("\tType: %d",icmp->type);
+   fprintf(logfile,"\t\t\nICMP Header \n");
+   fprintf(logfile,"\tType: %d",icmp->type);
    
    switch(icmp->type){
-      case 0:  printf(" (Echo Reply)\n"); break;
-      case 3:  printf(" (Destination Unreachable)\n"); break;
-      case 8:  printf(" (Echo Request)\n"); break;
-      case 11: printf(" (Time Exceeded)\n"); break;
-      case 13: printf(" (Timestamp Request)\n"); break;
-      case 14: printf(" (Timestamp Reply)\n"); break;
-      default: printf("\n"); break;
+
+      case 0:  fprintf(logfile," (Echo Reply)\n"); break;
+      case 3:  fprintf(logfile," (Destination Unreachable)\n"); break;
+      case 8:  fprintf(logfile," (Echo Request)\n"); break;
+      case 11: fprintf(logfile," (Time Exceeded)\n"); break;
+      case 13: fprintf(logfile," (Timestamp Request)\n"); break;
+      case 14: fprintf(logfile," (Timestamp Reply)\n"); break;
+      default: fprintf(logfile,"\n"); break;
+
    }
 
-   printf("\tCode: %d\n", icmp->code);
-   printf("\tChecksum: 0x%04x\n", ntohs(icmp->checksum));
+   fprintf(logfile,"\tCode: %d\n", icmp->code);
+   fprintf(logfile,"\tChecksum: 0x%04x\n", ntohs(icmp->checksum));
    
    if(icmp->type==8 || icmp->type==0){
-      printf("\tID: %u\n",ntohs(icmp->un.echo.id));
-      printf("\tSequence: %u\n",ntohs(icmp->un.echo.sequence));
+      fprintf(logfile,"\tID: %u\n",ntohs(icmp->un.echo.id));
+      fprintf(logfile,"\tSequence: %u\n",ntohs(icmp->un.echo.sequence));
    }
    
    u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
    ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
 
    if(payload_size>0){
-       printf("\tPayload (%zd): \n",payload_size);
+       fprintf(logfile,"\tPayload (%zd): \n",payload_size);
        hexdump(payload,payload_size);
 
 
    }else{
 
-      printf("\t\t\tNo ICMP payload\n");
+      fprintf(logfile,"\t\t\tNo ICMP payload\n");
    }
 
-   printf("\t\n\n##############################################################################\n");
+   fprintf(logfile,"\t\n\n##############################################################################\n");
 
 }
 
@@ -125,18 +134,18 @@ void showipheader(i8 *data){
        src_ip.s_addr=ip_header->saddr;
        dst_ip.s_addr=ip_header->daddr;
 
-       printf("\t\t\t\n IP header: \n\n");
-       printf("\tIP Version: %u\n",(u32)ip_header->version);
-       printf("\tIP header length: %u bytes\n",ipheader_len);
-       printf("\tType Of Service: %u\n",ip_header->tos);
-       printf("\tIP Total length: %u\n",ntohs(ip_header->tot_len));
-       printf("\tIdentification: %u\n",ntohs(ip_header->id));
-       printf("\tFlags + frag offset: 0x%04x\n",ntohs(ip_header->frag_off));
-       printf("\tTTL: %u\n",ip_header->ttl);
-       printf("\tProtocol: %u\n",ip_header->protocol);
-       printf("\tHeader checksum: 0x%04x\n",ntohs(ip_header->check));
-       printf("\tSource IP: %s\n",inet_ntoa(src_ip));
-       printf("\tDestination IP: %s\n",inet_ntoa(dst_ip));
+       fprintf(logfile,"\t\t\t\n IP header: \n\n");
+       fprintf(logfile,"\tIP Version: %u\n",(u32)ip_header->version);
+       fprintf(logfile,"\tIP header length: %u bytes\n",ipheader_len);
+       fprintf(logfile,"\tType Of Service: %u\n",ip_header->tos);
+       fprintf(logfile,"\tIP Total length: %u\n",ntohs(ip_header->tot_len));
+       fprintf(logfile,"\tIdentification: %u\n",ntohs(ip_header->id));
+       fprintf(logfile,"\tFlags + frag offset: 0x%04x\n",ntohs(ip_header->frag_off));
+       fprintf(logfile,"\tTTL: %u\n",ip_header->ttl);
+       fprintf(logfile,"\tProtocol: %u\n",ip_header->protocol);
+       fprintf(logfile,"\tHeader checksum: 0x%04x\n",ntohs(ip_header->check));
+       fprintf(logfile,"\tSource IP: %s\n",inet_ntoa(src_ip));
+       fprintf(logfile,"\tDestination IP: %s\n",inet_ntoa(dst_ip));
 
 }
 
@@ -146,36 +155,36 @@ void showipheader(i8 *data){
 void hexdump(void *buff,u16 size){
      const u8 *p=(const u8 *)buff;
      size_t i,j;
-     printf("\t\t\t");
+     fprintf(logfile,"\t\t\t");
      for(i=0;i<size;i++){
          
          if((i%16)==0){
-             printf("%08lx ",i);
+             fprintf(logfile,"%08lx ",i);
             }
             
             if(i % 8==0 && i!=0){
-                printf(" ");
+                fprintf(logfile," ");
             }
          
 
-            printf(" %02x",p[i]);
+            fprintf(logfile," %02x",p[i]);
             
 
          if((i%16)==15 || i==(size_t)size-1){
             for(j=0;j<15-(i%16);j++){
-               printf(" ");
+               fprintf(logfile," ");
             }
-            printf(" | ");
+            fprintf(logfile," | ");
              for(j=(i-(i%16));j<=i;j++){
                 if(IS_PRINTABLE_ASCII(p[j])){
-                    printf("%c",p[j]);
+                    fprintf(logfile,"%c",p[j]);
                 }else{
-                    printf(".");
+                    fprintf(logfile,".");
                 }
              }
-             printf("\n\t\t\t");
+             fprintf(logfile,"\n\t\t\t");
          }
 
      }
-     printf("\n");
+     fprintf(logfile,"\n");
 }
