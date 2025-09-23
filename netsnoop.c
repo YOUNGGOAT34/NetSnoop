@@ -67,6 +67,8 @@ void process_packet(i8 *data,ssize_t data_size){
           case 1:
             showicmp(data,data_size);
             break;
+          case 17:
+             showudp(data,data_size);
           default:
             break;
       }
@@ -79,6 +81,8 @@ void showicmp(i8 *data,ssize_t data_size){
    
    IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
    u16 ipheader_len=ip_header->ihl*4;
+
+
    
    ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
    fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
@@ -116,6 +120,40 @@ void showicmp(i8 *data,ssize_t data_size){
    }else{
 
       fprintf(logfile,"\t\t\tNo ICMP payload\n");
+   }
+
+   fprintf(logfile,"\t\n\n##############################################################################\n");
+
+}
+
+
+void showudp(i8 *data,ssize_t data_size){
+
+   IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
+   u16 ip_header_len=ip_header->ihl*4;
+
+   UDP *udp_header=(UDP *)(data+ETHERNET_HEADER_SIZE+ip_header_len);
+   
+   fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
+   showipheader(ip_header);
+   fprintf(logfile,"\t\t\nUDP Header \n");
+
+   fprintf(logfile,"\tSource Port: %u\n",ntohs(udp_header->uh_sport));
+   fprintf(logfile,"\tDestination Port: %u\n",ntohs(udp_header->uh_dport));
+   fprintf(logfile,"\tUDP length: %u\n",ntohs(udp_header->len));
+   fprintf(logfile,"\tUDP Checksum: 0x%04x\n",ntohs(udp_header->check));
+
+   u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ip_header_len+sizeof(UDP));
+   ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ip_header_len+sizeof(UDP));
+
+   if(payload_size>0){
+       fprintf(logfile,"\tPayload (%zd): \n",payload_size);
+       hexdump(payload,payload_size);
+
+
+   }else{
+
+      fprintf(logfile,"\t\t\tNo UDP payload\n");
    }
 
    fprintf(logfile,"\t\n\n##############################################################################\n");

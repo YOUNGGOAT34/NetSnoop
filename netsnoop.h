@@ -22,6 +22,7 @@
 
 #include <netinet/ip.h>
 #include <netinet/ip_icmp.h>
+#include <netinet/udp.h>
 
 
 #define IS_PRINTABLE_ASCII(c) (((c)>31) && ((c)<127))
@@ -37,6 +38,7 @@
 //packet header definations
 #define IP struct iphdr
 #define ICMP struct icmphdr
+#define UDP struct udphdr
 
 //colors
 #define RED   "\033[1;31m"
@@ -63,6 +65,7 @@ void error(bool with_exit,const i8*);
 void capture_packets(void);
 void process_packet(i8 *,ssize_t );
 void showicmp(i8 *,ssize_t);
+void showudp(i8 *,ssize_t);
 void showipheader(IP *);
 void hexdump(void *buff,u16 size);
 

@@ -7,26 +7,24 @@
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
+	IP Total length: 65
+	Identification: 28306
+	Flags + frag offset: 0x4000
 	TTL: 255
-	Protocol: 1
-	Header checksum: 0x33ac
-	Source IP: 192.168.100.20
-	Destination IP: 172.217.170.174
+	Protocol: 17
+	Header checksum: 0x0762
+	Source IP: 192.168.100.19
+	Destination IP: 224.0.0.251
 		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0xa262
-	ID: 35279
-	Sequence: 2
-	Payload (56): 
-			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+UDP Header 
+	Source Port: 5353
+	Destination Port: 5353
+	UDP length: 45
+	UDP Checksum: 0x6bc6
+	Payload (37): 
+			00000000  00 01 00 00 00 01 00 00  00 00 00 00 08 5f 6d 65 | ............._me
+			00000010   73 68 63 6f 70 04 5f 75  64 70 05 6c 6f 63 61 6c | shcop._udp.local
+			00000020   00 00 0c 80 01            | .....
 			
 	
 
@@ -40,59 +38,24 @@ ICMP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 84
-	Identification: 0
-	Flags + frag offset: 0x0000
-	TTL: 115
-	Protocol: 1
-	Header checksum: 0xcb64
-	Source IP: 172.217.170.174
-	Destination IP: 192.168.100.20
-		
-ICMP Header 
-	Type: 0 (Echo Reply)
-	Code: 0
-	Checksum: 0xaa62
-	ID: 35279
-	Sequence: 2
-	Payload (56): 
-			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-			
-	
-
-##############################################################################
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
+	IP Total length: 65
+	Identification: 28538
+	Flags + frag offset: 0x4000
 	TTL: 255
-	Protocol: 1
-	Header checksum: 0x33ac
-	Source IP: 192.168.100.20
-	Destination IP: 172.217.170.174
+	Protocol: 17
+	Header checksum: 0x067a
+	Source IP: 192.168.100.19
+	Destination IP: 224.0.0.251
 		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0xa261
-	ID: 35279
-	Sequence: 3
-	Payload (56): 
-			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+UDP Header 
+	Source Port: 5353
+	Destination Port: 5353
+	UDP length: 45
+	UDP Checksum: 0x6c45
+	Payload (37): 
+			00000000  00 02 00 00 00 01 00 00  00 00 00 00 08 5f 6d 65 | ............._me
+			00000010   73 68 63 6f 70 04 5f 75  64 70 05 6c 6f 63 61 6c | shcop._udp.local
+			00000020   00 00 0c 00 01            | .....
 			
 	
 
@@ -106,56 +69,103 @@ ICMP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 84
-	Identification: 0
-	Flags + frag offset: 0x0000
-	TTL: 115
-	Protocol: 1
-	Header checksum: 0xcb64
-	Source IP: 172.217.170.174
-	Destination IP: 192.168.100.20
-		
-ICMP Header 
-	Type: 0 (Echo Reply)
-	Code: 0
-	Checksum: 0xaa61
-	ID: 35279
-	Sequence: 3
-	Payload (56): 
-			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-			
-	
-
-##############################################################################
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
+	IP Total length: 65
+	Identification: 28717
+	Flags + frag offset: 0x4000
 	TTL: 255
-	Protocol: 1
-	Header checksum: 0x33ac
-	Source IP: 192.168.100.20
-	Destination IP: 172.217.170.174
+	Protocol: 17
+	Header checksum: 0x05c7
+	Source IP: 192.168.100.19
+	Destination IP: 224.0.0.251
 		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0xa260
-	ID: 35279
-	Sequence: 4
-	Payload (56): 
-			00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-			00000030   47 47 47 4
+UDP Header 
+	Source Port: 5353
+	Destination Port: 5353
+	UDP length: 45
+	UDP Checksum: 0x6c44
+	Payload (37): 
+			00000000  00 03 00 00 00 01 00 00  00 00 00 00 08 5f 6d 65 | ............._me
+			00000010   73 68 63 6f 70 04 5f 75  64 70 05 6c 6f 63 61 6c | shcop._udp.local
+			00000020   00 00 0c 00 01            | .....
+			
+	
+
+##############################################################################
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 65
+	Identification: 28933
+	Flags + frag offset: 0x4000
+	TTL: 255
+	Protocol: 17
+	Header checksum: 0x04ef
+	Source IP: 192.168.100.19
+	Destination IP: 224.0.0.251
+		
+UDP Header 
+	Source Port: 5353
+	Destination Port: 5353
+	UDP length: 45
+	UDP Checksum: 0x6bc6
+	Payload (37): 
+			00000000  00 01 00 00 00 01 00 00  00 00 00 00 08 5f 6d 65 | ............._me
+			00000010   73 68 63 6f 70 04 5f 75  64 70 05 6c 6f 63 61 6c | shcop._udp.local
+			00000020   00 00 0c 80 01            | .....
+			
+	
+
+##############################################################################
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 65
+	Identification: 28962
+	Flags + frag offset: 0x4000
+	TTL: 255
+	Protocol: 17
+	Header checksum: 0x04d2
+	Source IP: 192.168.100.19
+	Destination IP: 224.0.0.251
+		
+UDP Header 
+	Source Port: 5353
+	Destination Port: 5353
+	UDP length: 45
+	UDP Checksum: 0x6c45
+	Payload (37): 
+			00000000  00 02 00 00 00 01 00 00  00 00 00 00 08 5f 6d 65 | ............._me
+			00000010   73 68 63 6f 70 04 5f 75  64 70 05 6c 6f 63 61 6c | shcop._udp.local
+			00000020   00 00 0c 00 01            | .....
+			
+	
+
+##############################################################################
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 65
+	Identification: 29042
+	Flags + frag offset: 0x4000
+	TTL: 255
+	Protocol: 17
+	Header checksum: 0x0482
+	Source IP: 192.168
