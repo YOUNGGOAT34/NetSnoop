@@ -67,8 +67,8 @@ void process_packet(i8 *,ssize_t );
 void showicmp(i8 *,ssize_t);
 void showudp(i8 *,ssize_t);
 void showipheader(IP *);
+void showtcp(i8 *data,ssize_t data_size);
 void hexdump(void *buff,u16 size);
-
 
 
 #endif

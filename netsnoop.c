@@ -161,6 +161,11 @@ void showudp(i8 *data,ssize_t data_size){
 }
 
 
+void showtcp(i8 *data,ssize_t data_size){
+      
+}
+
+
 void showipheader(IP *ip_header){
       // IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
        u16 ipheader_len=ip_header->ihl*4;
