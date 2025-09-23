@@ -42,18 +42,14 @@ void capture_packets(void){
            error(false,"Error receiving packet");
       }
        
-   
-      
       process_packet(packet_buffer,received_bytes);
-
-
+      
    }
 
 }
 
 
 void process_packet(i8 *data,ssize_t data_size){
-   
       /*
         Extract the ip header from the received data and take action accordiing to the protocal type i.e icmp
       */
@@ -77,11 +73,12 @@ void showicmp(i8 *data,ssize_t data_size){
    
    ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
 
+   
+
+   printf("\t\n\n*************************************ICMP Packet*************************************\n");
    showipheader(data);
-
-   printf("\tICMP\n");
-
-   printf("Type: %d",icmp->type);
+   printf("\t\t\nICMP Header \n");
+   printf("\tType: %d",icmp->type);
    
    switch(icmp->type){
       case 0:  printf(" (Echo Reply)\n"); break;
@@ -111,11 +108,10 @@ void showicmp(i8 *data,ssize_t data_size){
 
    }else{
 
-      printf("No ICMP payload\n");
+      printf("\t\t\tNo ICMP payload\n");
    }
 
-  
-
+   printf("\t\n\n##############################################################################\n");
 
 }
 
@@ -129,7 +125,7 @@ void showipheader(i8 *data){
        src_ip.s_addr=ip_header->saddr;
        dst_ip.s_addr=ip_header->daddr;
 
-       printf("\t\t\n IP header: \n");
+       printf("\t\t\t\n IP header: \n\n");
        printf("\tIP Version: %u\n",(u32)ip_header->version);
        printf("\tIP header length: %u bytes\n",ipheader_len);
        printf("\tType Of Service: %u\n",ip_header->tos);
@@ -150,7 +146,7 @@ void showipheader(i8 *data){
 void hexdump(void *buff,u16 size){
      const u8 *p=(const u8 *)buff;
      size_t i,j;
-     
+     printf("\t\t\t");
      for(i=0;i<size;i++){
          
          if((i%16)==0){
@@ -177,8 +173,7 @@ void hexdump(void *buff,u16 size){
                     printf(".");
                 }
              }
-             printf("\n");
-
+             printf("\n\t\t\t");
          }
 
      }
