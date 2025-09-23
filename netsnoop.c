@@ -1,6 +1,5 @@
 #include "netsnoop.h"
 
-
 FILE *logfile;
 
 void error(bool with_exit,const i8* error_message){
@@ -14,6 +13,7 @@ void error(bool with_exit,const i8* error_message){
    
 
 }
+
 
 void capture_packets(void){
 
@@ -81,14 +81,12 @@ void showicmp(i8 *data,ssize_t data_size){
    u16 ipheader_len=ip_header->ihl*4;
    
    ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
-
    fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
-   showipheader(data);
+   showipheader(ip_header);
    fprintf(logfile,"\t\t\nICMP Header \n");
    fprintf(logfile,"\tType: %d",icmp->type);
    
    switch(icmp->type){
-
       case 0:  fprintf(logfile," (Echo Reply)\n"); break;
       case 3:  fprintf(logfile," (Destination Unreachable)\n"); break;
       case 8:  fprintf(logfile," (Echo Request)\n"); break;
@@ -125,8 +123,8 @@ void showicmp(i8 *data,ssize_t data_size){
 }
 
 
-void showipheader(i8 *data){
-      IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
+void showipheader(IP *ip_header){
+      // IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
        u16 ipheader_len=ip_header->ihl*4;
        
        struct in_addr src_ip,dst_ip;
@@ -148,8 +146,6 @@ void showipheader(i8 *data){
        fprintf(logfile,"\tDestination IP: %s\n",inet_ntoa(dst_ip));
 
 }
-
-
 
 
 void hexdump(void *buff,u16 size){

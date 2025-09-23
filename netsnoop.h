@@ -63,7 +63,7 @@ void error(bool with_exit,const i8*);
 void capture_packets(void);
 void process_packet(i8 *,ssize_t );
 void showicmp(i8 *,ssize_t);
-void showipheader(i8 *);
+void showipheader(IP *);
 void hexdump(void *buff,u16 size);
 
 
