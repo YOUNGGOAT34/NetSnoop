@@ -64,11 +64,15 @@ void process_packet(i8 *data,ssize_t data_size){
       */
       IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
       switch(ip_header->protocol){
-          case 1:
+          case PROTO_ICMP:
             showicmp(data,data_size);
             break;
-          case 17:
+          case PROTO_UDP:
              showudp(data,data_size);
+             break;
+          case PROTO_TCP:
+            showtcp(data,data_size);
+            break;
           default:
             break;
       }
@@ -134,7 +138,7 @@ void showudp(i8 *data,ssize_t data_size){
 
    UDP *udp_header=(UDP *)(data+ETHERNET_HEADER_SIZE+ip_header_len);
    
-   fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
+   fprintf(logfile,"\t\n\n*************************************UDP Packet*************************************\n");
    showipheader(ip_header);
    fprintf(logfile,"\t\t\nUDP Header \n");
 
@@ -162,8 +166,38 @@ void showudp(i8 *data,ssize_t data_size){
 
 
 void showtcp(i8 *data,ssize_t data_size){
-      
+   IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
+   u16 ip_header_len=ip_header->ihl*4;
+
+   TCP *tcp_header=(TCP *)(data+ETHERNET_HEADER_SIZE+ip_header_len);
+   
+   fprintf(logfile,"\t\n\n*************************************TCP Packet*************************************\n");
+   showipheader(ip_header);
+   fprintf(logfile,"\t\t\nTCP Header \n");
+
+
+   fprintf(logfile,"\tSource Port: %u",ntohs(tcp_header->source));
+   fprintf(logfile,"\tDestination Port: %u",ntohs(tcp_header->dest));
+    
+
+   u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
+   ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
+
+   if(payload_size>0){
+       fprintf(logfile,"\tPayload (%zd): \n",payload_size);
+       hexdump(payload,payload_size);
+       
+
+
+   }else{
+
+      fprintf(logfile,"\t\t\tNo TCP payload\n");
+   }
+
+   fprintf(logfile,"\t\n\n##############################################################################\n");
+
 }
+
 
 
 void showipheader(IP *ip_header){
