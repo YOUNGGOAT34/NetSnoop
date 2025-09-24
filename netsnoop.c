@@ -18,7 +18,7 @@ void error(bool with_exit,const i8* error_message){
 void capture_packets(void){
 
    logfile=fopen("log.txt","w");
-
+    
    if(!logfile){
       error(true,"Failed to create the log file");
    }
