@@ -86,8 +86,6 @@ void showicmp(i8 *data,ssize_t data_size){
    IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
    u16 ipheader_len=ip_header->ihl*4;
 
-
-   
    ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
    fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
    showipheader(ip_header);
@@ -176,19 +174,17 @@ void showtcp(i8 *data,ssize_t data_size){
    fprintf(logfile,"\t\t\nTCP Header \n");
 
 
-   fprintf(logfile,"\tSource Port: %u",ntohs(tcp_header->source));
-   fprintf(logfile,"\tDestination Port: %u",ntohs(tcp_header->dest));
+   fprintf(logfile,"\t\t\tSource Port: %u\n",ntohs(tcp_header->source));
+   fprintf(logfile,"\t\t\tDestination Port: %u\n",ntohs(tcp_header->dest));
     
 
    u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
    ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
 
    if(payload_size>0){
-       fprintf(logfile,"\tPayload (%zd): \n",payload_size);
+       fprintf(logfile,"\t\tPayload (%zd): \n",payload_size);
        hexdump(payload,payload_size);
        
-
-
    }else{
 
       fprintf(logfile,"\t\t\tNo TCP payload\n");
