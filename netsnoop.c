@@ -176,13 +176,24 @@ void showtcp(i8 *data,ssize_t data_size){
 
    fprintf(logfile,"\t\t\tSource Port: %u\n",ntohs(tcp_header->source));
    fprintf(logfile,"\t\t\tDestination Port: %u\n",ntohs(tcp_header->dest));
-    
+   fprintf(logfile,"\t\t\tSequence Number: %u\n",ntohs(tcp_header->seq));
+   fprintf(logfile,"\t\t\tAcknowledge Number: %u\n",ntohs(tcp_header->ack_seq));
+   fprintf(logfile,"\t\t\tHeader Length: %u\n",ntohs(tcp_header->doff));
+   fprintf(logfile,"\t\t\tUrgent Flag          : %d\n",(unsigned int)tcp_header->urg);
+	fprintf(logfile,"\t\t\tAcknowledgement Flag : %d\n",(unsigned int)tcp_header->ack);
+	fprintf(logfile,"\t\t\tPush Flag            : %d\n",(unsigned int)tcp_header->psh);
+	fprintf(logfile,"\t\t\tReset Flag           : %d\n",(unsigned int)tcp_header->rst);
+	fprintf(logfile,"\t\t\tSynchronise Flag     : %d\n",(unsigned int)tcp_header->syn);
+	fprintf(logfile,"\t\t\tFinish Flag          : %d\n",(unsigned int)tcp_header->fin);
+	fprintf(logfile,"\t\t\tWindow         : %d\n",ntohs(tcp_header->window));
+	fprintf(logfile,"\t\t\tChecksum       : %d\n",ntohs(tcp_header->check));
+	fprintf(logfile,"\t\t\tUrgent Pointer : %d\n",tcp_header->urg_ptr);
 
    u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
    ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
 
    if(payload_size>0){
-       fprintf(logfile,"\t\tPayload (%zd): \n",payload_size);
+       fprintf(logfile,"\t\t\tPayload (%zd): \n",payload_size);
        hexdump(payload,payload_size);
        
    }else{
@@ -224,7 +235,7 @@ void showipheader(IP *ip_header){
 void hexdump(void *buff,u16 size){
      const u8 *p=(const u8 *)buff;
      size_t i,j;
-     fprintf(logfile,"\t\t\t");
+     fprintf(logfile,"\t\t\t\t\t\t");
      for(i=0;i<size;i++){
          
          if((i%16)==0){
@@ -251,7 +262,7 @@ void hexdump(void *buff,u16 size){
                     fprintf(logfile,".");
                 }
              }
-             fprintf(logfile,"\n\t\t\t");
+             fprintf(logfile,"\n\t\t\t\t\t\t");
          }
 
      }
