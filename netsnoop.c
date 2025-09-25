@@ -178,7 +178,7 @@ void showtcp(i8 *data,ssize_t data_size){
    fprintf(logfile,"\t\t\tDestination Port: %u\n",ntohs(tcp_header->dest));
    fprintf(logfile,"\t\t\tSequence Number: %u\n",ntohl(tcp_header->seq));
    fprintf(logfile,"\t\t\tAcknowledge Number: %u\n",ntohl(tcp_header->ack_seq));
-   fprintf(logfile,"\t\t\tHeader Length: %u\n",ntohs(tcp_header->doff));
+   fprintf(logfile,"\t\t\tHeader Length: %u\n",tcp_header->doff*4);
    fprintf(logfile,"\t\t\tUrgent Flag          : %d\n",(unsigned int)tcp_header->urg);
 	fprintf(logfile,"\t\t\tAcknowledgement Flag : %d\n",(unsigned int)tcp_header->ack);
 	fprintf(logfile,"\t\t\tPush Flag            : %d\n",(unsigned int)tcp_header->psh);
