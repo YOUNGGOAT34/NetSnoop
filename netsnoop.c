@@ -87,6 +87,7 @@ void showicmp(i8 *data,ssize_t data_size){
    u16 ipheader_len=ip_header->ihl*4;
 
    ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
+   fprintf(logfile, "%s Captured ICMP Packet\n", get_timestamp());
    fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
    showipheader(ip_header);
    fprintf(logfile,"\t\t\nICMP Header \n");
