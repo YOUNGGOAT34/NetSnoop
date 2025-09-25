@@ -10,6 +10,7 @@
 #include <netinet/if_ether.h>
 #include <linux/if_packet.h>
 #include <arpa/inet.h>
+#include <net/ethernet.h>
 /*
 
   get the ip header
@@ -34,7 +35,7 @@
 #define ALL_INTERFACES ETH_P_ALL 
 #define PACKETS AF_PACKET 
 #define  SA struct sockaddr
-#define ETHERNET_HEADER_SIZE 14
+#define ETHERNET_HEADER_SIZE sizeof(struct ethhdr)
 
 //packet header definations
 #define IP struct iphdr
