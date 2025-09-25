@@ -268,3 +268,12 @@ void hexdump(void *buff,u16 size){
      }
      fprintf(logfile,"\n");
 }
+
+
+const char* get_timestamp() {
+   static char buffer[64];
+   time_t now = time(NULL);
+   struct tm *tm_info = localtime(&now);
+   strftime(buffer, sizeof(buffer), "[%Y-%m-%d %H:%M:%S]", tm_info);
+   return buffer;
+}

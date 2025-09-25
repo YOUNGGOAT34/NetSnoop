@@ -81,6 +81,6 @@ void showudp(i8 *,ssize_t);
 void showipheader(IP *);
 void showtcp(i8 *data,ssize_t data_size);
 void hexdump(void *buff,u16 size);
-
+const char* get_timestamp(); 
 
 #endif
