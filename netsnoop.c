@@ -1,6 +1,11 @@
 #include "netsnoop.h"
 
 FILE *logfile;
+volatile sig_atomic_t keep_sniffing=1;
+
+void handle_signal(__attribute__((unused)) i32 sig){
+      keep_sniffing=0;
+}
 
 void error(bool with_exit,const i8* error_message){
     if(with_exit){
@@ -14,8 +19,7 @@ void error(bool with_exit,const i8* error_message){
 
 }
 
-
-void capture_packets(void){
+void capture_packets(){
 
    logfile=fopen("log.txt","w");
     
@@ -36,11 +40,13 @@ void capture_packets(void){
        error(true,"Failed to allocate memory for the packet buffer");
    }
 
+   signal(SIGINT,handle_signal);
+
    ssize_t  received_bytes;
    SA saddr;
    socklen_t addr_size;
-   printf(WHITE"NetSnoop Listening on all interfaces\n"RESET);
-   while(1){
+   printf(WHITE"\nNetSnoop is Listening on all interfaces\n"RESET);
+   while(keep_sniffing){
       /* 
         receive the packet ,process it 
       */

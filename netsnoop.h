@@ -12,6 +12,7 @@
 #include <arpa/inet.h>
 #include <net/ethernet.h>
 #include <time.h>
+#include <signal.h>
 /*
 
   get the ip header
@@ -75,12 +76,13 @@ typedef enum {
 } ProtocolType;
 
 void error(bool with_exit,const i8*);
-void capture_packets(void);
+void capture_packets();
 void process_packet(i8 *,ssize_t );
 void showicmp(i8 *,ssize_t);
 void showudp(i8 *,ssize_t);
 void showipheader(IP *);
 void showtcp(i8 *data,ssize_t data_size);
+void handle_signal(__attribute__((unused)) i32 );
 void hexdump(void *buff,u16 size);
 const char* get_timestamp(); 
 
