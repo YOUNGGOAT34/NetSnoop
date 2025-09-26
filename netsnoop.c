@@ -45,7 +45,7 @@ void capture_packets(){
    ssize_t  received_bytes;
    SA saddr;
    socklen_t addr_size;
-   printf(WHITE"\nNetSnoop is Listening on all interfaces\n"RESET);
+   printf(WHITE"\nNetSnoop is Listening on all interfaces (press ctrl+c to stop)\n"RESET);
    while(keep_sniffing){
       /* 
         receive the packet ,process it 
@@ -94,10 +94,18 @@ void showicmp(i8 *data,ssize_t data_size){
    u16 ipheader_len=ip_header->ihl*4;
 
    ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
-
+  
    fprintf(logfile, "%s Captured ICMP Packet\n", get_timestamp());
    fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
-   showipheader(ip_header);
+   
+   src_dst_ip *ips=showipheader(ip_header);
+   char src_ip_str[INET_ADDRSTRLEN];
+   char dst_ip_str[INET_ADDRSTRLEN];
+   
+   inet_ntop(AF_INET, &ips->src, src_ip_str, INET_ADDRSTRLEN);
+   inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
+   printf("\n\n");
+   printf(WHITE"%s From %s ,To %s  ICMP packet\n"RESET,get_timestamp(),src_ip_str,dst_ip_str);
    fprintf(logfile,"\t\t\nICMP Header \n");
    fprintf(logfile,"\tType: %d",icmp->type);
    
@@ -109,8 +117,9 @@ void showicmp(i8 *data,ssize_t data_size){
       case 13: fprintf(logfile," (Timestamp Request)\n"); break;
       case 14: fprintf(logfile," (Timestamp Reply)\n"); break;
       default: fprintf(logfile,"\n"); break;
-
+  
    }
+
 
    fprintf(logfile,"\tCode: %d\n", icmp->code);
    fprintf(logfile,"\tChecksum: 0x%04x\n", ntohs(icmp->checksum));
@@ -135,8 +144,9 @@ void showicmp(i8 *data,ssize_t data_size){
 
    fprintf(logfile,"\t\n\n##############################################################################\n");
 
-}
+   free(ips);
 
+}
 
 void showudp(i8 *data,ssize_t data_size){
 
@@ -218,7 +228,7 @@ void showtcp(i8 *data,ssize_t data_size){
 
 
 
-void showipheader(IP *ip_header){
+src_dst_ip *showipheader(IP *ip_header){
       // IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
        u16 ipheader_len=ip_header->ihl*4;
        
@@ -226,6 +236,15 @@ void showipheader(IP *ip_header){
 
        src_ip.s_addr=ip_header->saddr;
        dst_ip.s_addr=ip_header->daddr;
+
+       src_dst_ip *ips=malloc(sizeof(src_dst_ip));
+
+       if(!ips){
+           error(true,"cannot allocate memory for source and destination ips");
+       }
+
+       ips->dst.s_addr=dst_ip.s_addr;
+       ips->src.s_addr=src_ip.s_addr;
 
        fprintf(logfile,"\t\t\t\n IP header: \n\n");
        fprintf(logfile,"\tIP Version: %u\n",(u32)ip_header->version);
@@ -239,6 +258,8 @@ void showipheader(IP *ip_header){
        fprintf(logfile,"\tHeader checksum: 0x%04x\n",ntohs(ip_header->check));
        fprintf(logfile,"\tSource IP: %s\n",inet_ntoa(src_ip));
        fprintf(logfile,"\tDestination IP: %s\n",inet_ntoa(dst_ip));
+
+       return ips;
 
 }
 

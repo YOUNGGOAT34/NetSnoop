@@ -67,6 +67,10 @@ typedef unsigned int u32;
 typedef unsigned long int u64;
 
 
+typedef struct{
+  struct in_addr src;
+  struct in_addr dst;
+}src_dst_ip;
 
 typedef enum {
   PROTO_UNKNOWN = 0,
@@ -80,7 +84,7 @@ void capture_packets();
 void process_packet(i8 *,ssize_t );
 void showicmp(i8 *,ssize_t);
 void showudp(i8 *,ssize_t);
-void showipheader(IP *);
+src_dst_ip *showipheader(IP *);
 void showtcp(i8 *data,ssize_t data_size);
 void handle_signal(__attribute__((unused)) i32 );
 void hexdump(void *buff,u16 size);
