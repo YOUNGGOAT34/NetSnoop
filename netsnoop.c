@@ -62,6 +62,9 @@ void capture_packets(){
       
    }
 
+   free(packet_buffer);
+   close(socket_fd);
+
 }
 
 

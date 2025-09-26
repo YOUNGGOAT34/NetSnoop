@@ -1,140 +1,80 @@
-[2025-09-26 20:33:27] Captured ICMP Packet
+[2025-09-26 21:09:23] Captured UDP Packet
 	
 
-*************************************ICMP Packet*************************************
+*************************************UDP Packet*************************************
 			
  IP header: 
 
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
-	TTL: 255
-	Protocol: 1
-	Header checksum: 0xd38a
-	Source IP: 192.168.100.20
-	Destination IP: 216.58.223.110
+	IP Total length: 160
+	Identification: 44339
+	Flags + frag offset: 0x4000
+	TTL: 4
+	Protocol: 17
+	Header checksum: 0xb475
+	Source IP: 192.168.100.1
+	Destination IP: 239.255.255.250
 		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0x1a8c
-	ID: 4513
-	Sequence: 7
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+UDP Header 
+	Source Port: 48737
+	Destination Port: 1900
+	UDP length: 140
+	UDP Checksum: 0x7bdb
+	Payload (132): 
+						00000000  4d 2d 53 45 41 52 43 48  20 2a 20 48 54 54 50 2f | M-SEARCH * HTTP/
+						00000010   31 2e 31 0d 0a 48 4f 53  54 3a 20 32 33 39 2e 32 | 1.1..HOST: 239.2
+						00000020   35 35 2e 32 35 35 2e 32  35 30 3a 31 39 30 30 0d | 55.255.250:1900.
+						00000030   0a 4d 41 4e 3a 20 22 73  73 64 70 3a 64 69 73 63 | .MAN: "ssdp:disc
+						00000040   6f 76 65 72 22 0d 0a 4d  58 3a 20 35 0d 0a 53 54 | over"..MX: 5..ST
+						00000050   3a 20 75 72 6e 3a 73 63  68 65 6d 61 73 2d 75 70 | : urn:schemas-up
+						00000060   6e 70 2d 6f 72 67 3a 64  65 76 69 63 65 3a 4d 61 | np-org:device:Ma
+						00000070   6e 61 67 65 61 62 6c 65  44 65 76 69 63 65 3a 31 | nageableDevice:1
+						00000080   0d 0a 0d 0a             | ....
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:28] Captured ICMP Packet
+[2025-09-26 21:09:23] Captured UDP Packet
 	
 
-*************************************ICMP Packet*************************************
+*************************************UDP Packet*************************************
 			
  IP header: 
 
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 84
-	Identification: 0
-	Flags + frag offset: 0x0000
-	TTL: 116
-	Protocol: 1
-	Header checksum: 0x6a43
-	Source IP: 216.58.223.110
-	Destination IP: 192.168.100.20
+	IP Total length: 160
+	Identification: 44354
+	Flags + frag offset: 0x4000
+	TTL: 4
+	Protocol: 17
+	Header checksum: 0xb466
+	Source IP: 192.168.100.1
+	Destination IP: 239.255.255.250
 		
-ICMP Header 
-	Type: 0 (Echo Reply)
-	Code: 0
-	Checksum: 0x228c
-	ID: 4513
-	Sequence: 7
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+UDP Header 
+	Source Port: 48737
+	Destination Port: 1900
+	UDP length: 140
+	UDP Checksum: 0x7bdb
+	Payload (132): 
+						00000000  4d 2d 53 45 41 52 43 48  20 2a 20 48 54 54 50 2f | M-SEARCH * HTTP/
+						00000010   31 2e 31 0d 0a 48 4f 53  54 3a 20 32 33 39 2e 32 | 1.1..HOST: 239.2
+						00000020   35 35 2e 32 35 35 2e 32  35 30 3a 31 39 30 30 0d | 55.255.250:1900.
+						00000030   0a 4d 41 4e 3a 20 22 73  73 64 70 3a 64 69 73 63 | .MAN: "ssdp:disc
+						00000040   6f 76 65 72 22 0d 0a 4d  58 3a 20 35 0d 0a 53 54 | over"..MX: 5..ST
+						00000050   3a 20 75 72 6e 3a 73 63  68 65 6d 61 73 2d 75 70 | : urn:schemas-up
+						00000060   6e 70 2d 6f 72 67 3a 64  65 76 69 63 65 3a 4d 61 | np-org:device:Ma
+						00000070   6e 61 67 65 61 62 6c 65  44 65 76 69 63 65 3a 31 | nageableDevice:1
+						00000080   0d 0a 0d 0a             | ....
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
-	TTL: 255
-	Protocol: 1
-	Header checksum: 0xd38a
-	Source IP: 192.168.100.20
-	Destination IP: 216.58.223.110
-		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0x1a8b
-	ID: 4513
-	Sequence: 8
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:29] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 0
-	Flags + frag offset: 0x0000
-	TTL: 116
-	Protocol: 1
-	Header checksum: 0x6a43
-	Source IP: 216.58.223.110
-	Destination IP: 192.168.100.20
-		
-ICMP Header 
-	Type: 0 (Echo Reply)
-	Code: 0
-	Checksum: 0x228b
-	ID: 4513
-	Sequence: 8
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:29] Captured UDP Packet
+[2025-09-26 21:09:24] Captured UDP Packet
 	
 
 *************************************UDP Packet*************************************
@@ -145,21 +85,21 @@ ICMP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 78
-	Identification: 27893
+	Identification: 37449
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 17
-	Header checksum: 0x8443
+	Header checksum: 0x5eef
 	Source IP: 192.168.100.20
 	Destination IP: 192.168.100.1
 		
 UDP Header 
-	Source Port: 4964
+	Source Port: 63715
 	Destination Port: 53
 	UDP length: 58
-	UDP Checksum: 0xdbfe
+	UDP Checksum: 0xda16
 	Payload (50): 
-						00000000  86 d3 01 00 00 01 00 00  00 00 00 00 06 6d 6f 62 | .............mob
+						00000000  a3 3b 01 00 00 01 00 00  00 00 00 00 06 6d 6f 62 | .;...........mob
 						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
 						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 01 | microsoft.com...
 						00000030   00 01               | ..
@@ -167,7 +107,7 @@ UDP Header
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured UDP Packet
+[2025-09-26 21:09:24] Captured UDP Packet
 	
 
 *************************************UDP Packet*************************************
@@ -178,21 +118,21 @@ UDP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 78
-	Identification: 13612
+	Identification: 30825
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 17
-	Header checksum: 0xbc0c
+	Header checksum: 0x78cf
 	Source IP: 192.168.100.20
 	Destination IP: 192.168.100.1
 		
 UDP Header 
-	Source Port: 4437
+	Source Port: 17095
 	Destination Port: 53
 	UDP length: 58
-	UDP Checksum: 0x3161
+	UDP Checksum: 0xa587
 	Payload (50): 
-						00000000  33 40 01 00 00 01 00 00  00 00 00 00 06 6d 6f 62 | 3@...........mob
+						00000000  8d a7 01 00 00 01 00 00  00 00 00 00 06 6d 6f 62 | .............mob
 						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
 						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 41 | microsoft.com..A
 						00000030   00 01               | ..
@@ -200,7 +140,7 @@ UDP Header
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured TCP Packet
+[2025-09-26 21:09:24] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -210,20 +150,20 @@ UDP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 165
-	Identification: 54157
+	IP Total length: 170
+	Identification: 64334
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 6
-	Header checksum: 0x97b5
+	Header checksum: 0x55b9
 	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
+	Destination IP: 52.182.143.211
 		
 TCP Header 
-			Source Port: 46068
+			Source Port: 55136
 			Destination Port: 443
-			Sequence Number: 945326945
-			Acknowledge Number: 2874140720
+			Sequence Number: 2437977665
+			Acknowledge Number: 2064662291
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -231,23 +171,24 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 13571
+			Window         : 450
+			Checksum       : 21229
 			Urgent Pointer : 0
-			Payload (125): 
-						00000000  01 01 08 0a 8b 49 a3 4d  01 21 1d 77 17 03 03 00 | .....I.M.!.w....
-						00000010   6c 1d 67 88 20 e2 ab 6c  76 67 d1 1a 35 22 c5 27 | l.g. ..lvg..5".'
-						00000020   0d c7 cf be 7c 74 f0 a3  a6 b5 91 e3 de e0 c2 e3 | ....|t..........
-						00000030   82 21 7a 0b 44 84 44 d6  d8 59 66 66 2b 13 89 e9 | .!z.D.D..Yff+...
-						00000040   e0 ed c9 fd 06 d2 72 a3  cf 74 78 c2 f0 6f e1 11 | ......r..tx..o..
-						00000050   05 5b ee 4b 82 6b 59 78  2f 5b a4 03 82 b0 03 3f | .[.K.kYx/[.....?
-						00000060   a4 31 5b 39 e8 40 3a 11  b1 03 82 c0 97 92 4d 8c | .1[9.@:.......M.
-						00000070   92 d1 8b 44 e3 03 50 60  a4 3a ba 07 2b    | ...D..P`.:..+
+			Payload (130): 
+						00000000  01 01 08 0a 36 73 6d 9b  05 9c 22 17 17 03 03 00 | ....6sm...".....
+						00000010   71 34 3e 9a 6f 60 84 05  e2 20 22 8b e1 71 ac 32 | q4>.o`... "..q.2
+						00000020   66 dc 73 85 41 0f ad 5f  87 31 00 64 3c 7a 75 c7 | f.s.A.._.1.d<zu.
+						00000030   ca e3 27 b8 4f 52 fb 57  57 ee e3 b2 ca f4 ca a9 | ..'.OR.WW.......
+						00000040   d6 b0 ff c2 ae fe 04 25  72 5d 67 f1 ff 0e a7 ba | .......%r]g.....
+						00000050   f2 57 12 c4 81 71 d9 df  4d 2d 57 58 c3 cf 12 96 | .W...q..M-WX....
+						00000060   b9 16 74 8c 8e 01 32 60  8b 04 76 a8 28 19 24 00 | ..t...2`..v.(.$.
+						00000070   27 0a f8 96 4c bc 49 0d  bb 2e 2e 2a 29 1d 70 7e | '...L.I....*).p~
+						00000080   f6 cc               | ..
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured TCP Packet
+[2025-09-26 21:09:24] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -258,19 +199,19 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 1452
-	Identification: 54158
+	Identification: 64335
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 6
-	Header checksum: 0x92ad
+	Header checksum: 0x50b6
 	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
+	Destination IP: 52.182.143.211
 		
 TCP Header 
-			Source Port: 46068
+			Source Port: 55136
 			Destination Port: 443
-			Sequence Number: 945327058
-			Acknowledge Number: 2874140720
+			Sequence Number: 2437977783
+			Acknowledge Number: 2064662291
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -278,104 +219,104 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 14003
+			Window         : 450
+			Checksum       : 44708
 			Urgent Pointer : 0
 			Payload (1412): 
-						00000000  01 01 08 0a 8b 49 a3 4d  01 21 1d 77 17 03 03 00 | .....I.M.!.w....
-						00000010   22 f3 d7 9e a7 ae d3 23  f0 92 bc 98 bf d7 ef 79 | "......#.......y
-						00000020   5f 38 86 b7 a4 02 47 26  e7 c3 bc 7f f4 40 a5 42 | _8....G&.....@.B
-						00000030   5f 2b f9 17 03 03 07 2c  f7 d3 9c 91 0d b2 64 2b | _+.....,......d+
-						00000040   6c 2f 17 2d c3 04 8d d5  d5 c8 4c b2 48 b4 e9 7a | l/.-......L.H..z
-						00000050   b2 87 a4 85 b7 d6 00 6b  c7 ce 2a 6a 4d 0c df bb | .......k..*jM...
-						00000060   13 74 67 b7 9b 6f ea 1b  15 e5 d1 b0 65 d5 8f 81 | .tg..o......e...
-						00000070   ff 62 6d 22 5f d1 de a9  4e b3 c9 b2 9c 00 f8 24 | .bm"_...N......$
-						00000080   c7 ef 71 70 41 95 2f d4  fc 72 21 f7 dc 65 d0 43 | ..qpA./..r!..e.C
-						00000090   7a 42 59 95 92 f8 58 e4  92 91 ad 7f 7a 63 3e fb | zBY...X.....zc>.
-						000000a0   e7 4a 5d fc b6 6f b1 5c  25 b5 6c f0 ea ca 32 b8 | .J]..o.\%.l...2.
-						000000b0   55 30 45 4a ea f0 20 95  77 d1 a2 16 9f 10 54 3e | U0EJ.. .w.....T>
-						000000c0   b6 0b 3c c7 87 0a 21 64  44 d1 1b 0e 77 7b c7 30 | ..<...!dD...w{.0
-						000000d0   49 f4 21 a5 a7 89 ba 21  2e fd 8b 93 6c 7d 8d c9 | I.!....!....l}..
-						000000e0   cd 50 17 3c 40 ab 61 2f  92 48 2f 10 69 32 ea ab | .P.<@.a/.H/.i2..
-						000000f0   04 9e 6e 0f 10 d3 f1 a8  34 06 f7 ad a1 6f ca 00 | ..n.....4....o..
-						00000100   fd 53 ff f5 31 43 bb f8  a7 bb c4 0a 62 6d f1 6a | .S..1C......bm.j
-						00000110   2f b0 02 8c 6e 04 49 11  9f 53 82 32 46 1a a7 2b | /...n.I..S.2F..+
-						00000120   ec c7 0b 99 19 d0 1d 08  5b 93 af 16 b6 b7 ee 2c | ........[......,
-						00000130   e9 84 cf 4a ce 8d 4e 3b  05 93 19 12 05 76 6d 92 | ...J..N;.....vm.
-						00000140   3d cb c3 63 d3 11 77 82  db 1e e6 94 ac 20 d1 55 | =..c..w...... .U
-						00000150   48 29 71 b6 3a b0 d8 d7  f3 74 c2 d0 f4 5f 9c 1c | H)q.:....t..._..
-						00000160   63 ee b3 65 f0 1d 4c 9f  f2 c6 1d 07 1c 34 a9 46 | c..e..L......4.F
-						00000170   db 30 9d 1d 11 1c 07 3a  b8 18 ce 32 c9 6f 12 35 | .0.....:...2.o.5
-						00000180   d2 ff b0 16 fc bf 1d 75  30 06 9b 96 26 f3 f1 7e | .......u0...&..~
-						00000190   f3 b3 7d 18 fb 13 4e d4  a2 d0 b0 be d9 f3 ae 8c | ..}...N.........
-						000001a0   24 13 d6 d9 ca 13 e8 dd  dc e5 87 e0 ee ad 80 53 | $..............S
-						000001b0   b5 9e bd a8 eb 6f eb c0  bb bd 0f e2 d5 58 5c d3 | .....o.......X\.
-						000001c0   e8 94 05 14 00 21 5a 9d  24 28 9a b8 a0 c5 62 3a | .....!Z.$(....b:
-						000001d0   c3 0d f2 d8 0e e7 4a 2c  9c c4 25 80 a4 06 1f 43 | ......J,..%....C
-						000001e0   3c 5e e3 6b 9b ab ce 36  0f a1 37 ef 62 ce 50 db | <^.k...6..7.b.P.
-						000001f0   9e d8 3a d9 96 81 2b cc  26 a6 dc 7e 0c bf f9 0e | ..:...+.&..~....
-						00000200   b7 bd ef 16 91 e6 a1 11  73 18 88 ef e0 71 5d 57 | ........s....q]W
-						00000210   d2 a6 08 82 2e 00 5f 17  0b d5 08 26 e6 c7 de cb | ......_....&....
-						00000220   99 26 4d 7c 41 e6 90 2c  10 44 63 34 c0 7e d5 4a | .&M|A..,.Dc4.~.J
-						00000230   af 1a 6e f9 88 6c 33 eb  84 78 52 48 af 7d 3c f8 | ..n..l3..xRH.}<.
-						00000240   34 66 3b e4 ce 1a 5f e0  cc 1c 23 8b c8 21 32 cf | 4f;..._...#..!2.
-						00000250   11 fa be 43 b0 8c 03 6d  d0 3f 5c 72 13 07 48 fb | ...C...m.?\r..H.
-						00000260   01 64 ae 60 86 81 07 7d  42 11 bf a5 f2 5b f6 18 | .d.`...}B....[..
-						00000270   89 a2 e9 63 57 92 5e 5d  51 47 8c f4 9b df 5e b0 | ...cW.^]QG....^.
-						00000280   02 ef 85 38 fd 92 70 6f  b4 89 6b 1d 61 cc 90 88 | ...8..po..k.a...
-						00000290   5b 1f 8c 55 d0 ba 40 b6  5f de dd 6d 44 a1 70 7e | [..U..@._..mD.p~
-						000002a0   99 4d 40 5a df 33 2f f5  a8 00 21 b4 78 ce 0b 2e | .M@Z.3/...!.x...
-						000002b0   b9 97 c1 49 31 f1 0d 75  fd 42 57 a7 d8 cc 92 ca | ...I1..u.BW.....
-						000002c0   a1 e9 1e 3a 4b 03 44 95  37 26 9f 32 a3 0c f4 a4 | ...:K.D.7&.2....
-						000002d0   ab 25 06 70 cf e3 bb fe  cf da 8c a6 69 57 f5 e2 | .%.p........iW..
-						000002e0   c6 84 6d 29 15 fc c4 00  ac 2b ef 2e 19 a8 47 39 | ..m).....+....G9
-						000002f0   3b 49 ea 52 a7 9d 5c 0b  20 1f 85 a9 e2 a9 21 52 | ;I.R..\. .....!R
-						00000300   b7 13 11 e0 32 f4 28 7b  6f 0a 16 c9 b4 79 47 2e | ....2.({o....yG.
-						00000310   90 cb cd d7 f1 a4 65 e7  c4 e3 0f 12 a4 3c fa 22 | ......e......<."
-						00000320   0c bc b7 c5 54 27 c9 6a  6f fc f9 ef 2b b6 e1 d2 | ....T'.jo...+...
-						00000330   d5 13 8e 6f c4 cd b8 a0  f9 a9 49 61 3b f4 96 b1 | ...o......Ia;...
-						00000340   9d bd 12 f3 95 f9 55 d0  41 6a a2 7e 70 e3 7b 7e | ......U.Aj.~p.{~
-						00000350   64 f4 bd 64 e2 16 cf f9  e9 50 e2 f8 fe 7a 7e 1d | d..d.....P...z~.
-						00000360   65 d0 04 10 57 5c b1 37  a3 b2 24 94 07 34 72 1d | e...W\.7..$..4r.
-						00000370   86 4d 70 f9 1c a0 ed 56  65 61 8c d3 89 f3 ad 8d | .Mp....Vea......
-						00000380   ce e0 4c 10 ce 41 ab 08  8e 18 49 b9 23 87 55 f6 | ..L..A....I.#.U.
-						00000390   25 52 60 60 86 7b 2d f3  8e 7c 7b 0e 29 88 31 0a | %R``.{-..|{.).1.
-						000003a0   a4 71 cb 23 e2 f5 58 33  bb f5 36 48 b0 22 38 ca | .q.#..X3..6H."8.
-						000003b0   54 2c c0 3a b9 54 05 8a  d4 eb 26 46 50 ad 90 53 | T,.:.T....&FP..S
-						000003c0   b6 f8 a5 b2 bf b6 d9 40  4b f1 db 6d 54 6b cd 85 | .......@K..mTk..
-						000003d0   fa 5f b0 0b 9d f3 c9 d7  0c 73 8d 8d e9 f3 3b 7f | ._.......s....;.
-						000003e0   ca 12 a1 be 6b a8 9f 9b  58 9d da 99 c4 ed 97 45 | ....k...X......E
-						000003f0   a5 69 81 19 48 68 7a be  2e 69 dc 41 02 5b 41 59 | .i..Hhz..i.A.[AY
-						00000400   7c e1 70 69 71 99 b4 99  97 b8 36 73 f0 62 25 cd | |.piq.....6s.b%.
-						00000410   4a c7 88 d7 32 8c 45 24  d7 9c ba d7 2c ca e0 c6 | J...2.E$....,...
-						00000420   44 e0 15 58 fb 20 52 94  14 b4 14 07 3c da 1e 6a | D..X. R.....<..j
-						00000430   87 d3 cb f0 e7 31 fe 03  b7 60 8c f6 75 c6 12 63 | .....1...`..u..c
-						00000440   0a f3 24 24 85 16 75 5d  85 c5 16 dc cd c3 59 81 | ..$$..u]......Y.
-						00000450   de 6f 11 23 e9 ae 9f 46  59 b8 17 d8 4a 53 a6 ea | .o.#...FY...JS..
-						00000460   ea 28 83 03 bf 02 59 92  e9 f4 01 2b c3 a2 16 31 | .(....Y....+...1
-						00000470   9c 57 9a d9 38 07 2b d5  35 41 04 70 f5 ec bf bc | .W..8.+.5A.p....
-						00000480   fc 40 d8 67 b5 74 97 0a  32 60 33 e2 4c b3 33 c3 | .@.g.t..2`3.L.3.
-						00000490   95 18 b5 53 6e c5 9a 40  aa d7 c6 a2 be 85 4d b8 | ...Sn..@......M.
-						000004a0   eb 4f 91 a4 06 c5 f4 fc  5a 77 dd cc 9c c4 aa c1 | .O......Zw......
-						000004b0   0f b5 41 b9 98 8d fc c0  95 5d 56 e4 91 40 a8 b6 | ..A......]V..@..
-						000004c0   8b 81 1e ff 94 4a 2d ce  ca fa 9e bb 10 c2 e3 d9 | .....J-.........
-						000004d0   89 84 6c d9 34 ce 55 14  69 7a 04 40 94 4e 76 ee | ..l.4.U.iz.@.Nv.
-						000004e0   c0 cc 24 87 26 14 fb 37  db 1d 0c 4c bd f9 60 82 | ..$.&..7...L..`.
-						000004f0   fa 6e ec aa 33 10 bd c4  d3 30 84 c2 2f 5a 5e 42 | .n..3....0../Z^B
-						00000500   3c 5e 74 e1 42 88 52 61  7b 24 ed e3 3a 96 b8 b5 | <^t.B.Ra{$..:...
-						00000510   5d 70 25 af 8c f6 ee 06  56 80 c0 43 18 99 fb 86 | ]p%.....V..C....
-						00000520   2b 4b 20 b4 84 c7 63 c1  08 d8 8a b9 d1 ef 34 c0 | +K ...c.......4.
-						00000530   4f 53 1e 91 27 f2 74 ab  92 fb fc 8c 79 64 32 56 | OS..'.t.....yd2V
-						00000540   4f 37 1c c1 cb 19 7c 62  e9 5f d6 54 72 a9 57 0c | O7....|b._.Tr.W.
-						00000550   4d fb 6d cc 81 1c 7a 2d  9c cf 3d 15 cb f0 45 57 | M.m...z-..=...EW
-						00000560   1f d6 1e 66 91 69 26 1f  ed 38 57 e3 05 26 8e 32 | ...f.i&..8W..&.2
-						00000570   15 64 5e 0a d5 f3 84 77  54 a9 ad e1 e1 3d bf 8b | .d^....wT....=..
-						00000580   c6 63 0c b8             | .c..
+						00000000  01 01 08 0a 36 73 6d 9c  05 9c 22 17 17 03 03 07 | ....6sm...".....
+						00000010   2c a1 64 d0 64 bf 98 23  f4 20 7b da ef 79 54 0c | ,.d.d..#. {..yT.
+						00000020   ac e2 cc 44 14 26 41 f6  67 de 94 64 55 c0 bd 8b | ...D.&A.g..dU...
+						00000030   2b f0 bb 10 04 1e 0b e5  97 f2 fc 2f 03 9b 4d 2b | +........../..M+
+						00000040   f1 d8 1b 83 9e dc 68 0d  c4 38 b2 de 39 dd 1f 62 | ......h..8..9..b
+						00000050   32 35 3b 65 8f 41 45 87  ca 37 30 1e 51 e9 fc 39 | 25;e.AE..70.Q..9
+						00000060   e8 02 09 5e 03 5e df a4  da 3a b2 98 7e bd f6 03 | ...^.^...:..~...
+						00000070   57 ff da ba 47 61 ec 6b  3f 67 72 b6 1d db 3a 79 | W...Ga.k?gr...:y
+						00000080   17 6e 2a f5 bc 25 8a 9b  00 b1 8a 75 45 72 76 a0 | .n*..%.....uErv.
+						00000090   4f 2f 80 45 4c 6d ef 81  7a 5c 4c 7a dc 15 cc 6f | O/.ELm..z\Lz...o
+						000000a0   9b 20 08 a8 ff 8e 6e f1  11 8d b1 20 e9 63 d2 55 | . ....n.... .c.U
+						000000b0   4a e5 87 df 53 00 e1 78  03 e6 10 d2 33 62 31 a7 | J...S..x....3b1.
+						000000c0   76 22 7c 4a 4c e0 9d c4  20 31 e0 d9 70 cb df cc | v"|JL... 1..p...
+						000000d0   33 44 d2 d0 8d 88 73 27  d1 29 9c a8 e3 38 ca 79 | 3D....s'.)...8.y
+						000000e0   9e a3 70 ca d3 52 75 90  5d ff a9 dc a8 2c fb ef | ..p..Ru.]....,..
+						000000f0   5e 11 7a e5 5d ee a0 7f  03 6e 82 c2 32 8d 0c cc | ^.z.]....n..2...
+						00000100   d0 26 90 d8 5b 90 14 ee  8c 20 ca 07 d4 5c 8a cb | .&..[.... ...\..
+						00000110   e9 b0 bc 29 30 54 4c 60  9f 10 69 89 4b 58 4c f6 | ...)0TL`..i.KXL.
+						00000120   bb 83 b4 ca 6a 60 9a 9b  30 ff 95 b3 73 8c 42 d0 | ....j`..0...s.B.
+						00000130   90 5a 4d d4 89 44 59 c6  b9 34 f2 39 4e 93 88 78 | .ZM..DY..4.9N..x
+						00000140   9a f3 f5 7d ea 7e c8 0c  60 15 a8 67 4a 9e 9e 5b | ...}.~..`..gJ..[
+						00000150   20 1b 8c c6 b1 13 2a 8b  7c da 2c 2f b0 00 46 44 |  .....*.|.,/..FD
+						00000160   4d 9a 10 52 ac b4 84 97  ca 3f ef 5f a7 61 18 40 | M..R.....?._.a.@
+						00000170   b8 ae 06 41 76 83 8f c2  7b c9 80 d2 22 5e df 5a | ...Av...{..."^.Z
+						00000180   d5 ff 86 71 39 e5 fe 52  b0 d0 a0 6d 6a 48 3e 77 | ...q9..R...mjH>w
+						00000190   7d 8f f5 11 13 a6 e4 6a  11 81 03 49 7b 2a 20 f8 | }......j...I{* .
+						000001a0   46 ba a6 94 67 f1 de a4  b0 7f a6 51 71 7f 0e 27 | F...g......Qq..'
+						000001b0   47 d4 05 7a d3 de 73 66  aa b4 fd ef 66 85 77 83 | G..z..sf....f.w.
+						000001c0   aa bf 1e 57 8e c7 0d c5  fe 47 99 c3 a2 8b 00 6d | ...W.....G.....m
+						000001d0   92 52 42 e8 0b ae 3e 99  f7 4a 23 41 1e 4c 11 02 | .RB...>..J#A.L..
+						000001e0   ff 6c a4 db 32 ea ac 6f  e9 52 93 05 65 c7 51 40 | .l..2..o.R..e.Q@
+						000001f0   bd cd f3 5f 07 08 b4 18  23 d7 57 22 b0 b1 5b 92 | ..._....#.W"..[.
+						00000200   48 8a 59 ef 34 05 f3 51  eb 97 3f 7a af 98 ed 72 | H.Y.4..Q..?z...r
+						00000210   29 1c e0 43 1c 79 ec ad  69 ee ca b6 9f d0 e9 16 | )..C.y..i.......
+						00000220   79 35 47 a5 cc ed 00 1f  7c d9 6c 7d 5c 0c 9c 98 | y5G.....|.l}\...
+						00000230   74 f5 f7 ef ef 0f c6 10  bb c2 f4 13 df 92 63 c2 | t.............c.
+						00000240   b6 08 50 ed 2c 7c f5 c9  fd 4f 34 45 8c 94 46 d8 | ..P.,|...O4E..F.
+						00000250   5c 6e 70 dd 3e 2d a0 1e  0a 1e b2 9f c1 62 0e 2d | \np.>-.......b.-
+						00000260   56 e4 18 a9 df 58 8c 38  1a f6 99 0c 0b 1a 7f ec | V....X.8........
+						00000270   34 58 7d d0 a7 a5 6d cb  12 87 0c f3 16 99 57 40 | 4X}...m.......W@
+						00000280   fb 10 ea 65 89 8f c3 38  2c eb d0 4b d7 02 39 fc | ...e...8,..K..9.
+						00000290   e1 e9 a4 44 c0 f2 f3 6a  a4 ac 9a 67 a7 8f 22 6d | ...D...j...g.."m
+						000002a0   cb da f2 b5 49 e1 ef a5  91 e1 29 a4 00 a1 4b 2c | ....I.....)...K,
+						000002b0   cd 70 83 95 f2 50 5a 09  79 3d 6e e0 3b df 53 d1 | .p...PZ.y=n.;.S.
+						000002c0   da d5 31 19 b5 f3 85 b4  89 76 d4 59 07 8e 45 3d | ..1......v.Y..E=
+						000002d0   7a 84 92 8c 1d 48 4a 90  9c 58 aa 57 61 2c 75 41 | z....HJ..X.Wa,uA
+						000002e0   db 09 c9 f0 87 49 97 f4  4f 15 4d 17 cf fe 62 69 | .....I..O.M...bi
+						000002f0   9d fe 56 52 51 76 ee 97  7f 7c 36 2d bb 42 1b a2 | ..VRQv...|6-.B..
+						00000300   25 9f 6f e4 02 87 79 20  a9 86 6f 26 68 dd 03 df | %.o...y ..o&h...
+						00000310   fa a8 50 9d 70 77 e1 66  bc ed e3 77 39 72 a9 31 | ..P.pw.f...w9r.1
+						00000320   fe b0 6e d7 42 57 98 54  06 b2 dc 5b 2d d1 02 f3 | ..n.BW.T...[-...
+						00000330   ae a4 db ed 72 3b 06 61  f4 d1 36 8d ce 2a b5 06 | ....r;.a..6..*..
+						00000340   4f ec 1e 15 7c 86 91 96  24 99 83 60 c6 f4 70 9b | O...|...$..`..p.
+						00000350   dc 6a c6 21 bd 66 3b 07  09 2a be 72 4f 20 38 1b | .j.!.f;..*.rO 8.
+						00000360   09 4e ec f6 c8 95 f5 62  3f 95 74 1f c6 c8 da c3 | .N.....b?.t.....
+						00000370   e6 16 34 a2 92 3b d8 82  ea 64 bc d3 ed 4e 1a 05 | ..4..;...d...N..
+						00000380   88 37 20 e9 99 6e f8 7d  bf 39 93 0c 92 95 b8 1a | .7 ..n.}.9......
+						00000390   c1 c7 9f c5 6f 35 17 30  39 c2 e9 b9 b0 64 a1 2b | ....o5.09....d.+
+						000003a0   d2 8a 17 d8 bc 4a c9 8b  be 8b e4 48 4d f8 5a 88 | .....J.....HM.Z.
+						000003b0   d8 2f a3 90 4b 78 35 ac  3b 7b af 06 e9 c5 c4 5d | ./..Kx5.;{.....]
+						000003c0   54 7e d9 c1 24 31 13 e7  6b 41 03 3f d3 ad e0 ac | T~..$1..kA.?....
+						000003d0   d2 54 04 be 53 57 8e 6d  a7 29 ea 7d c5 39 62 36 | .T..SW.m.).}.9b6
+						000003e0   f6 67 3b 2e db 3b 7b 12  47 f6 fc ef e8 e0 b6 6b | .g;..;{.G......k
+						000003f0   ab 75 d9 64 04 05 ec c3  e9 e4 11 d5 47 30 0d 53 | .u.d........G0.S
+						00000400   11 46 a3 5d 28 30 f5 db  c1 da e1 b7 c0 ab 81 b0 | .F.](0..........
+						00000410   78 4e 1b ea f3 db 7c db  20 1f 5a 60 39 61 e3 39 | xN....|. .Z`9a.9
+						00000420   14 e0 b2 a0 f5 6b db c9  7b 23 c8 a6 ac 6d a6 f9 | .....k..{#...m..
+						00000430   86 69 08 ae 76 06 63 a3  94 5c 90 0e ed 09 b5 ca | .i..v.c..\......
+						00000440   8d de be 0a 25 cf d5 e6  0e c6 ff 02 10 5e b5 62 | ....%........^.b
+						00000450   fb 7b 02 79 bf 72 5b fd  6f f9 5c 5c 6a d1 0f fc | .{.y.r[.o.\\j...
+						00000460   6b 39 4b 43 15 23 60 f3  c6 04 62 4b 54 f9 0d 87 | k9KC.#`...bKT...
+						00000470   90 3e 28 76 09 fb d6 ce  27 7f 4a 94 cc f7 d8 59 | .>(v....'.J....Y
+						00000480   57 f5 9d 31 f6 0d 82 25  44 ac ab b9 6c b7 64 75 | W..1...%D...l.du
+						00000490   00 a2 85 b0 3a 22 79 19  a3 47 65 23 9c cc 33 a1 | ....:"y..Ge#..3.
+						000004a0   7d e1 19 5b 8c 67 ae 46  21 7b 08 28 c3 05 73 a9 | }..[.g.F!{.(..s.
+						000004b0   33 c3 7d 68 a3 56 45 2c  ca b7 e3 f2 52 e6 77 0e | 3.}h.VE,....R.w.
+						000004c0   f5 59 fe f0 90 11 7b f3  f9 53 d9 f8 1d 2b 0c fa | .Y....{..S...+..
+						000004d0   60 9d 38 90 54 ea 5b e5  ac a8 bb dc 69 fe 32 39 | `.8.T.[.....i.29
+						000004e0   e2 66 d7 a6 c8 9c 37 8d  de 89 3b de 36 8d d7 f9 | .f....7...;.6...
+						000004f0   29 d8 6c 6b eb 0b 72 ee  e5 ad 0f 10 82 89 dc 65 | ).lk..r........e
+						00000500   51 35 98 67 6b 10 06 25  f9 da b8 d6 4f 97 74 20 | Q5.gk..%....O.t 
+						00000510   6d b3 10 a0 ec 1c 32 94  cf 44 92 c2 b3 4c 98 93 | m.....2..D...L..
+						00000520   2d 0b f9 17 0c b5 67 8c  6d 8c 25 dc 91 79 e4 83 | -.....g.m.%..y..
+						00000530   f1 b8 64 39 b3 3e f7 7d  4a f3 84 90 9f 16 63 c8 | ..d9.>.}J.....c.
+						00000540   a7 08 c7 a1 13 6c b3 b3  6c 6f 82 e3 e4 46 ac f7 | .....l..lo...F..
+						00000550   bc c5 1a 78 52 88 b5 d8  36 2d b3 34 c2 48 6c 82 | ...xR...6-.4.Hl.
+						00000560   1c 8c 30 11 ea 18 b6 a8  28 1e e6 d5 cd 22 86 42 | ..0.....(....".B
+						00000570   b3 f8 f1 d8 06 43 d1 a8  f1 b2 73 1d 22 df 7d 2e | .....C....s.".}.
+						00000580   44 f1 f1 4a             | D..J
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured TCP Packet
+[2025-09-26 21:09:24] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -385,20 +326,20 @@ TCP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 532
-	Identification: 54159
+	IP Total length: 493
+	Identification: 64336
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 6
-	Header checksum: 0x9644
+	Header checksum: 0x5474
 	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
+	Destination IP: 52.182.143.211
 		
 TCP Header 
-			Source Port: 46068
+			Source Port: 55136
 			Destination Port: 443
-			Sequence Number: 945328458
-			Acknowledge Number: 2874140720
+			Sequence Number: 2437979183
+			Acknowledge Number: 2064662291
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -406,46 +347,44 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 8851
+			Window         : 450
+			Checksum       : 37519
 			Urgent Pointer : 0
-			Payload (492): 
-						00000000  01 01 08 0a 8b 49 a3 4d  01 21 1d 77 63 1e 4f 6d | .....I.M.!.wc.Om
-						00000010   df bf 51 de d8 58 29 29  1d 8f 7c ae 8e b6 5c dd | ..Q..X))..|...\.
-						00000020   67 0b 44 2f 09 99 30 19  b1 62 43 e8 84 dd 75 fd | g.D/..0..bC...u.
-						00000030   c7 71 5b 66 db 84 55 0e  3b a6 40 f0 aa 7e 5d f8 | .q[f..U.;.@..~].
-						00000040   19 56 23 96 8c f2 5b 20  d7 85 b8 f0 07 8d c3 1d | .V#...[ ........
-						00000050   9b 96 c2 ca 1d 4d cc 6f  6b b6 7d 97 d6 eb 84 ca | .....M.ok.}.....
-						00000060   8f 86 7d 45 b8 ca 86 53  2e 72 10 0b 11 28 99 54 | ..}E...S.r...(.T
-						00000070   6e 1c d4 76 ac e4 8d 81  1a 30 0a 0d 09 ad 90 c9 | n..v.....0......
-						00000080   b5 5c 8f 91 d4 d6 9d 57  ad 1d e6 95 ad 34 83 7b | .\.....W.....4.{
-						00000090   95 ef 42 12 fb 75 46 c5  5b 75 95 d6 e4 72 34 58 | ..B..uF.[u...r4X
-						000000a0   a2 ee 25 ca ab f9 d1 0e  c1 97 b5 44 93 61 b5 34 | ..%........D.a.4
-						000000b0   b7 15 5d 17 48 e7 5b 5b  5c 14 68 ef 10 2c d0 32 | ..].H.[[\.h..,.2
-						000000c0   4a 9f c2 be 43 3e 7d ea  0e a8 cf 7b f1 50 8d a5 | J...C>}....{.P..
-						000000d0   7b 66 df 48 74 76 a3 cd  12 9b 27 f6 10 3b e6 51 | {f.Htv....'..;.Q
-						000000e0   bf 8e ed 66 a4 52 b0 8a  68 67 3d b6 1b c1 1b a8 | ...f.R..hg=.....
-						000000f0   1b 5c ae 1a 79 3e 47 16  f9 e8 9e 16 36 d6 89 b6 | .\..y>G.....6...
-						00000100   2c ec 7d e1 ea 2e 73 c1  b0 43 a4 af f1 af 0c d6 | ,.}...s..C......
-						00000110   30 77 d8 44 6c 48 51 11  8f 59 44 06 49 8c 4f 69 | 0w.DlHQ..YD.I.Oi
-						00000120   4e 15 85 a5 33 2b c4 43  3e 7d ce 25 d5 b6 06 c0 | N...3+.C>}.%....
-						00000130   5f 13 da 33 38 c0 34 1e  24 51 09 07 d6 e4 0f 20 | _..38.4.$Q..... 
-						00000140   41 60 49 51 36 d7 50 d6  88 4f 62 48 b5 13 01 51 | A`IQ6.P..ObH...Q
-						00000150   55 b7 c4 4a 93 16 71 96  48 ab cf ca a8 fb 02 78 | U..J..q.H......x
-						00000160   5a 56 1e 6e 39 e0 e9 78  49 5e 87 f8 f7 05 c5 45 | ZV.n9..xI^.....E
-						00000170   03 7c 39 b2 f1 ed 55 a0  6b 13 0e ff c9 a2 13 51 | .|9...U.k......Q
-						00000180   0c a1 6a 36 bd 7f 06 f6  07 c0 2c ae ec 4a 87 03 | ..j6......,..J..
-						00000190   8a 46 b4 4a f7 02 b7 6c  65 be 49 57 21 81 47 7b | .F.J...le.IW!.G{
-						000001a0   63 88 b7 07 ac b6 d6 1a  7f 6e 15 66 6f 54 4b a9 | c........n.foTK.
-						000001b0   0c 78 e2 3f 7c f6 f0 20  20 4b 62 6f 5b b8 57 e4 | .x.?|..  Kbo[.W.
-						000001c0   62 55 80 57 05 79 ca 8a  1d 3a cb 95 24 34 00 87 | bU.W.y...:..$4..
-						000001d0   97 f4 dc 7f 41 a6 32 51  c4 d0 cc 39 2c 83 ed 6f | ....A.2Q...9,..o
-						000001e0   d0 60 5e 69 99 52 5d f1  e7 77 95 cc     | .`^i.R]..w..
+			Payload (453): 
+						00000000  01 01 08 0a 36 73 6d 9c  05 9c 22 17 75 cf 6b f4 | ....6sm...".u.k.
+						00000010   04 20 3c 24 06 7c 6e 75  03 b5 b1 50 39 26 b7 3c | . <$.|nu...P9&.<
+						00000020   9d 1d 35 de cf 15 3c a8  73 81 f2 e7 df f8 a3 c6 | ..5...<.s.......
+						00000030   06 10 30 e2 45 e7 6a 97  1c 9e dc 90 a5 81 e1 f1 | ..0.E.j.........
+						00000040   1e e6 33 64 42 90 75 97  a7 aa 66 5f 8c 61 77 58 | ..3dB.u...f_.awX
+						00000050   2b c8 53 b8 da 2c e3 cf  c5 79 8a 7a 2d 5f 7b b2 | +.S..,...y.z-_{.
+						00000060   e0 4c 03 5f 74 70 82 d9  b8 a8 75 af 52 18 93 d7 | .L._tp....u.R...
+						00000070   9b e4 9b 08 44 28 87 49  e3 c9 19 fb 1d cd dd ec | ....D(.I........
+						00000080   92 e7 66 02 f9 2b 2f 7f  15 2c f6 54 5d 80 b1 ff | ..f..+/..,.T]...
+						00000090   12 84 af bc db 46 83 d2  16 84 a2 8e ee 3a ed 49 | .....F.......:.I
+						000000a0   08 ae ed 2e 73 d8 cc 06  05 25 41 93 c6 2c 2e d9 | ....s....%A..,..
+						000000b0   97 cd f4 12 8e 37 76 c1  c4 78 f1 b6 63 8e d6 6c | .....7v..x..c..l
+						000000c0   92 81 86 26 af 6e 5f 54  ea b4 08 71 7a 0a e1 36 | ...&.n_T...qz..6
+						000000d0   3b 12 ad a4 fb 6a 0a 7c  47 37 17 07 20 59 c7 00 | ;....j.|G7.. Y..
+						000000e0   10 64 f4 69 90 a6 44 c6  d4 21 81 d1 98 31 a6 32 | .d.i..D..!...1.2
+						000000f0   c2 00 99 30 67 55 df 9b  54 3d a9 f0 9f a2 76 11 | ...0gU..T=....v.
+						00000100   6b df fc 26 d2 02 78 ec  04 9d 33 ee e1 b2 e2 21 | k..&..x...3....!
+						00000110   ae 7c cc 92 f0 83 9c e2  5e 53 35 9d fa 73 48 dc | .|......^S5..sH.
+						00000120   88 54 26 75 4d 6d db 77  ed 7b ad 10 ab a6 ef 7e | .T&uMm.w.{.....~
+						00000130   29 94 7b cc f2 3b 77 9d  71 10 14 60 af 2e c2 f2 | ).{..;w.q..`....
+						00000140   99 e8 2c 16 b4 34 9e 94  aa a1 d9 57 e4 21 01 b8 | ..,..4.....W.!..
+						00000150   48 b6 5f a7 38 82 90 e8  c8 5f b9 f5 b9 3e 1e 15 | H._.8...._...>..
+						00000160   49 96 0a aa 28 96 86 14  f1 5b 47 c3 f3 bd cd 4a | I...(....[G....J
+						00000170   02 6a 09 f1 b0 70 3a 5f  c4 a5 72 eb 66 bf 26 ea | .j...p:_..r.f.&.
+						00000180   88 23 4d 7a 1a a9 2e 32  20 bd c1 24 4f e9 19 d8 | .#Mz...2 ..$O...
+						00000190   cc 3a 39 ac 4d f9 55 37  84 26 05 96 f4 0f 20 e2 | .:9.M.U7.&.... .
+						000001a0   fd d7 ae ff b3 12 14 77  c2 6b 42 b7 2b 04 c5 5b | .......w.kB.+..[
+						000001b0   81 e9 1f 42 e3 09 56 07  94 33 37 45 76 ec eb 8f | ...B..V..37Ev...
+						000001c0   a1 41 c6 12 d6            | .A...
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured UDP Packet
+[2025-09-26 21:09:24] Captured UDP Packet
 	
 
 *************************************UDP Packet*************************************
@@ -455,37 +394,37 @@ TCP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 198
-	Identification: 58405
+	IP Total length: 202
+	Identification: 42861
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 17
-	Header checksum: 0x0c9b
+	Header checksum: 0x494f
 	Source IP: 192.168.100.1
 	Destination IP: 192.168.100.20
 		
 UDP Header 
 	Source Port: 53
-	Destination Port: 4964
-	UDP length: 178
-	UDP Checksum: 0xa143
-	Payload (170): 
-						00000000  86 d3 81 80 00 01 00 03  00 00 00 00 06 6d 6f 62 | .............mob
+	Destination Port: 63715
+	UDP length: 182
+	UDP Checksum: 0x542c
+	Payload (174): 
+						00000000  a3 3b 81 80 00 01 00 03  00 00 00 00 06 6d 6f 62 | .;...........mob
 						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
 						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 01 | microsoft.com...
-						00000030   00 01 c0 0c 00 05 00 01  00 00 00 4f 00 27 06 6d | ...........O.'.m
+						00000030   00 01 c0 0c 00 05 00 01  00 00 00 04 00 27 06 6d | .............'.m
 						00000040   6f 62 69 6c 65 06 65 76  65 6e 74 73 04 64 61 74 | obile.events.dat
 						00000050   61 0e 74 72 61 66 66 69  63 6d 61 6e 61 67 65 72 | a.trafficmanager
-						00000060   03 6e 65 74 00 c0 3e 00  05 00 01 00 00 00 1d 00 | .net..>.........
-						00000070   29 10 6f 6e 65 64 73 63  6f 6c 70 72 64 65 75 73 | ).onedscolprdeus
-						00000080   31 31 06 65 61 73 74 75  73 08 63 6c 6f 75 64 61 | 11.eastus.clouda
-						00000090   70 70 05 61 7a 75 72 65  c0 29 c0 71 00 01 00 01 | pp.azure.).q....
-						000000a0   00 00 00 09 00 04 14 2a  41 59       | .......*AY
+						00000060   03 6e 65 74 00 c0 3e 00  05 00 01 00 00 00 0e 00 | .net..>.........
+						00000070   2d 10 6f 6e 65 64 73 63  6f 6c 70 72 64 77 65 75 | -.onedscolprdweu
+						00000080   30 37 0a 77 65 73 74 65  75 72 6f 70 65 08 63 6c | 07.westeurope.cl
+						00000090   6f 75 64 61 70 70 05 61  7a 75 72 65 c0 29 c0 71 | oudapp.azure.).q
+						000000a0   00 01 00 01 00 00 00 04  00 04 14 32 c9 c9   | ...........2..
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured UDP Packet
+[2025-09-26 21:09:24] Captured UDP Packet
 	
 
 *************************************UDP Packet*************************************
@@ -496,31 +435,31 @@ UDP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 242
-	Identification: 58406
+	Identification: 42862
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 17
-	Header checksum: 0x0c6e
+	Header checksum: 0x4926
 	Source IP: 192.168.100.1
 	Destination IP: 192.168.100.20
 		
 UDP Header 
 	Source Port: 53
-	Destination Port: 4437
+	Destination Port: 17095
 	UDP length: 222
-	UDP Checksum: 0xc98d
+	UDP Checksum: 0x4188
 	Payload (214): 
-						00000000  33 40 81 80 00 01 00 02  00 01 00 00 06 6d 6f 62 | 3@...........mob
+						00000000  8d a7 81 80 00 01 00 02  00 01 00 00 06 6d 6f 62 | .............mob
 						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
 						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 41 | microsoft.com..A
-						00000030   00 01 c0 0c 00 05 00 01  00 00 00 06 00 27 06 6d | .............'.m
+						00000030   00 01 c0 0c 00 05 00 01  00 00 00 33 00 27 06 6d | ...........3.'.m
 						00000040   6f 62 69 6c 65 06 65 76  65 6e 74 73 04 64 61 74 | obile.events.dat
 						00000050   61 0e 74 72 61 66 66 69  63 6d 61 6e 61 67 65 72 | a.trafficmanager
-						00000060   03 6e 65 74 00 c0 3e 00  05 00 01 00 00 00 10 00 | .net..>.........
+						00000060   03 6e 65 74 00 c0 3e 00  05 00 01 00 00 00 0b 00 | .net..>.........
 						00000070   29 10 6f 6e 65 64 73 63  6f 6c 70 72 64 77 75 73 | ).onedscolprdwus
-						00000080   30 32 06 77 65 73 74 75  73 08 63 6c 6f 75 64 61 | 02.westus.clouda
+						00000080   31 35 06 77 65 73 74 75  73 08 63 6c 6f 75 64 61 | 15.westus.clouda
 						00000090   70 70 05 61 7a 75 72 65  c0 29 c0 82 00 06 00 01 | pp.azure.)......
-						000000a0   00 00 00 10 00 30 06 6e  73 31 2d 30 32 09 61 7a | .....0.ns1-02.az
+						000000a0   00 00 00 0c 00 30 06 6e  73 31 2d 30 32 09 61 7a | .....0.ns1-02.az
 						000000b0   75 72 65 2d 64 6e 73 c0  29 06 6d 73 6e 68 73 74 | ure-dns.).msnhst
 						000000c0   c0 1f 00 00 27 11 00 00  03 84 00 00 01 2c 00 09 | ....'........,..
 						000000d0   3a 80 00 00 00 3c           | :....<
@@ -528,51 +467,45 @@ UDP Header
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured ICMP Packet
+[2025-09-26 21:09:24] Captured UDP Packet
 	
 
-*************************************ICMP Packet*************************************
+*************************************UDP Packet*************************************
 			
  IP header: 
 
 	IP Version: 4
 	IP header length: 20 bytes
-	Type Of Service: 192
-	IP Total length: 270
-	Identification: 26591
-	Flags + frag offset: 0x0000
-	TTL: 64
-	Protocol: 1
-	Header checksum: 0xc7e9
-	Source IP: 192.168.100.20
-	Destination IP: 192.168.100.1
+	Type Of Service: 0
+	IP Total length: 161
+	Identification: 44369
+	Flags + frag offset: 0x4000
+	TTL: 4
+	Protocol: 17
+	Header checksum: 0xb456
+	Source IP: 192.168.100.1
+	Destination IP: 239.255.255.250
 		
-ICMP Header 
-	Type: 3 (Destination Unreachable)
-	Code: 3
-	Checksum: 0x4753
-	Payload (242): 
-						00000000  45 00 00 f2 e4 26 40 00  40 11 0c 6e c0 a8 64 01 | E....&@.@..n..d.
-						00000010   c0 a8 64 14 00 35 11 55  00 de c9 8d 33 40 81 80 | ..d..5.U....3@..
-						00000020   00 01 00 02 00 01 00 00  06 6d 6f 62 69 6c 65 06 | .........mobile.
-						00000030   65 76 65 6e 74 73 04 64  61 74 61 09 6d 69 63 72 | events.data.micr
-						00000040   6f 73 6f 66 74 03 63 6f  6d 00 00 41 00 01 c0 0c | osoft.com..A....
-						00000050   00 05 00 01 00 00 00 06  00 27 06 6d 6f 62 69 6c | .........'.mobil
-						00000060   65 06 65 76 65 6e 74 73  04 64 61 74 61 0e 74 72 | e.events.data.tr
-						00000070   61 66 66 69 63 6d 61 6e  61 67 65 72 03 6e 65 74 | afficmanager.net
-						00000080   00 c0 3e 00 05 00 01 00  00 00 10 00 29 10 6f 6e | ..>.........).on
-						00000090   65 64 73 63 6f 6c 70 72  64 77 75 73 30 32 06 77 | edscolprdwus02.w
-						000000a0   65 73 74 75 73 08 63 6c  6f 75 64 61 70 70 05 61 | estus.cloudapp.a
-						000000b0   7a 75 72 65 c0 29 c0 82  00 06 00 01 00 00 00 10 | zure.)..........
-						000000c0   00 30 06 6e 73 31 2d 30  32 09 61 7a 75 72 65 2d | .0.ns1-02.azure-
-						000000d0   64 6e 73 c0 29 06 6d 73  6e 68 73 74 c0 1f 00 00 | dns.).msnhst....
-						000000e0   27 11 00 00 03 84 00 00  01 2c 00 09 3a 80 00 00 | '........,..:...
-						000000f0   00 3c               | .<
+UDP Header 
+	Source Port: 48737
+	Destination Port: 1900
+	UDP length: 141
+	UDP Checksum: 0x343c
+	Payload (133): 
+						00000000  4d 2d 53 45 41 52 43 48  20 2a 20 48 54 54 50 2f | M-SEARCH * HTTP/
+						00000010   31 2e 31 0d 0a 48 4f 53  54 3a 20 32 33 39 2e 32 | 1.1..HOST: 239.2
+						00000020   35 35 2e 32 35 35 2e 32  35 30 3a 31 39 30 30 0d | 55.255.250:1900.
+						00000030   0a 4d 41 4e 3a 20 22 73  73 64 70 3a 64 69 73 63 | .MAN: "ssdp:disc
+						00000040   6f 76 65 72 22 0d 0a 4d  58 3a 20 35 0d 0a 53 54 | over"..MX: 5..ST
+						00000050   3a 20 75 72 6e 3a 77 77  77 2d 68 75 61 77 65 69 | : urn:www-huawei
+						00000060   2d 63 6f 6d 3a 73 65 72  76 69 63 65 3a 4e 65 74 | -com:service:Net
+						00000070   77 6f 72 6b 53 79 6e 63  53 65 72 76 69 63 65 3a | workSyncService:
+						00000080   31 0d 0a 0d 0a            | 1....
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured TCP Packet
+[2025-09-26 21:09:24] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -583,19 +516,19 @@ ICMP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 52
-	Identification: 17942
+	Identification: 28549
 	Flags + frag offset: 0x4000
-	TTL: 107
+	TTL: 103
 	Protocol: 6
-	Header checksum: 0xfa9d
-	Source IP: 52.168.117.171
+	Header checksum: 0xbaf8
+	Source IP: 52.182.143.211
 	Destination IP: 192.168.100.20
 		
 TCP Header 
 			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140720
-			Acknowledge Number: 945328458
+			Destination Port: 55136
+			Sequence Number: 2064662291
+			Acknowledge Number: 2437979183
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -604,1222 +537,15 @@ TCP Header
 			Synchronise Flag     : 0
 			Finish Flag          : 0
 			Window         : 16384
-			Checksum       : 30096
+			Checksum       : 39627
 			Urgent Pointer : 0
 			Payload (12): 
-						00000000  01 01 08 0a 01 21 af 91  8b 49 a3 4d     | .....!...I.M
+						00000000  01 01 08 0a 05 9c 48 41  36 73 6d 9b     | ......HA6sm.
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:29] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 91
-	Identification: 17943
-	Flags + frag offset: 0x4000
-	TTL: 107
-	Protocol: 6
-	Header checksum: 0xfa75
-	Source IP: 52.168.117.171
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140720
-			Acknowledge Number: 945328458
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 16384
-			Checksum       : 63091
-			Urgent Pointer : 0
-			Payload (51): 
-						00000000  01 01 08 0a 01 21 af 91  8b 49 a3 4d 17 03 03 00 | .....!...I.M....
-						00000010   22 64 8f 1a d7 f3 d7 ea  72 30 1b b5 08 d2 13 18 | "d......r0......
-						00000020   4f 89 b0 84 79 42 6d e7  b9 42 5b 59 8e 90 19 26 | O...yBm..B[Y...&
-						00000030   d0 31 e6              | .1.
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:29] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 52
-	Identification: 54160
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x9823
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945328938
-			Acknowledge Number: 2874140759
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 45310
-			Urgent Pointer : 0
-			Payload (12): 
-						00000000  01 01 08 0a 8b 49 a4 15  01 21 af 91     | .....I...!..
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:29] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 52
-	Identification: 17944
-	Flags + frag offset: 0x4000
-	TTL: 107
-	Protocol: 6
-	Header checksum: 0xfa9b
-	Source IP: 52.168.117.171
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140759
-			Acknowledge Number: 945328938
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 16382
-			Checksum       : 29533
-			Urgent Pointer : 0
-			Payload (12): 
-						00000000  01 01 08 0a 01 21 af bf  8b 49 a3 4d     | .....!...I.M
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:30] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
-	TTL: 255
-	Protocol: 1
-	Header checksum: 0xd38a
-	Source IP: 192.168.100.20
-	Destination IP: 216.58.223.110
-		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0x1a8a
-	ID: 4513
-	Sequence: 9
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:30] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 0
-	Flags + frag offset: 0x0000
-	TTL: 116
-	Protocol: 1
-	Header checksum: 0x6a43
-	Source IP: 216.58.223.110
-	Destination IP: 192.168.100.20
-		
-ICMP Header 
-	Type: 0 (Echo Reply)
-	Code: 0
-	Checksum: 0x228a
-	ID: 4513
-	Sequence: 9
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:30] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 150
-	Identification: 17945
-	Flags + frag offset: 0x4000
-	TTL: 107
-	Protocol: 6
-	Header checksum: 0xfa38
-	Source IP: 52.168.117.171
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140759
-			Acknowledge Number: 945328938
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 16382
-			Checksum       : 30975
-			Urgent Pointer : 0
-			Payload (110): 
-						00000000  01 01 08 0a 01 21 b0 55  8b 49 a4 15 17 03 03 00 | .....!.U.I......
-						00000010   5d a3 b5 78 09 0d 8b 0a  3b 97 45 86 b7 5b 6f 07 | ]..x....;.E..[o.
-						00000020   9f d1 e2 62 19 5e b0 7f  96 a7 d3 82 55 a4 06 0a | ...b.^......U...
-						00000030   01 22 ad ad 30 b7 30 ed  07 d2 da 8f 48 ea f9 8d | ."..0.0.....H...
-						00000040   fd de b0 db b0 91 f1 dc  68 09 de 14 72 85 3c 39 | ........h...r.<9
-						00000050   df 75 7d 5d dc fb b8 6d  e2 89 24 26 88 55 ff 37 | .u}]...m..$&.U.7
-						00000060   4f 10 51 18 9f 07 6e b5  11 25 90 5c 32 bd   | O.Q...n..%.\2.
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:30] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 52
-	Identification: 54161
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x9822
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945328938
-			Acknowledge Number: 2874140857
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 44820
-			Urgent Pointer : 0
-			Payload (12): 
-						00000000  01 01 08 0a 8b 49 a4 d9  01 21 b0 55     | .....I...!.U
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:30] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 87
-	Identification: 54162
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x97fe
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945328938
-			Acknowledge Number: 2874140857
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 57158
-			Urgent Pointer : 0
-			Payload (47): 
-						00000000  01 01 08 0a 8b 49 a4 de  01 21 b0 55 17 03 03 00 | .....I...!.U....
-						00000010   1e 18 f9 0a 2e 98 63 14  5e 7d 97 09 0b 1d 21 f6 | ......c.^}....!.
-						00000020   3c ec ba d8 76 53 fa 32  e9 69 a3 9f af db 45  | <...vS.2.i....E
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:30] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 52
-	Identification: 17946
-	Flags + frag offset: 0x4000
-	TTL: 107
-	Protocol: 6
-	Header checksum: 0xfa99
-	Source IP: 52.168.117.171
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140857
-			Acknowledge Number: 945328973
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 16382
-			Checksum       : 28593
-			Urgent Pointer : 0
-			Payload (12): 
-						00000000  01 01 08 0a 01 21 b1 55  8b 49 a4 de     | .....!.U.I..
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
-	TTL: 255
-	Protocol: 1
-	Header checksum: 0xd38a
-	Source IP: 192.168.100.20
-	Destination IP: 216.58.223.110
-		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0x1a89
-	ID: 4513
-	Sequence: 10
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 0
-	Flags + frag offset: 0x0000
-	TTL: 116
-	Protocol: 1
-	Header checksum: 0x6a43
-	Source IP: 216.58.223.110
-	Destination IP: 192.168.100.20
-		
-ICMP Header 
-	Type: 0 (Echo Reply)
-	Code: 0
-	Checksum: 0x2289
-	ID: 4513
-	Sequence: 10
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 165
-	Identification: 54163
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x97af
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945328973
-			Acknowledge Number: 2874140857
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 38264
-			Urgent Pointer : 0
-			Payload (125): 
-						00000000  01 01 08 0a 8b 49 ab 9c  01 21 b1 55 17 03 03 00 | .....I...!.U....
-						00000010   6c cc d8 fe b4 b7 15 46  90 8c 3b 4f 4c 9d ca 6c | l......F..;OL..l
-						00000020   86 a6 ba bf 92 16 d5 a9  79 83 a6 ca f0 73 71 e8 | ........y....sq.
-						00000030   da b1 e7 09 cd cd f5 43  2f 3b e9 08 f0 67 be 7b | .......C/;...g.{
-						00000040   af 35 b5 6a ff 14 24 5e  49 32 86 55 2e a8 73 3b | .5.j..$^I2.U..s;
-						00000050   1e cb 40 51 26 01 5d 66  78 fb 43 23 25 12 69 96 | ..@Q&.]fx.C#%.i.
-						00000060   04 91 0b d1 6b e8 1e 70  3b 73 cb 88 1a 43 13 12 | ....k..p;s...C..
-						00000070   8e 52 1c be 1f fe 6b 1d  4c 12 09 b0 0b    | .R....k.L....
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 1452
-	Identification: 54164
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x92a7
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945329086
-			Acknowledge Number: 2874140857
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 54829
-			Urgent Pointer : 0
-			Payload (1412): 
-						00000000  01 01 08 0a 8b 49 ab 9c  01 21 b1 55 17 03 03 15 | .....I...!.U....
-						00000010   52 cf 7e 5f 0d f8 71 f0  4e 1d a5 20 6c ad ec 13 | R.~_..q.N.. l...
-						00000020   d9 a8 74 4c 70 28 78 33  5b ef 13 8e ea ba 01 76 | ..tLp(x3[......v
-						00000030   0b 1d b8 d8 7c db f5 4a  de 8d 73 5f ac e4 52 cb | ....|..J..s_..R.
-						00000040   6a 43 b3 8d 78 cc 43 01  a7 08 7c 2f 10 1c d8 bb | jC..x.C...|/....
-						00000050   26 3f 3c 56 33 7d ea a8  ba 97 ce 0f 2d 37 23 0f | &?<V3}......-7#.
-						00000060   44 a0 d2 47 c6 86 f8 ff  42 f8 32 a8 0c 65 4b 81 | D..G....B.2..eK.
-						00000070   95 f1 2c 1a 46 ef 03 47  bb 3b 60 4a e0 3b 22 bc | ..,.F..G.;`J.;".
-						00000080   fb fe d9 99 1b a6 b5 59  37 1f be a5 bf 54 02 18 | .......Y7....T..
-						00000090   18 4b 26 5c 56 6f 68 58  d7 e1 63 36 0c a9 0f 82 | .K&\VohX..c6....
-						000000a0   3d fc 4b a0 33 62 7d 2e  ea 1a d4 bc 2d 1b ec a8 | =.K.3b}.....-...
-						000000b0   65 26 ea 02 bc 87 e4 ca  0e a8 91 dd ea 1e 8d 4b | e&.............K
-						000000c0   ff dd 3c ae 78 b3 74 58  16 49 d9 7f 43 9b 88 64 | ..<.x.tX.I..C..d
-						000000d0   9a 46 dc a5 56 4d 43 d9  44 48 92 72 c3 b1 99 dc | .F..VMC.DH.r....
-						000000e0   b1 e0 6d 57 4b e1 a6 33  69 8f dc a2 cb 2c bd a8 | ..mWK..3i....,..
-						000000f0   69 13 c7 c0 41 8a 96 45  dd d2 6e 1b 71 e2 78 15 | i...A..E..n.q.x.
-						00000100   80 e3 9a 24 ba 87 25 cb  72 02 82 37 06 a6 50 7b | ...$..%.r..7..P{
-						00000110   11 75 3a 29 1b 57 39 47  3e e8 1b c6 f7 30 cd 09 | .u:).W9G>....0..
-						00000120   fb 77 6b 4d 3a b2 31 e2  0d 95 b8 d2 7d 33 17 93 | .wkM:.1.....}3..
-						00000130   49 45 20 d7 bf e3 a6 1a  d0 f6 16 a7 dd 8d 90 b4 | IE .............
-						00000140   b7 58 0c b9 30 d6 d6 ff  84 80 67 17 51 24 6a cb | .X..0.....g.Q$j.
-						00000150   b6 69 99 15 e3 cf de 40  91 76 94 2e f3 0d 2a f7 | .i.....@.v....*.
-						00000160   e9 04 8c 55 76 97 50 a5  42 1c 6f a9 f6 e0 4c fb | ...Uv.P.B.o...L.
-						00000170   ab 03 0d c3 2a 88 8b 62  ae 36 ff f7 10 ab fd a8 | ....*..b.6......
-						00000180   2a 8a e4 c2 c1 0d 33 ce  f6 70 a3 a7 91 ca 37 cc | *.....3..p....7.
-						00000190   bd 04 79 21 f6 36 33 f1  18 43 b3 a0 84 0e c8 6d | ..y!.63..C.....m
-						000001a0   18 16 36 fe f6 cd 41 62  bd 13 83 8f b6 e9 6e 6a | ..6...Ab......nj
-						000001b0   78 39 c6 a4 72 7c df 54  01 01 ef 6b 99 e8 81 24 | x9..r|.T...k...$
-						000001c0   88 09 05 05 eb aa 0d 5b  ac 68 db 2b 42 33 7f 3d | .......[.h.+B3.=
-						000001d0   4f 5b 9a 05 9d 1b 0f 38  ee 01 fd e9 3c 4f d1 1a | O[.....8....<O..
-						000001e0   de 66 72 63 d1 05 ff 5b  7d df 7b 0b 9c 64 c2 f3 | .frc...[}.{..d..
-						000001f0   b1 d3 47 eb 95 95 6f 99  6b 14 41 88 ff e0 e0 c7 | ..G...o.k.A.....
-						00000200   3c a2 a3 88 7f 08 5b 2e  82 94 b0 b2 b6 9a 0b d2 | <.....[.........
-						00000210   53 4e 16 97 40 bd 5b 36  99 d9 db 98 36 18 69 1d | SN..@.[6....6.i.
-						00000220   44 17 00 05 14 8d 23 44  22 e8 80 b0 a1 63 49 97 | D.....#D"....cI.
-						00000230   84 7b a2 25 71 96 c5 3a  38 89 b5 33 29 61 0d d3 | .{.%q..:8..3)a..
-						00000240   0d 5b 26 ff c5 08 d0 7f  86 bf 5e a2 40 95 a8 48 | .[&.......^.@..H
-						00000250   ab d3 c2 50 6d c6 dd ef  01 35 74 fe 86 b8 3a 4a | ...Pm....5t...:J
-						00000260   18 a6 77 5f 08 2b d5 bb  87 8d 92 91 60 fb 30 32 | ..w_.+......`.02
-						00000270   e5 bc a3 6a 52 77 4f 9c  fd 35 ce b4 75 8d b9 59 | ...jRwO..5..u..Y
-						00000280   35 81 8f de 46 51 56 bd  e8 27 da 12 6c 14 02 f1 | 5...FQV..'..l...
-						00000290   a6 88 b7 d8 07 54 e0 8e  90 5b 9e 10 2b f2 cf 54 | .....T...[..+..T
-						000002a0   bf e5 a6 8e a9 4c c0 e3  0f 5a 40 0d 1e ff 1b 7d | .....L...Z@....}
-						000002b0   36 9a 67 b2 77 69 f4 20  d0 b8 2d ad b5 74 f0 8c | 6.g.wi. ..-..t..
-						000002c0   d7 66 db a2 97 c6 d5 af  88 8f 77 54 ae a7 2c b9 | .f........wT..,.
-						000002d0   51 fb 71 20 90 1c 57 44  48 c2 d2 03 f8 88 39 20 | Q.q ..WDH.....9 
-						000002e0   89 03 89 5c c7 10 32 c8  ce 8f 08 b8 26 c3 f4 48 | ...\..2.....&..H
-						000002f0   4c a6 a6 aa 9b 49 ee a8  fb cf c4 4c f7 5d bf f7 | L....I.....L.]..
-						00000300   12 43 97 93 fb d2 d9 de  50 39 03 ab 02 d2 b1 93 | .C......P9......
-						00000310   fc 8e 0e dc 40 f8 17 20  a4 09 45 93 4c ec 68 54 | ....@.. ..E.L.hT
-						00000320   1e ce c4 6e 24 59 f7 d9  48 04 12 00 89 76 d5 0b | ...n$Y..H....v..
-						00000330   2f 64 5a c8 21 17 04 cb  e1 5a 98 56 c0 db 60 a0 | /dZ.!....Z.V..`.
-						00000340   73 ae fb c4 2f b5 47 13  c5 e0 8d 0d 13 cc a9 a7 | s.../.G.........
-						00000350   8b 4b 1c 67 b2 e3 98 fc  c2 06 ed ac e5 8e 28 f0 | .K.g..........(.
-						00000360   53 b6 f4 31 4d 8a db 51  53 a5 88 2a 9e 75 dd d4 | S..1M..QS..*.u..
-						00000370   21 13 36 72 8b f3 99 a7  41 44 d8 b7 f0 d4 1d fe | !.6r....AD......
-						00000380   cd df dc ca 5e f8 2c b7  a6 f5 c0 3b e1 53 66 38 | ....^.,....;.Sf8
-						00000390   14 e4 6f 82 3d 07 d5 fb  72 9f 84 35 df 99 2a cc | ..o.=...r..5..*.
-						000003a0   5c 26 36 af aa 5b fc ba  4f b0 dd 61 35 37 fc 7e | \&6..[..O..a57.~
-						000003b0   89 0b d7 d2 2e f2 26 f2  68 93 9d 8d 7f 80 4f de | ......&.h.....O.
-						000003c0   a3 b3 e9 6a 23 f4 41 a4  c6 f7 6f e0 00 a5 ed 4c | ...j#.A...o....L
-						000003d0   fd bd 9f 64 a6 66 23 c9  b5 99 f4 90 96 98 b5 e5 | ...d.f#.........
-						000003e0   b4 01 6c dc b7 70 f0 51  e2 77 dd 9a 3c 80 f0 37 | ..l..p.Q.w..<..7
-						000003f0   b1 bb 8b 7d 7a 1c be 19  fc ff 4c 00 b2 99 0a b6 | ...}z.....L.....
-						00000400   a0 1a de c2 8b a5 e8 07  46 a1 01 85 ac 40 64 f6 | ........F....@d.
-						00000410   30 fa 37 8a 91 a5 71 a8  f7 5c 25 3c 9e 73 45 72 | 0.7...q..\%<.sEr
-						00000420   a4 e5 61 e4 49 42 15 4a  27 e1 fe 25 cd 4b 67 31 | ..a.IB.J'..%.Kg1
-						00000430   85 fa 10 34 c5 72 06 c2  95 37 66 bc 21 ea 62 b5 | ...4.r...7f.!.b.
-						00000440   36 a4 f5 bb 92 1b 2b 0b  d5 04 19 e6 5a c3 da 53 | 6.....+.....Z..S
-						00000450   0a 54 13 4d 77 a0 83 b8  5f 8f d2 9b dd d5 9f 26 | .T.Mw..._......&
-						00000460   cc da 99 ce 81 fd c1 06  44 57 cd 2c 71 11 13 93 | ........DW.,q...
-						00000470   4f a6 65 8f be 06 bf 6a  e4 fb 55 29 c3 60 d4 ee | O.e....j..U).`..
-						00000480   60 86 b4 78 fc c9 df 30  0b 4c a7 93 dc e3 4f 21 | `..x...0.L....O!
-						00000490   c6 b7 71 76 56 4b 37 60  df f5 a0 b5 9b d0 63 5b | ..qvVK7`......c[
-						000004a0   ce 5f 4a f6 d5 24 fd 46  4e b5 76 85 57 0d 1d e7 | ._J..$.FN.v.W...
-						000004b0   da c7 8b 13 d0 8c 86 82  6a 28 a4 10 2f de a7 4b | ........j(../..K
-						000004c0   04 4b e0 b2 2d 7b 56 16  75 fb 5d 5d 85 4d 05 1f | .K..-{V.u.]].M..
-						000004d0   7a 69 f3 9f 2c b7 a2 db  16 fe e5 b1 56 28 4c a0 | zi..,.......V(L.
-						000004e0   73 2d e3 d2 99 04 13 54  11 2d d9 62 dd 25 e0 0e | s-.....T.-.b.%..
-						000004f0   af 25 21 18 3a 0c 1f 89  bc 09 62 65 7b a1 26 74 | .%!.:.....be{.&t
-						00000500   78 6e 43 96 94 d3 67 71  d1 14 e5 e6 54 4f aa 86 | xnC...gq....TO..
-						00000510   7b 1f 8e a0 d0 a8 6f 29  b9 f5 e9 79 49 2f b3 81 | {.....o)...yI/..
-						00000520   1e 14 c1 45 8b 4f d4 a9  b1 2a 11 52 3c 6d 68 1a | ...E.O...*.R<mh.
-						00000530   73 62 ef f1 ae e3 fd 34  f5 9b e5 a0 0e 4e 93 d1 | sb.....4.....N..
-						00000540   7c 54 ee a9 00 ef 51 5b  0a da d8 00 7f c7 51 fb | |T....Q[......Q.
-						00000550   52 c4 f5 6b ec 22 78 8f  9b b0 c2 ee 28 d4 61 e6 | R..k."x.....(.a.
-						00000560   75 e5 a8 43 74 b3 c5 9e  6f 0a ff e5 7f 96 d7 18 | u..Ct...o.......
-						00000570   5b ca ec 8d cd da 9b 61  d3 00 f3 69 bf 9b 46 b4 | [......a...i..F.
-						00000580   4d fb 7c 90             | M.|.
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 1452
-	Identification: 54165
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x92a6
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945330486
-			Acknowledge Number: 2874140857
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 11528
-			Urgent Pointer : 0
-			Payload (1412): 
-						00000000  01 01 08 0a 8b 49 ab 9c  01 21 b1 55 51 3f 5a ed | .....I...!.UQ?Z.
-						00000010   dd 24 50 49 cb d2 c5 de  b5 eb c3 19 a0 bb 0c e5 | .$PI............
-						00000020   f1 b8 aa 2c 99 56 a0 9c  56 6c 0a 09 1c ce ec 76 | ...,.V..Vl.....v
-						00000030   67 f7 49 0d ed c9 c8 1b  b8 73 95 71 87 97 23 88 | g.I......s.q..#.
-						00000040   f7 df fd 6c 21 8e 4f 46  85 1c 92 92 45 7e 77 16 | ...l!.OF....E~w.
-						00000050   9c ab 9a dc a5 10 49 66  91 ef 81 af 6d 9a 9a 0f | ......If....m...
-						00000060   4b 7f 29 78 5b 71 bf 71  9e 10 60 ef 26 23 72 aa | K.)x[q.q..`.&#r.
-						00000070   30 94 7e 08 f0 e7 c3 01  5f 0c 1d bf c0 6a 17 d2 | 0.~....._....j..
-						00000080   f8 01 f0 ae d3 18 fe 3e  80 cf ab 64 99 9f f0 42 | .......>...d...B
-						00000090   9d f1 8c 84 f6 07 50 3a  e9 cb 2b b0 44 bd 19 95 | ......P:..+.D...
-						000000a0   73 e5 8a 08 9c 2d 10 d3  29 9e 7b 91 34 4c b8 61 | s....-..).{.4L.a
-						000000b0   19 fa d9 a2 02 d5 a0 f3  b8 fb 06 25 e6 84 0d 3d | ...........%...=
-						000000c0   e3 ef b6 23 26 18 92 df  9e 6c 6a e9 2c b5 d8 ef | ...#&....lj.,...
-						000000d0   30 90 0f 4d 0d 69 fc 7f  14 80 24 d2 65 e4 34 18 | 0..M.i....$.e.4.
-						000000e0   3b e2 f1 27 80 4e 97 cc  18 aa f4 08 04 3b fb 7a | ;..'.N.......;.z
-						000000f0   2a ba a9 0b 90 85 5f c7  f0 1e d3 3a 7e 53 0c 95 | *....._....:~S..
-						00000100   ff 9a 2a 40 97 84 f0 9c  73 3d 8e 78 5c c8 05 63 | ..*@....s=.x\..c
-						00000110   9b 25 86 d3 54 d4 4e da  75 80 c4 8e 8b cb ae 6d | .%..T.N.u......m
-						00000120   5e bf 51 2a 17 ea 5c 66  e3 3e 29 a0 9a 77 f3 86 | ^.Q*..\f.>)..w..
-						00000130   91 d4 77 f9 11 22 cf 27  47 8e a4 1d 25 02 9a e6 | ..w..".'G...%...
-						00000140   1f 64 65 85 b2 5a 47 c6  7f 31 4d ed 9d 42 49 cb | .de..ZG..1M..BI.
-						00000150   c9 eb 12 19 f4 97 89 43  9f f0 c7 35 8a 6b 95 61 | .......C...5.k.a
-						00000160   52 dd ea a1 39 10 2f ab  5f c9 2b f7 2c 6f 39 a8 | R...9./._.+.,o9.
-						00000170   34 70 c1 45 c1 d5 8d 51  f7 d3 4b bf f9 bc f1 f9 | 4p.E...Q..K.....
-						00000180   0c ad f9 09 92 c2 ad 82  71 63 6c f8 38 1d 64 2b | ........qcl.8.d+
-						00000190   9c b6 97 f2 bb 07 03 3a  76 70 38 df 3e d4 b8 c8 | .......:vp8.>...
-						000001a0   0e 70 16 9c 7c e6 27 21  ce ae 58 1b 3c cb 10 bd | .p..|.'!..X.<...
-						000001b0   da 7a 76 15 66 db 4e 23  ea 88 ea b6 1c 89 8c 72 | .zv.f.N#.......r
-						000001c0   f4 1e b5 8e e7 e7 34 45  5a 5b 94 fc 56 6f 29 a9 | ......4EZ[..Vo).
-						000001d0   34 4d 65 44 58 5e 96 2a  46 c2 a7 9f 8e c6 b9 1b | 4MeDX^.*F.......
-						000001e0   2f 71 bc 25 72 6e 4c 7c  2b 6c bc fa 56 9a f2 b6 | /q.%rnL|+l..V...
-						000001f0   94 86 73 7d 7d 41 73 27  12 ff 0a 0d 6c 91 38 27 | ..s}}As'....l.8'
-						00000200   6f 9e ce ec 14 70 d3 91  64 d7 27 c7 ad 12 fd 99 | o....p..d.'.....
-						00000210   32 73 19 8d fe e8 6f cd  6e dd b3 17 45 9e 64 ef | 2s....o.n...E.d.
-						00000220   75 eb 05 35 c0 c3 a9 8d  01 7a 05 e7 b3 76 0b a4 | u..5.....z...v..
-						00000230   12 80 c7 ef 3e 1d 41 48  cd 55 10 71 5c 53 02 c8 | ....>.AH.U.q\S..
-						00000240   02 74 8a 00 f5 4c e2 d7  53 c2 c4 e9 4b a0 a6 98 | .t...L..S...K...
-						00000250   a5 26 7b 4c 25 9f a2 62  ac eb 6e bd 24 5c 94 4a | .&{L%..b..n.$\.J
-						00000260   bb 40 7d cc b1 a5 96 18  3d f8 64 d8 72 6f 5d ff | .@}.....=.d.ro].
-						00000270   8b 82 cc bf 93 9f d4 50  b7 a4 aa 44 bf 58 49 9c | .......P...D.XI.
-						00000280   b1 d7 ef 00 b7 90 6b c8  af bc fc e6 24 e0 01 8a | ......k.....$...
-						00000290   59 05 98 ae c1 6e 0b 39  d0 df 94 76 79 a6 ef 5e | Y....n.9...vy..^
-						000002a0   a1 e0 70 e4 3f 8e a5 b4  fe 47 ca bf 4f a0 e5 90 | ..p.?....G..O...
-						000002b0   55 22 67 0e c8 18 f9 2b  4a 64 85 57 a0 bc 81 db | U"g....+Jd.W....
-						000002c0   7d 9e 2c 68 7f 50 b8 15  dd 90 fd 3e 70 3f 54 66 | }.,h.P.....>p?Tf
-						000002d0   15 02 a0 34 b5 25 7b c8  df 96 79 ea 61 47 55 5f | ...4.%{...y.aGU_
-						000002e0   71 b5 48 b4 97 1b e3 83  a6 61 b5 05 4a d4 9b 97 | q.H......a..J...
-						000002f0   64 f0 9f e9 e5 cf 83 bb  8c 0f c1 6a 8b 0e bf 69 | d..........j...i
-						00000300   ed 60 81 2d 1d ee df 99  b5 57 c9 29 d2 d2 19 3a | .`.-.....W.)...:
-						00000310   f2 2b 2b e3 e7 2a c6 07  d2 5f 3c 35 33 c7 38 a7 | .++..*..._<53.8.
-						00000320   52 b6 ed 49 ae 56 7a da  97 69 23 15 96 f4 cb 97 | R..I.Vz..i#.....
-						00000330   7c 0e b0 de e3 d6 34 82  2b 08 e2 25 a5 fb de 75 | |.....4.+..%...u
-						00000340   3e 46 a4 ef 8e 8b 38 d9  56 ef 42 21 af 97 4d c5 | >F....8.V.B!..M.
-						00000350   7e 54 6c b8 7b 72 e6 b4  44 62 94 f5 05 14 03 9e | ~Tl.{r..Db......
-						00000360   89 45 c8 cf 74 1d 70 bd  48 46 1a fa dd 49 5f 0e | .E..t.p.HF...I_.
-						00000370   f3 a2 fc 3b 20 d8 1b 96  c3 da 44 8b 72 16 56 5e | ...; .....D.r.V^
-						00000380   22 e9 1a ed 6e 76 48 6a  32 43 51 49 6f 0d 7f 73 | "...nvHj2CQIo..s
-						00000390   e2 9b f4 bc 23 d6 14 79  51 4b b7 57 94 c6 01 a9 | ....#..yQK.W....
-						000003a0   0d 1e 50 be fd 6d 6d 60  b7 36 b6 1a 54 c9 b3 79 | ..P..mm`.6..T..y
-						000003b0   e2 0a 77 3e 04 37 86 a1  81 84 0e 61 88 10 14 31 | ..w>.7.....a...1
-						000003c0   b9 e3 9e eb 8f f0 70 99  fc a1 62 fb d0 e7 d4 17 | ......p...b.....
-						000003d0   70 b5 2c 70 5b 7c 1d 74  01 45 63 c5 46 5a 69 ca | p.,p[|.t.Ec.FZi.
-						000003e0   45 56 be 77 a0 ef 05 b0  a2 35 35 c2 9f 78 2d c3 | EV.w.....55..x-.
-						000003f0   2c 39 a2 f1 b2 a3 69 2e  2c 63 df 2b 12 d9 e8 fb | ,9....i.,c.+....
-						00000400   fe ad 2e c3 43 7e ba 45  cd fc 04 1c 91 ac ae a4 | ....C~.E........
-						00000410   fb 69 7e f0 c7 82 b0 f7  cc 29 c6 49 cd 91 18 75 | .i~......).I...u
-						00000420   d1 70 37 46 2c fb 36 8c  e0 9a 64 fb 8d 8b 1d 1e | .p7F,.6...d.....
-						00000430   c8 d6 07 09 e9 95 0e 2b  f2 07 9b 67 23 8b a0 02 | .......+...g#...
-						00000440   88 b7 43 83 96 31 8a 00  3b 22 f7 3b 22 3c 2f dc | ..C..1..;".;"</.
-						00000450   90 58 9d 70 c7 df 93 79  f6 95 20 11 f8 d2 d2 66 | .X.p...y.. ....f
-						00000460   ed 5c 04 22 47 37 35 18  76 36 8b 92 5b 4b b7 b3 | .\."G75.v6..[K..
-						00000470   25 de 7b 55 55 3b ee a3  ef e9 4e cf 53 38 c7 ce | %.{UU;....N.S8..
-						00000480   68 82 df b6 3d 48 98 25  ad b3 d6 9a c5 20 0e ae | h...=H.%..... ..
-						00000490   f3 d1 4d d4 a9 d1 1f be  03 39 d7 57 d2 aa 85 d5 | ..M......9.W....
-						000004a0   83 1f f1 04 1e e9 db c0  4e 0d 98 8c 92 4b d6 d5 | ........N....K..
-						000004b0   81 67 d5 b9 eb 04 83 3f  1b 9e 2d 9d df d5 70 49 | .g.....?..-...pI
-						000004c0   8d 82 a1 3d dc f7 73 71  4f 78 b1 f1 10 73 1b a6 | ...=..sqOx...s..
-						000004d0   e9 d7 ec f1 75 07 43 ae  20 b3 2a 94 06 eb e9 f9 | ....u.C. .*.....
-						000004e0   9e 6b e3 37 83 13 30 9d  63 10 30 68 9a c2 1e 84 | .k.7..0.c.0h....
-						000004f0   27 91 2f 10 34 2f 9f 87  20 ce b5 f1 8f e2 4b 98 | './.4/.. .....K.
-						00000500   fd 30 92 20 5b 0e 65 26  d2 6f 3e 6b d5 1f 43 67 | .0. [.e&.o>k..Cg
-						00000510   24 32 0f 02 16 97 f2 8e  0c e0 29 00 13 48 9f bc | $2........)..H..
-						00000520   fd 56 3e f7 28 9c 19 ed  39 03 38 b3 6d 69 f8 a5 | .V>.(...9.8.mi..
-						00000530   b8 c5 a1 d5 ce a7 21 0f  e1 92 3d 75 66 ee 4b 16 | ......!...=uf.K.
-						00000540   ac d3 ee e3 7c 41 b8 fb  29 e4 13 94 88 50 5d 51 | ....|A..)....P]Q
-						00000550   6a f1 34 ae 8b 0c 94 e0  1e af 27 c2 67 ac 5d 40 | j.4.......'.g.]@
-						00000560   55 68 e7 eb a0 dd 9e 04  81 9e a6 24 5a eb be 33 | Uh.........$Z..3
-						00000570   d9 5e 05 f9 68 eb 8c 54  e2 1b e4 4f 7d 75 8f ac | .^..h..T...O}u..
-						00000580   d7 ce 6a 73             | ..js
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 1452
-	Identification: 54166
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x92a5
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945331886
-			Acknowledge Number: 2874140857
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 30087
-			Urgent Pointer : 0
-			Payload (1412): 
-						00000000  01 01 08 0a 8b 49 ab 9c  01 21 b1 55 6c 9c b4 5b | .....I...!.Ul..[
-						00000010   95 67 cf ef 58 8b cb e8  68 cd 0c c3 84 b4 ff 55 | .g..X...h......U
-						00000020   44 6c 9f e3 cf 11 1d af  20 3e 76 50 de b5 a3 c5 | Dl...... >vP....
-						00000030   09 8a 45 35 39 82 0c 73  91 9d 65 0a 2c cc 8a 53 | ..E59..s..e.,..S
-						00000040   ed 33 9c 1a 08 1b 72 26  d8 63 e0 be ff 04 34 88 | .3....r&.c....4.
-						00000050   e7 33 0b de a0 20 c5 17  cd 7d 91 04 e6 22 ee 3f | .3... ...}...".?
-						00000060   62 62 79 94 1c 5f 47 8f  f9 f9 2d 69 a2 d2 b5 f3 | bby.._G...-i....
-						00000070   e2 fe de 92 fe 32 cc 56  4a 5d bf f1 ae e6 4e b1 | .....2.VJ]....N.
-						00000080   0d 38 1b 2e cc fe b9 ce  2f dc e9 23 4e ab 8a 6d | .8....../..#N..m
-						00000090   9c e5 b7 19 96 79 16 22  53 76 f1 b1 80 8e 99 95 | .....y."Sv......
-						000000a0   b4 1d c0 2e 8d 03 86 9c  05 ad 09 69 c2 f8 f3 de | ...........i....
-						000000b0   3b 3d c2 f7 23 c0 40 58  b6 f9 48 c4 94 cd 2b f3 | ;=..#.@X..H...+.
-						000000c0   3b 31 77 b7 a4 17 41 17  42 60 76 98 4e 38 32 9e | ;1w...A.B`v.N82.
-						000000d0   4f 39 b7 31 72 3a 28 69  9e ae b6 86 de 44 34 11 | O9.1r:(i.....D4.
-						000000e0   96 09 f4 11 2d 68 04 0d  d3 a2 8c 68 fc e7 de 3f | ....-h.....h...?
-						000000f0   85 72 f4 96 9c f5 f3 7c  ee 45 34 e1 94 3d d3 02 | .r.....|.E4..=..
-						00000100   30 28 14 4a da 3b f9 93  b1 37 3c 46 fd f2 db 80 | 0(.J.;...7<F....
-						00000110   1d a9 8a 01 3b be 83 e0  95 51 03 5d 5e c4 a6 5f | ....;....Q.]^.._
-						00000120   33 d0 3e a1 c4 f3 78 a9  d7 5e f9 b1 c7 54 93 5e | 3.>...x..^...T.^
-						00000130   32 a7 54 41 eb aa 6f e4  2d 5e 51 23 18 62 2f 78 | 2.TA..o.-^Q#.b/x
-						00000140   47 43 54 24 97 75 4e 6c  d8 ae 42 ab f9 29 59 9d | GCT$.uNl..B..)Y.
-						00000150   07 c9 fc ac ab 63 cf 21  4f 90 9f a3 63 91 3d 13 | .....c.!O...c.=.
-						00000160   6a 07 58 4a 30 55 48 8e  39 93 07 54 29 8c ce c3 | j.XJ0UH.9..T)...
-						00000170   6d 98 9c ad 0a 88 3e fc  b4 95 01 60 9c 3d 20 2e | m.....>....`.= .
-						00000180   b3 b3 10 e4 ed 31 76 9a  6a 0a e4 21 9f 8a ac a8 | .....1v.j..!....
-						00000190   43 71 54 80 46 f9 52 d8  4f c5 56 17 56 64 78 8b | CqT.F.R.O.V.Vdx.
-						000001a0   3a d7 51 2b 1a 3a 09 d2  19 f2 4f 20 f8 96 fb 79 | :.Q+.:....O ...y
-						000001b0   ed a7 f8 bd 0f 24 1b 3a  d0 ff cf 4f 3f 07 0c 10 | .....$.:...O?...
-						000001c0   25 4a c3 70 88 ec d9 a7  68 a7 19 95 7b 15 e3 f8 | %J.p....h...{...
-						000001d0   6a e6 7b 8b cc 01 75 bc  b7 6b 1d cf 37 ca e5 3b | j.{...u..k..7..;
-						000001e0   0b aa e3 1a 63 a0 e5 b9  2b b6 3c 3b 9d 76 14 b5 | ....c...+.<;.v..
-						000001f0   34 23 19 32 70 3d 19 3b  88 39 57 e4 d5 f2 63 84 | 4#.2p=.;.9W...c.
-						00000200   6a 4c b1 79 3b 85 1e a2  e6 50 9b 36 eb 98 a0 db | jL.y;....P.6....
-						00000210   5e c3 b0 91 3b 5d 02 41  9d a5 fb b5 6f 3b 21 80 | ^...;].A....o;!.
-						00000220   bd a0 41 92 5b 11 56 7b  d9 b6 a9 0e bb 2a 3f 9a | ..A.[.V{.....*?.
-						00000230   22 9a d7 07 73 df 50 9a  2e 0b 9f 31 53 98 da 4b | "...s.P....1S..K
-						00000240   a3 32 da 9a 09 88 40 61  0d 4d c4 a6 cf 81 ab fe | .2....@a.M......
-						00000250   2d 14 be 9e 91 ba 90 ed  0b 35 c2 1e 04 a2 af 67 | -........5.....g
-						00000260   b0 82 81 e3 85 f4 67 a3  08 f6 1a 42 5f 2b bc c6 | ......g....B_+..
-						00000270   77 fd 20 a6 28 eb d2 3e  a6 aa 56 2d db 0c 03 0b | w. .(..>..V-....
-						00000280   51 34 9c c4 39 57 a5 b8  c3 6a f2 be 5d fa 59 36 | Q4..9W...j..].Y6
-						00000290   ea e8 92 c9 69 70 43 13  51 2e ae 0f da f9 8f f2 | ....ipC.Q.......
-						000002a0   fd 56 c7 69 7d 64 72 b4  de 8d 9a 3e 5a 6f fe e8 | .V.i}dr....>Zo..
-						000002b0   75 03 75 c6 c8 dc d1 a3  27 7d ed 2f 9c 05 1a e1 | u.u.....'}./....
-						000002c0   30 98 e6 25 f7 f2 1e e4  90 b2 8d f7 21 4f 6e 39 | 0..%........!On9
-						000002d0   3b 94 cd ee 54 a5 90 9d  76 c8 92 24 93 59 33 54 | ;...T...v..$.Y3T
-						000002e0   f1 0a a0 b0 b2 3f e6 a7  5e 37 70 9b b6 b5 f5 6d | .....?..^7p....m
-						000002f0   4e 9e 41 c7 c5 fe b4 e9  d6 d6 d8 97 76 e9 fe 05 | N.A.........v...
-						00000300   8b 03 f8 4e 1d 47 61 44  df b6 78 a6 bf 28 f5 6e | ...N.GaD..x..(.n
-						00000310   ec 66 e6 98 b0 86 3a b9  56 68 07 4b 38 4d db 4d | .f....:.Vh.K8M.M
-						00000320   c2 c4 a5 fa 98 00 38 47  31 10 a4 59 4a 53 a5 78 | ......8G1..YJS.x
-						00000330   77 89 1c e6 83 45 16 fc  1d 42 34 43 9d 0b 07 0a | w....E...B4C....
-						00000340   3f 09 24 b2 90 77 a4 48  f7 5d 73 5c f2 83 79 3d | ?.$..w.H.]s\..y=
-						00000350   aa c9 bc f0 bf ca 4f fa  a3 52 3d 99 81 ee 92 27 | ......O..R=....'
-						00000360   49 60 56 e6 6a 3f f6 00  1f cc 3e 3e ad 1f f3 f3 | I`V.j?....>>....
-						00000370   ab 29 88 4f 63 bb 6e e6  99 78 ce ab e9 db a5 bd | .).Oc.n..x......
-						00000380   60 a0 5b 8e 95 f1 30 b0  ea 98 76 98 9d 0c ef 11 | `.[...0...v.....
-						00000390   f6 88 d4 09 15 95 44 34  32 09 80 0d 53 f6 cc 34 | ......D42...S..4
-						000003a0   c7 d6 6b 6c 70 a7 65 56  a4 d4 96 4c b6 64 8e 30 | ..klp.eV...L.d.0
-						000003b0   6a 9b 9d 87 da 25 16 b3  6b dd 74 0e 6b b9 4f de | j....%..k.t.k.O.
-						000003c0   19 94 94 28 5f e0 a5 8b  7c 0f 1c dd 26 c0 e8 fb | ...(_...|...&...
-						000003d0   3d 42 41 92 ff ba f2 bc  1f 3c b3 ab 7e b6 60 c2 | =BA......<..~.`.
-						000003e0   b2 62 ca 66 63 70 80 3f  26 8b 71 39 74 bb 2e 50 | .b.fcp.?&.q9t..P
-						000003f0   f8 33 32 6f 7f 13 cc ab  22 2f b4 64 33 62 58 63 | .32o...."/.d3bXc
-						00000400   6a 32 8e da de 16 37 58  1e 76 79 d1 26 9e ea 68 | j2....7X.vy.&..h
-						00000410   af 0e 32 f2 30 fe 33 c9  38 b6 d4 5c a5 c8 56 3d | ..2.0.3.8..\..V=
-						00000420   e1 bf a6 32 ed 3c 78 5c  03 9f 2c ce b0 e5 86 e9 | ...2.<x\..,.....
-						00000430   2b fd e2 b7 c1 37 5f 49  4a 6c 45 0e 47 a3 c8 f8 | +....7_IJlE.G...
-						00000440   fe 23 65 0e 00 25 7e 89  35 b5 27 56 ba 5b d0 5a | .#e..%~.5.'V.[.Z
-						00000450   a4 88 22 05 9b 20 a4 e8  08 01 06 fc 5a fc 02 8a | ..".. ......Z...
-						00000460   6b 52 86 81 5b fa c6 d5  82 04 11 5a 16 fb 1d ba | kR..[......Z....
-						00000470   a5 ca 7f 0a ef 7f 01 7b  7a f1 4d 9c ef f3 aa 26 | .......{z.M....&
-						00000480   7c 48 3d aa 00 61 b1 de  9d 9a ae fb 63 3e 4b c1 | |H=..a......c>K.
-						00000490   c0 60 5c bf 70 b3 a7 75  ba 0d b1 cf 7c 9f 51 cb | .`\.p..u....|.Q.
-						000004a0   17 55 ac da 10 fa 42 87  ed 57 47 0f b0 ae 08 ec | .U....B..WG.....
-						000004b0   6e 56 52 0a bb 96 44 6c  c5 65 a5 65 3a 4f ac bf | nVR...Dl.e.e:O..
-						000004c0   9c 7c cf 98 17 c0 95 45  1c 86 a0 47 cb ff 51 de | .|.....E...G..Q.
-						000004d0   86 f6 d3 9d 36 31 bf 1c  69 5e 83 47 38 2f 88 85 | ....61..i^.G8/..
-						000004e0   62 01 c8 73 70 79 44 37  da df f1 78 26 b1 b5 20 | b..spyD7...x&.. 
-						000004f0   0a d0 cc ab ca 60 e2 51  7b 34 a5 91 06 b0 f9 24 | .....`.Q{4.....$
-						00000500   e6 5a f8 ea 74 cc ff bd  d1 bb b3 bf c0 f1 ba 11 | .Z..t...........
-						00000510   da d0 6b 50 1c 2c a1 6e  38 65 ac 3a ce eb 82 b5 | ..kP.,.n8e.:....
-						00000520   a5 71 27 47 98 7e 45 af  78 f6 09 ce 96 f0 61 35 | .q'G.~E.x.....a5
-						00000530   01 69 c4 8a 29 6a 73 10  ad 58 c4 2c cb 48 39 b0 | .i..)js..X.,.H9.
-						00000540   98 ae dc 40 f5 ad a6 72  e6 f8 1e 2e 41 e5 57 9a | ...@...r....A.W.
-						00000550   e0 79 36 2f 95 72 48 a2  39 11 fe 68 c1 2b f4 96 | .y6/.rH.9..h.+..
-						00000560   d7 b7 d0 1d 1f 78 e1 fa  c0 2a 07 1d 55 f1 11 88 | .....x...*..U...
-						00000570   0a ce af 3d dd 62 ab d2  af d0 c6 ab 59 7a af 94 | ...=.b......Yz..
-						00000580   11 60 57 33             | .`W3
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 1315
-	Identification: 54167
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x932d
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945333286
-			Acknowledge Number: 2874140857
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 15330
-			Urgent Pointer : 0
-			Payload (1275): 
-						00000000  01 01 08 0a 8b 49 ab 9c  01 21 b1 55 c2 75 3b ab | .....I...!.U.u;.
-						00000010   5f 35 ba f8 77 59 f5 e9  46 48 bb 31 14 c8 be a6 | _5..wY..FH.1....
-						00000020   4d 33 a9 24 9e 86 d0 00  e4 c2 d7 2d cb 14 f5 8d | M3.$.......-....
-						00000030   ee 95 e6 a0 27 78 79 3e  89 3d 14 be 1a d8 90 57 | ....'xy>.=.....W
-						00000040   5a e5 f3 73 a5 b2 e9 6f  cf 71 ad 44 8a f5 8e 9d | Z..s...o.q.D....
-						00000050   db d3 ed 75 73 4b ef 41  3f 54 23 2d 96 18 c3 29 | ...usK.A?T#-...)
-						00000060   7e 7a 2e 01 4f 30 2f 6c  72 f4 3c 97 b6 60 6d e7 | ~z..O0/lr.<..`m.
-						00000070   0a 42 68 8c ce 56 f1 85  65 10 47 0d 29 17 3f 05 | .Bh..V..e.G.).?.
-						00000080   cf 43 22 54 89 0f b6 e3  52 4a 85 02 2a 2a 62 33 | .C"T....RJ..**b3
-						00000090   e4 79 c1 ed c0 ba c9 b8  0b 4d a1 dc 27 8e 31 5a | .y.......M..'.1Z
-						000000a0   33 95 6c f6 f4 1a 44 c8  6c f1 3a b5 ef de 90 b9 | 3.l...D.l.:.....
-						000000b0   8f 1c 43 8e 74 94 c3 bf  19 04 80 a3 66 54 94 07 | ..C.t.......fT..
-						000000c0   93 1b 75 48 5e a0 1a 86  48 bc 39 c4 62 42 c5 31 | ..uH^...H.9.bB.1
-						000000d0   9c 8c 55 5d 1e bb e9 53  01 00 6b 42 81 13 32 46 | ..U]...S..kB..2F
-						000000e0   bd ef c3 f1 c6 fb f4 e2  3f 5c 2b f6 b5 6b 07 17 | ........?\+..k..
-						000000f0   9c ea 62 c4 e5 a6 86 ee  d3 d9 6a 58 3a 57 c1 06 | ..b.......jX:W..
-						00000100   42 91 67 20 99 57 dd 04  d9 61 fe 16 02 9a 00 87 | B.g .W...a......
-						00000110   5a 41 69 0d 27 f4 84 bd  43 29 0e d8 74 4c 88 d4 | ZAi.'...C)..tL..
-						00000120   90 90 c4 a3 7c 8b cb 24  2f 08 fe e4 5a c2 64 92 | ....|..$/...Z.d.
-						00000130   97 da f8 b9 59 2e 72 b4  07 d9 f9 36 74 b8 74 8f | ....Y.r....6t.t.
-						00000140   10 67 92 fe ad 85 32 11  9a 48 33 d9 06 16 77 b2 | .g....2..H3...w.
-						00000150   1c 70 54 0a ec 8c 3b 51  da 5a 50 f1 de 61 84 2c | .pT...;Q.ZP..a.,
-						00000160   0b 56 29 8d 4e a4 9e 34  d8 0a 0c aa 1d fc 65 39 | .V).N..4......e9
-						00000170   ac 03 f8 71 71 b5 e0 fa  71 5b c3 cf a0 fa 91 74 | ...qq...q[.....t
-						00000180   a6 a9 37 5e 1f c9 e7 1b  75 b3 e2 0f 78 13 4e d4 | ..7^....u...x.N.
-						00000190   f4 17 e7 03 79 8e 74 dc  5a 05 6a d1 21 06 32 52 | ....y.t.Z.j.!.2R
-						000001a0   1f 41 58 d4 3c e0 d7 32  cf 28 2f b8 9a 7a ea ba | .AX.<..2.(/..z..
-						000001b0   41 3e ee 2e e7 ce 1a 77  03 80 91 40 cf 75 87 8b | A>.....w...@.u..
-						000001c0   17 35 94 47 00 af 33 14  83 af 1e f2 d7 3e 31 d4 | .5.G..3......>1.
-						000001d0   b8 5a b0 c6 2a 90 51 d0  0d 43 4c a8 ea 9d 0f e9 | .Z..*.Q..CL.....
-						000001e0   cb c5 95 2d 08 52 4c 9f  8f a1 68 52 e1 57 03 78 | ...-.RL...hR.W.x
-						000001f0   8a 60 1c 0e 1c c1 7d 93  05 9d bd 7c d8 3f 4b 82 | .`....}....|.?K.
-						00000200   d6 e4 9d 3f e8 e7 72 dd  f5 b3 60 ff 4c ab fc f5 | ...?..r...`.L...
-						00000210   9c 4a d9 0e ec c6 d4 4e  94 b8 10 2b fe 0b 7e 2e | .J.....N...+..~.
-						00000220   4c 14 a3 55 bc a0 53 cc  4e f2 bc 22 eb f3 6b 23 | L..U..S.N.."..k#
-						00000230   57 72 89 f7 7c b0 ef 95  e5 48 e2 cd e9 ab 34 73 | Wr..|....H....4s
-						00000240   ac 61 49 ad 0a d7 03 e4  ab ac cb 94 6d 7a 50 6c | .aI.........mzPl
-						00000250   bd 4a f3 e4 c3 ea 6a 4a  5e 20 91 8e d7 7f 69 3b | .J....jJ^ ....i;
-						00000260   e5 ad 5d a7 0b ed 4a 95  f7 81 bf 7d 26 83 77 7d | ..]...J....}&.w}
-						00000270   8a cd 1a 9b 68 1b 09 eb  2c 8c 12 d5 59 6a 3b 81 | ....h...,...Yj;.
-						00000280   a7 d1 ab 6a a7 cb 66 64  59 76 f4 5e 1e f1 0e 2c | ...j..fdYv.^...,
-						00000290   7d b2 9d 89 ff 9f b4 02  d6 ab 84 45 9a 03 55 02 | }..........E..U.
-						000002a0   4e cc ed e2 a7 58 1f fe  1a 9e 3e 2f 92 1d 2b cb | N....X....>/..+.
-						000002b0   94 2e 33 9e 5f 1c 9d ed  f7 15 84 b1 b1 ac 39 d5 | ..3._.........9.
-						000002c0   8e 56 a0 38 03 4c 6a 1a  38 5f 90 62 94 c2 47 f7 | .V.8.Lj.8_.b..G.
-						000002d0   0d 36 3e d1 a3 0a 7c 09  72 8c 5c 58 40 7d 15 ea | .6>...|.r.\X@}..
-						000002e0   b4 57 42 0c 87 03 91 3e  80 3f c7 f0 7c 0e d9 cd | .WB....>.?..|...
-						000002f0   22 73 72 76 ec b9 10 09  87 1e d2 6f 4f 80 67 88 | "srv.......oO.g.
-						00000300   57 fc 3a 91 78 ca 98 b6  f6 69 7d f2 4a d3 ce 10 | W.:.x....i}.J...
-						00000310   54 81 93 62 0e 04 31 43  9f 9c e5 c1 bf cb 6a 6b | T..b..1C......jk
-						00000320   54 fb 46 00 f0 92 76 13  1c a0 31 28 b1 33 95 3a | T.F...v...1(.3.:
-						00000330   51 ff 74 a1 ed 2f eb ff  4e f9 1b 84 9c ba 91 16 | Q.t../..N.......
-						00000340   ed a2 03 b3 c3 32 4a 83  fe 3b d4 ef fc 1f 9f e8 | .....2J..;......
-						00000350   2b 51 bf d6 9e 33 ae 99  0c c7 55 2d 70 15 4d 16 | +Q...3....U-p.M.
-						00000360   3e ed 77 55 d4 82 68 2d  7b 42 74 0e a0 89 06 70 | >.wU..h-{Bt....p
-						00000370   01 91 6e 5e e7 12 d9 42  33 b0 45 fb 47 b6 d7 b9 | ..n^...B3.E.G...
-						00000380   9e 33 f8 10 82 96 f8 40  ac 38 6d 08 c2 22 99 0f | .3.....@.8m.."..
-						00000390   9d ca 0e 47 05 1c b8 be  51 50 aa 71 48 be d9 c7 | ...G....QP.qH...
-						000003a0   79 9d e9 4c 7b a8 7e 64  31 7a eb 68 cf ed 3b 53 | y..L{.~d1z.h..;S
-						000003b0   4b e4 63 cf 04 65 1f 0a  38 b3 cb a7 2e e4 5f f0 | K.c..e..8....._.
-						000003c0   df fb d4 67 d8 d3 50 ed  4b 03 7f 62 95 b6 75 2f | ...g..P.K..b..u/
-						000003d0   4e 4a b4 42 68 dc 8e d2  90 e1 db 01 98 55 91 e8 | NJ.Bh........U..
-						000003e0   86 2c 12 e9 e6 67 19 1d  91 c7 6d b8 ad af c1 fb | .,...g....m.....
-						000003f0   47 08 e8 24 e2 1d 34 99  fc 77 c5 b6 83 6f 86 61 | G..$..4..w...o.a
-						00000400   b8 0e db 5f 2e 10 39 cd  79 dd 50 62 74 5a 6a 88 | ..._..9.y.PbtZj.
-						00000410   72 fe 4a f8 d4 03 af db  b1 43 09 59 d5 30 9e 14 | r.J......C.Y.0..
-						00000420   8f 2c 97 95 45 3a 30 08  c0 de 71 0c df 2a a1 e5 | .,..E:0...q..*..
-						00000430   c0 f8 3c 5e c8 66 ae af  c4 7f d2 94 ac fa 89 18 | ..<^.f..........
-						00000440   8d cc 9d 8d 2c e0 44 ae  e7 37 bf 56 87 30 f7 56 | ....,.D..7.V.0.V
-						00000450   c8 23 8c f5 de 19 90 89  1c 72 bb 56 bd a5 fa 80 | .#.......r.V....
-						00000460   c5 7e f9 ff 49 bb e4 e5  85 8f 7c 4d f4 7d 2c 6c | .~..I.....|M.},l
-						00000470   4a fc 87 5d 9a 14 76 31  b6 ee c2 cf a7 53 b8 5b | J..]..v1.....S.[
-						00000480   53 9c ab b1 47 85 50 2f  fd 9d 7d 42 61 28 94 08 | S...G.P/..}Ba(..
-						00000490   9c a0 d9 b3 63 81 54 bb  bc 22 25 99 96 2e c6 8c | ....c.T.."%.....
-						000004a0   99 db 5e e4 4b 7a e3 5e  18 df a9 e1 b7 a1 76 b1 | ..^.Kz.^......v.
-						000004b0   2c d7 c3 b4 8d 55 ff 50  53 f2 be b7 bb e4 37 00 | ,....U.PS.....7.
-						000004c0   4a f9 35 ea a7 ca 91 56  fc bd ab 24 f6 50 25 16 | J.5....V...$.P%.
-						000004d0   f8 72 ab f0 e7 04 10 9e  f6 b4 b8 1c f2 99 df fe | .r..............
-						000004e0   24 f4 cf c1 82 d5 e6 32  be 9c 7d d8 c3 1f 34 48 | $......2..}...4H
-						000004f0   ad 29 11 df 8c 0b 7b 67  b6 2d 9e      | .)....{g.-.
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 52
-	Identification: 17947
-	Flags + frag offset: 0x4000
-	TTL: 107
-	Protocol: 6
-	Header checksum: 0xfa98
-	Source IP: 52.168.117.171
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140857
-			Acknowledge Number: 945330486
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 16384
-			Checksum       : 23678
-			Urgent Pointer : 0
-			Payload (12): 
-						00000000  01 01 08 0a 01 21 b7 df  8b 49 ab 9c     | .....!...I..
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 52
-	Identification: 17948
-	Flags + frag offset: 0x4000
-	TTL: 107
-	Protocol: 6
-	Header checksum: 0xfa97
-	Source IP: 52.168.117.171
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140857
-			Acknowledge Number: 945333286
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 16384
-			Checksum       : 20876
-			Urgent Pointer : 0
-			Payload (12): 
-						00000000  01 01 08 0a 01 21 b7 e1  8b 49 ab 9c     | .....!...I..
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:31] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 87
-	Identification: 17949
-	Flags + frag offset: 0x4000
-	TTL: 107
-	Protocol: 6
-	Header checksum: 0xfa73
-	Source IP: 52.168.117.171
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140857
-			Acknowledge Number: 945334549
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 16379
-			Checksum       : 25252
-			Urgent Pointer : 0
-			Payload (47): 
-						00000000  01 01 08 0a 01 21 b7 e1  8b 49 ab 9c 17 03 03 00 | .....!...I......
-						00000010   1e dc 04 ea 97 28 ca e3  71 62 7a a7 e3 88 e0 46 | .....(..qbz....F
-						00000020   01 af 15 f5 d4 b6 c7 25  ba b5 a9 7a a1 71 e1  | .......%...z.q.
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:32] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 52
-	Identification: 54168
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0x981b
-	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
-		
-TCP Header 
-			Source Port: 46068
-			Destination Port: 443
-			Sequence Number: 945334549
-			Acknowledge Number: 2874140892
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 35262
-			Urgent Pointer : 0
-			Payload (12): 
-						00000000  01 01 08 0a 8b 49 ac 95  01 21 b7 e1     | .....I...!..
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:32] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 3000
-	Flags + frag offset: 0x0000
-	TTL: 255
-	Protocol: 1
-	Header checksum: 0xd38a
-	Source IP: 192.168.100.20
-	Destination IP: 216.58.223.110
-		
-ICMP Header 
-	Type: 8 (Echo Request)
-	Code: 0
-	Checksum: 0x1a88
-	ID: 4513
-	Sequence: 11
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:32] Captured ICMP Packet
-	
-
-*************************************ICMP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 84
-	Identification: 0
-	Flags + frag offset: 0x0000
-	TTL: 116
-	Protocol: 1
-	Header checksum: 0x6a43
-	Source IP: 216.58.223.110
-	Destination IP: 192.168.100.20
-		
-ICMP Header 
-	Type: 0 (Echo Reply)
-	Code: 0
-	Checksum: 0x2288
-	ID: 4513
-	Sequence: 11
-	Payload (56): 
-						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
-						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:32] Captured TCP Packet
+[2025-09-26 21:09:24] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -1830,19 +556,19 @@ ICMP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 146
-	Identification: 17950
+	Identification: 28550
 	Flags + frag offset: 0x4000
-	TTL: 107
+	TTL: 103
 	Protocol: 6
-	Header checksum: 0xfa37
-	Source IP: 52.168.117.171
+	Header checksum: 0xba99
+	Source IP: 52.182.143.211
 	Destination IP: 192.168.100.20
 		
 TCP Header 
 			Source Port: 443
-			Destination Port: 46068
-			Sequence Number: 2874140892
-			Acknowledge Number: 945334549
+			Destination Port: 55136
+			Sequence Number: 2064662291
+			Acknowledge Number: 2437979624
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -1850,22 +576,22 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 16379
-			Checksum       : 18354
+			Window         : 16382
+			Checksum       : 48309
 			Urgent Pointer : 0
 			Payload (106): 
-						00000000  01 01 08 0a 01 21 b8 d5  8b 49 ac 95 17 03 03 00 | .....!...I......
-						00000010   59 95 6d 63 80 4e 90 0b  7a 8f a4 b4 99 29 f4 89 | Y.mc.N..z....)..
-						00000020   c4 02 ff 75 7c f5 6e 22  3e ac f9 b9 16 68 fe e9 | ...u|.n">....h..
-						00000030   9a 24 63 a8 bb 7d 03 5f  4b b7 ab 16 12 9d b4 9d | .$c..}._K.......
-						00000040   9c 6a ae fc 01 4f 80 fb  80 49 a0 21 6c fa 22 9e | .j...O...I.!l.".
-						00000050   ba d0 36 84 c5 e3 74 99  e5 99 16 19 19 1e 05 c6 | ..6...t.........
-						00000060   40 2d ef 5c 19 ed 06 1e  d9 7c       | @-.\.....|
+						00000000  01 01 08 0a 05 9c 48 42  36 73 6d 9c 17 03 03 00 | ......HB6sm.....
+						00000010   59 99 3f be 60 0b e3 30  44 9e bb 91 97 55 3d 80 | Y.?.`..0D....U=.
+						00000020   83 4f e5 86 03 64 b2 15  a4 75 6c c1 a7 c9 58 7d | .O...d...ul...X}
+						00000030   68 17 db a4 41 13 f3 ff  d1 02 f6 11 d2 5e 2f e6 | h...A........^/.
+						00000040   aa e6 68 f4 a4 af b4 f3  27 b5 02 ce 64 9d 9d 03 | ..h.....'...d...
+						00000050   97 f6 ae b9 eb 8f af 2d  e8 c0 1a a8 a7 49 a5 77 | .......-.....I.w
+						00000060   b3 1a 73 a9 52 44 52 7d  07 a2       | ..s.RDR}..
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:32] Captured TCP Packet
+[2025-09-26 21:09:24] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -1876,19 +602,19 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 52
-	Identification: 54169
+	Identification: 64337
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 6
-	Header checksum: 0x981a
+	Header checksum: 0x562c
 	Source IP: 192.168.100.20
-	Destination IP: 52.168.117.171
+	Destination IP: 52.182.143.211
 		
 TCP Header 
-			Source Port: 46068
+			Source Port: 55136
 			Destination Port: 443
-			Sequence Number: 945334549
-			Acknowledge Number: 2874140986
+			Sequence Number: 2437979624
+			Acknowledge Number: 2064662385
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -1896,16 +622,16 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 451
-			Checksum       : 34728
+			Window         : 450
+			Checksum       : 54781
 			Urgent Pointer : 0
 			Payload (12): 
-						00000000  01 01 08 0a 8b 49 ad 59  01 21 b8 d5     | .....I.Y.!..
+						00000000  01 01 08 0a 36 73 6e 8f  05 9c 48 42     | ....6sn...HB
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:32] Captured TCP Packet
+[2025-09-26 21:09:24] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -1915,62 +641,20 @@ TCP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 78
-	Identification: 14551
-	Flags + frag offset: 0x4000
-	TTL: 45
-	Protocol: 6
-	Header checksum: 0xf1aa
-	Source IP: 140.82.114.25
-	Destination IP: 192.168.100.20
-		
-TCP Header 
-			Source Port: 443
-			Destination Port: 44184
-			Sequence Number: 2049099969
-			Acknowledge Number: 2034156420
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 70
-			Checksum       : 60389
-			Urgent Pointer : 0
-			Payload (38): 
-						00000000  01 01 08 0a 32 67 65 99  19 9a 83 6b 17 03 03 00 | ....2ge....k....
-						00000010   15 ea 14 22 93 8c 93 6c  4c 14 b1 c8 43 6d e2 52 | ..."...lL...Cm.R
-						00000020   51 a0 77 e9 ac 16           | Q.w...
-						
-	
-
-##############################################################################
-[2025-09-26 20:33:32] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 82
-	Identification: 31445
+	IP Total length: 87
+	Identification: 64338
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 6
-	Header checksum: 0x9ca8
+	Header checksum: 0x5608
 	Source IP: 192.168.100.20
-	Destination IP: 140.82.114.25
+	Destination IP: 52.182.143.211
 		
 TCP Header 
-			Source Port: 44184
+			Source Port: 55136
 			Destination Port: 443
-			Sequence Number: 2034156420
-			Acknowledge Number: 2049099995
+			Sequence Number: 2437979624
+			Acknowledge Number: 2064662385
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -1978,18 +662,56 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 471
-			Checksum       : 22422
+			Window         : 450
+			Checksum       : 60303
 			Urgent Pointer : 0
-			Payload (42): 
-						00000000  01 01 08 0a 19 9b 6d cb  32 67 65 99 17 03 03 00 | ......m.2ge.....
-						00000010   19 75 fe 6f 47 b0 56 4a  dd e7 fb 7d 40 5c 4a f6 | .u.oG.VJ...}@\J.
-						00000020   a3 7e da fa a1 cd 72 cd  e4 d5       | .~....r...
+			Payload (47): 
+						00000000  01 01 08 0a 36 73 6e 92  05 9c 48 42 17 03 03 00 | ....6sn...HB....
+						00000010   1e 59 6e d6 3c 0e 3c 41  f9 0e 57 20 56 a3 22 a0 | .Yn.<.<A..W V.".
+						00000020   57 c7 e1 2b 91 06 f3 4f  23 d1 02 61 d6 ce 47  | W..+...O#..a..G
 						
 	
 
 ##############################################################################
-[2025-09-26 20:33:32] Captured TCP Packet
+[2025-09-26 21:09:25] Captured UDP Packet
+	
+
+*************************************UDP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 161
+	Identification: 44371
+	Flags + frag offset: 0x4000
+	TTL: 4
+	Protocol: 17
+	Header checksum: 0xb454
+	Source IP: 192.168.100.1
+	Destination IP: 239.255.255.250
+		
+UDP Header 
+	Source Port: 48737
+	Destination Port: 1900
+	UDP length: 141
+	UDP Checksum: 0x343c
+	Payload (133): 
+						00000000  4d 2d 53 45 41 52 43 48  20 2a 20 48 54 54 50 2f | M-SEARCH * HTTP/
+						00000010   31 2e 31 0d 0a 48 4f 53  54 3a 20 32 33 39 2e 32 | 1.1..HOST: 239.2
+						00000020   35 35 2e 32 35 35 2e 32  35 30 3a 31 39 30 30 0d | 55.255.250:1900.
+						00000030   0a 4d 41 4e 3a 20 22 73  73 64 70 3a 64 69 73 63 | .MAN: "ssdp:disc
+						00000040   6f 76 65 72 22 0d 0a 4d  58 3a 20 35 0d 0a 53 54 | over"..MX: 5..ST
+						00000050   3a 20 75 72 6e 3a 77 77  77 2d 68 75 61 77 65 69 | : urn:www-huawei
+						00000060   2d 63 6f 6d 3a 73 65 72  76 69 63 65 3a 4e 65 74 | -com:service:Net
+						00000070   77 6f 72 6b 53 79 6e 63  53 65 72 76 69 63 65 3a | workSyncService:
+						00000080   31 0d 0a 0d 0a            | 1....
+						
+	
+
+##############################################################################
+[2025-09-26 21:09:25] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -2000,19 +722,19 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 52
-	Identification: 14552
+	Identification: 28551
 	Flags + frag offset: 0x4000
-	TTL: 45
+	TTL: 103
 	Protocol: 6
-	Header checksum: 0xf1c3
-	Source IP: 140.82.114.25
+	Header checksum: 0xbaf6
+	Source IP: 52.182.143.211
 	Destination IP: 192.168.100.20
 		
 TCP Header 
 			Source Port: 443
-			Destination Port: 44184
-			Sequence Number: 2049099995
-			Acknowledge Number: 2034156450
+			Destination Port: 55136
+			Sequence Number: 2064662385
+			Acknowledge Number: 2437979659
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -2020,11 +742,59 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 70
-			Checksum       : 1166
+			Window         : 16382
+			Checksum       : 38517
 			Urgent Pointer : 0
 			Payload (12): 
-						00000000  01 01 08 0a 32 67 66 c0  19 9b 6d cb     | ....2gf...m.
+						00000000  01 01 08 0a 05 9c 49 68  36 73 6e 92     | ......Ih6sn.
+						
+	
+
+##############################################################################
+[2025-09-26 21:09:26] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 170
+	Identification: 64339
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0x55b4
+	Source IP: 192.168.100.20
+	Destination IP: 52.182.143.211
+		
+TCP Header 
+			Source Port: 55136
+			Destination Port: 443
+			Sequence Number: 2437979659
+			Acknowledge Number: 2064662385
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 1
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 450
+			Checksum       : 55238
+			Urgent Pointer : 0
+			Payload (130): 
+						00000000  01 01 08 0a 36 73 75 e3  05 9c 49 68 17 03 03 00 | ....6su...Ih....
+						00000010   71 c0 1d 27 4a 35 87 d8  45 bc 3e f4 d3 4d 3d 62 | q..'J5..E.>..M=b
+						00000020   8d 14 93 29 56 f4 99 a7  71 15 81 ab 13 41 6a 6b | ...)V...q....Ajk
+						00000030   c1 5c 4b ca 83 ea 32 75  e5 8f c8 c2 7d e8 05 4f | .\K...2u....}..O
+						00000040   6d 2b 00 e4 a9 8b 21 3c  c4 cc 3d 4d 87 c7 4b f6 | m+....!<..=M..K.
+						00000050   71 a8 8c 3f 93 8b cc 65  af 7f 95 00 0c a7 bc 20 | q..?...e....... 
+						00000060   d6 e2 16 04 8f 91 bf 5f  c6 7a 3e 72 71 84 c6 e3 | ......._.z>rq...
+						00000070   ac 4c 55 37 ac d2 b1 5b  a4 e4 36 4c 18 b0 06 97 | .LU7...[..6L....
+						00000080   21 42               | !B
 						
 	
 
