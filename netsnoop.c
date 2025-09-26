@@ -39,6 +39,7 @@ void capture_packets(void){
    ssize_t  received_bytes;
    SA saddr;
    socklen_t addr_size;
+   printf(WHITE"NetSnoop Listening on all interfaces\n"RESET);
    while(1){
       /* 
         receive the packet ,process it 
