@@ -110,6 +110,8 @@ void showicmp(i8 *data,ssize_t data_size){
    
    inet_ntop(AF_INET, &ips->src, src_ip_str, INET_ADDRSTRLEN);
    inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
+   free(ips);
+
    printf("\n\n");
    printf(WHITE"%s From %s ,To %s  ICMP packet\n"RESET,get_timestamp(),src_ip_str,dst_ip_str);
    sleep(1);
@@ -151,7 +153,7 @@ void showicmp(i8 *data,ssize_t data_size){
 
    fprintf(logfile,"\t\n\n##############################################################################\n");
 
-   free(ips);
+
 
 }
 
@@ -171,6 +173,8 @@ void showudp(i8 *data,ssize_t data_size){
     
     inet_ntop(AF_INET, &ips->src, src_ip_str, INET_ADDRSTRLEN);
     inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
+    free(ips);
+
     printf("\n\n");
 
     printf(WHITE"%s From %s on Port %u,To %s  on Port %u UDP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(udp_header->uh_sport),dst_ip_str,ntohs(udp_header->uh_dport));
@@ -215,12 +219,16 @@ void showtcp(i8 *data,ssize_t data_size){
     
     inet_ntop(AF_INET, &ips->src, src_ip_str, INET_ADDRSTRLEN);
     inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
+    
+    free(ips);
+
     printf("\n\n");
     printf(WHITE"%s From %s on Port %u,To %s  on Port %u TCP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(tcp_header->source),dst_ip_str,ntohs(tcp_header->dest));
+
     sleep(1);
-
+    
    fprintf(logfile,"\t\t\nTCP Header \n");
-
+   
 
    fprintf(logfile,"\t\t\tSource Port: %u\n",ntohs(tcp_header->source));
    fprintf(logfile,"\t\t\tDestination Port: %u\n",ntohs(tcp_header->dest));
