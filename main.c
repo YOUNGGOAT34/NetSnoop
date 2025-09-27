@@ -1,6 +1,10 @@
 #include "netsnoop.h"
 
+/*
+ Ping flood /
+ ICMP flood
 
+*/
 
 
 int main(void){

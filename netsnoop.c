@@ -1,7 +1,7 @@
 #include "netsnoop.h"
 
 FILE *logfile;
-volatile sig_atomic_t keep_sniffing=1;
+volatile sig_atomic_t keep_sniffing=1;                                                                                                                                                        
 
 void handle_signal(__attribute__((unused)) i32 sig){
       keep_sniffing=0;
@@ -26,7 +26,7 @@ void capture_packets(){
    if(!logfile){
       error(true,"Failed to create the log file");
    }
-  
+                     
    //a socket that will sniff on all interfaces ,and all protocals
    i32 socket_fd=socket(PACKETS,SOCK_RAW,htons(ALL_INTERFACES));
 
@@ -54,7 +54,8 @@ void capture_packets(){
       addr_size=sizeof(saddr);
       received_bytes=recvfrom(socket_fd,packet_buffer,BUFFER_SIZE,0,&saddr,&addr_size);
      
-      if(received_bytes<0 || received_bytes==-1){
+      if(received_bytes<0){
+         if(errno==EINTR) continue;
            error(false,"Error receiving packet");
       }
        
@@ -62,6 +63,7 @@ void capture_packets(){
       
    }
 
+   fclose(logfile);
    free(packet_buffer);
    close(socket_fd);
 
@@ -102,6 +104,7 @@ void showicmp(i8 *data,ssize_t data_size){
    fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
    
    src_dst_ip *ips=showipheader(ip_header);
+
    char src_ip_str[INET_ADDRSTRLEN];
    char dst_ip_str[INET_ADDRSTRLEN];
    
@@ -109,6 +112,7 @@ void showicmp(i8 *data,ssize_t data_size){
    inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
    printf("\n\n");
    printf(WHITE"%s From %s ,To %s  ICMP packet\n"RESET,get_timestamp(),src_ip_str,dst_ip_str);
+   sleep(1);
    fprintf(logfile,"\t\t\nICMP Header \n");
    fprintf(logfile,"\tType: %d",icmp->type);
    
@@ -160,7 +164,17 @@ void showudp(i8 *data,ssize_t data_size){
    
    fprintf(logfile, "%s Captured UDP Packet\n", get_timestamp());
    fprintf(logfile,"\t\n\n*************************************UDP Packet*************************************\n");
-   showipheader(ip_header);
+    src_dst_ip *ips=showipheader(ip_header);
+
+    char src_ip_str[INET_ADDRSTRLEN];
+    char dst_ip_str[INET_ADDRSTRLEN];
+    
+    inet_ntop(AF_INET, &ips->src, src_ip_str, INET_ADDRSTRLEN);
+    inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
+    printf("\n\n");
+
+    printf(WHITE"%s From %s on Port %u,To %s  on Port %u UDP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(udp_header->uh_sport),dst_ip_str,ntohs(udp_header->uh_dport));
+    sleep(1);
    fprintf(logfile,"\t\t\nUDP Header \n");
 
    fprintf(logfile,"\tSource Port: %u\n",ntohs(udp_header->uh_sport));
@@ -194,7 +208,17 @@ void showtcp(i8 *data,ssize_t data_size){
    
    fprintf(logfile, "%s Captured TCP Packet\n", get_timestamp());
    fprintf(logfile,"\t\n\n*************************************TCP Packet*************************************\n");
-   showipheader(ip_header);
+    src_dst_ip *ips=showipheader(ip_header);
+
+    char src_ip_str[INET_ADDRSTRLEN];
+    char dst_ip_str[INET_ADDRSTRLEN];
+    
+    inet_ntop(AF_INET, &ips->src, src_ip_str, INET_ADDRSTRLEN);
+    inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
+    printf("\n\n");
+    printf(WHITE"%s From %s on Port %u,To %s  on Port %u TCP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(tcp_header->source),dst_ip_str,ntohs(tcp_header->dest));
+    sleep(1);
+
    fprintf(logfile,"\t\t\nTCP Header \n");
 
 
