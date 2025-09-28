@@ -78,6 +78,8 @@ void process_packet(i8 *data,ssize_t data_size){
       */
    
       if(data_size<(ssize_t)(ETHERNET_HEADER_SIZE + sizeof(IP))){
+         fprintf(logfile, "%s Packet too small to contain Ethernet+IP headers (%zd bytes)\n", get_timestamp(), data_size);
+         fflush(logfile);
           return;
       }
 
@@ -85,10 +87,16 @@ void process_packet(i8 *data,ssize_t data_size){
       
       u16 ip_header_len=ip_header->ihl*4;
 
-      if(ip_header_len<5){
+      if(ip_header->ihl<5){
           return;
       }
 
+
+      if(data_size < (ssize_t)(ETHERNET_HEADER_SIZE + ip_header_len)){
+         fprintf(logfile, "%s Packet truncated (not enough data for full IP header): %zd < %zu\n",
+                 get_timestamp(), data_size, (size_t)(ETHERNET_HEADER_SIZE + ip_header_len));
+      
+         }
       switch(ip_header->protocol){
           case PROTO_ICMP:
             showicmp(data,data_size);
