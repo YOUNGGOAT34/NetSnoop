@@ -148,7 +148,7 @@ void showicmp(i8 *data,ssize_t data_size){
 
    printf("\n\n");
    printf(WHITE"%s From %s ,To %s  ICMP packet\n"RESET,get_timestamp(),src_ip_str,dst_ip_str);
-   sleep(1);
+   // sleep(1);
    fprintf(logfile,"\t\t\nICMP Header \n");
    fprintf(logfile,"\tType: %d",icmp->type);
    
@@ -221,7 +221,7 @@ void showudp(i8 *data,ssize_t data_size){
     printf("\n\n");
 
     printf(WHITE"%s From %s on Port %u,To %s  on Port %u UDP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(udp_header->uh_sport),dst_ip_str,ntohs(udp_header->uh_dport));
-    sleep(1);
+   //  sleep(1);
    fprintf(logfile,"\t\t\nUDP Header \n");
 
    fprintf(logfile,"\tSource Port: %u\n",ntohs(udp_header->uh_sport));
@@ -298,7 +298,7 @@ void showtcp(i8 *data,ssize_t data_size){
     printf("\n\n");
     printf(WHITE"%s From %s on Port %u,To %s  on Port %u TCP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(tcp_header->source),dst_ip_str,ntohs(tcp_header->dest));
 
-    sleep(1);
+   //  sleep(1);
     
    fprintf(logfile,"\t\t\nTCP Header \n");
    
