@@ -261,7 +261,28 @@ void showtcp(i8 *data,ssize_t data_size){
 
    //NOTE that tcphdr might show some squiggles on some systems but it compiles fine ,nothing to worry about
    TCP *tcp_header=(TCP *)(data+ETHERNET_HEADER_SIZE+ip_header_len);
+   /*
+      A TCP header must have atleast 5 (20 bytes) of size
+   */
    
+   u16 tcp_header_len=(tcp_header->doff)*4;
+
+   if(tcp_header->doff<5){
+      fprintf(logfile, "%s Invalid TCP header length (doff=%u)\n", get_timestamp(), (unsigned)tcp_header->doff);
+      fflush(logfile);
+      return;
+   }
+
+
+
+
+   if(data_size<(ssize_t)(offset+tcp_header_len)){
+      fprintf(logfile, "%s Truncated TCP packet (not enough bytes for options): %zd < %zu\n",
+      get_timestamp(), data_size, (size_t)(offset + tcp_header_len));
+      fflush(logfile);
+      return;
+   }
+
    fprintf(logfile, "%s Captured TCP Packet\n", get_timestamp());
    fprintf(logfile,"\t\n\n*************************************TCP Packet*************************************\n");
     src_dst_ip *ips=showipheader(ip_header);
@@ -297,8 +318,8 @@ void showtcp(i8 *data,ssize_t data_size){
 	fprintf(logfile,"\t\t\tChecksum       : %d\n",ntohs(tcp_header->check));
 	fprintf(logfile,"\t\t\tUrgent Pointer : %d\n",tcp_header->urg_ptr);
 
-   u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
-   ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ip_header_len+sizeof(TCP));
+   u8 *payload=(u8 *)(data+offset+tcp_header_len);
+   ssize_t payload_size=data_size-(offset+tcp_header_len);
 
    if(payload_size>0){
        fprintf(logfile,"\t\t\tPayload (%zd): \n",payload_size);
