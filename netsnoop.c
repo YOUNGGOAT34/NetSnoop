@@ -250,6 +250,15 @@ void showudp(i8 *data,ssize_t data_size){
 void showtcp(i8 *data,ssize_t data_size){
    IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
    u16 ip_header_len=ip_header->ihl*4;
+
+   size_t offset=ETHERNET_HEADER_SIZE+ip_header_len;
+
+   if(data_size<(ssize_t)(offset+sizeof(TCP))){
+      fprintf(logfile, "%s Truncated TCP packet (no base tcp header)\n", get_timestamp());
+      fflush(logfile);
+      return;
+   }
+
    //NOTE that tcphdr might show some squiggles on some systems but it compiles fine ,nothing to worry about
    TCP *tcp_header=(TCP *)(data+ETHERNET_HEADER_SIZE+ip_header_len);
    
