@@ -63,6 +63,8 @@ void capture_packets(){
       
    }
 
+   fflush(logfile);
+
    fclose(logfile);
    free(packet_buffer);
    close(socket_fd);
