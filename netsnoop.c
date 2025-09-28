@@ -95,8 +95,12 @@ void process_packet(i8 *data,ssize_t data_size){
       if(data_size < (ssize_t)(ETHERNET_HEADER_SIZE + ip_header_len)){
          fprintf(logfile, "%s Packet truncated (not enough data for full IP header): %zd < %zu\n",
                  get_timestamp(), data_size, (size_t)(ETHERNET_HEADER_SIZE + ip_header_len));
-      
+
+                 fflush(logfile);
+                 return;
          }
+
+
       switch(ip_header->protocol){
           case PROTO_ICMP:
             showicmp(data,data_size);
@@ -118,9 +122,17 @@ void process_packet(i8 *data,ssize_t data_size){
 void showicmp(i8 *data,ssize_t data_size){
    
    IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
-   u16 ipheader_len=ip_header->ihl*4;
+   u16 ip_header_len=ip_header->ihl*4;
 
-   ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ipheader_len);
+   size_t offset=ETHERNET_HEADER_SIZE+ip_header_len;
+
+   if(data_size<(ssize_t)(offset+sizeof(ICMP))){
+      fprintf(logfile, "%s Truncated ICMP packet\n", get_timestamp());
+      fflush(logfile);
+      return;
+   }
+
+   ICMP *icmp=(ICMP *)(data+ETHERNET_HEADER_SIZE+ip_header_len);
   
    fprintf(logfile, "%s Captured ICMP Packet\n", get_timestamp());
    fprintf(logfile,"\t\n\n*************************************ICMP Packet*************************************\n");
@@ -160,8 +172,8 @@ void showicmp(i8 *data,ssize_t data_size){
       fprintf(logfile,"\tSequence: %u\n",ntohs(icmp->un.echo.sequence));
    }
    
-   u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
-   ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ipheader_len+sizeof(ICMP));
+   u8 *payload=(u8 *)(data+offset+sizeof(ICMP));
+   ssize_t payload_size=data_size-(offset+sizeof(ICMP));
 
    if(payload_size>0){
        fprintf(logfile,"\tPayload (%zd): \n",payload_size);
