@@ -82,6 +82,13 @@ void process_packet(i8 *data,ssize_t data_size){
       }
 
       IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
+      
+      u16 ip_header_len=ip_header->ihl*4;
+
+      if(ip_header_len<5){
+          return;
+      }
+
       switch(ip_header->protocol){
           case PROTO_ICMP:
             showicmp(data,data_size);
