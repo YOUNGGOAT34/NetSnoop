@@ -76,6 +76,11 @@ void process_packet(i8 *data,ssize_t data_size){
       /*
         Extract the ip header from the received data and take action accordiing to the protocal type i.e icmp
       */
+   
+      if(data_size<(ssize_t)(ETHERNET_HEADER_SIZE + sizeof(IP))){
+          return;
+      }
+
       IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
       switch(ip_header->protocol){
           case PROTO_ICMP:
