@@ -196,6 +196,15 @@ void showudp(i8 *data,ssize_t data_size){
    IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
    u16 ip_header_len=ip_header->ihl*4;
 
+
+   size_t offset=ETHERNET_HEADER_SIZE+ip_header_len;
+
+   if(data_size<(ssize_t)(offset+sizeof(UDP))){
+      fprintf(logfile, "%s Truncated UDP packet\n", get_timestamp());
+      fflush(logfile);
+      return;
+   }
+
    UDP *udp_header=(UDP *)(data+ETHERNET_HEADER_SIZE+ip_header_len);
    
    fprintf(logfile, "%s Captured UDP Packet\n", get_timestamp());
@@ -220,8 +229,8 @@ void showudp(i8 *data,ssize_t data_size){
    fprintf(logfile,"\tUDP length: %u\n",ntohs(udp_header->len));
    fprintf(logfile,"\tUDP Checksum: 0x%04x\n",ntohs(udp_header->check));
 
-   u8 *payload=(u8 *)(data+ETHERNET_HEADER_SIZE+ip_header_len+sizeof(UDP));
-   ssize_t payload_size=data_size-(ETHERNET_HEADER_SIZE+ip_header_len+sizeof(UDP));
+   u8 *payload=(u8 *)(data+offset+sizeof(UDP));
+   ssize_t payload_size=data_size-(offset+sizeof(UDP));
 
    if(payload_size>0){
        fprintf(logfile,"\tPayload (%zd): \n",payload_size);
