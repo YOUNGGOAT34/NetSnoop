@@ -14,6 +14,7 @@
 #include <time.h>
 #include <signal.h>
 #include <unistd.h>
+#include <ctype.h>
 /*
 
   get the ip header
@@ -86,9 +87,10 @@ typedef enum {
 */
 
 typedef enum{
-     ICMP_P,
-     UDP_P,
-     TCP_P
+     icmp,
+     tcp,
+     udp,
+     proto_unknown
 }__attribute__((packed)) Protocal;
 
 typedef struct {

@@ -1,11 +1,31 @@
-#include "netsnoop.h"
-#include <getopt.h>
+#include "main.h"
 
 /*
  Ping flood /
  ICMP flood
 
 */
+
+
+//Incase the user passes the protocal in uppercase ,I wanna convert it to lower case before enumerating it
+Protocal parse_protocal(const i8 *str){
+   
+      i8 lower[5];
+      i32 i = 0;
+  
+      while (str[i] && i < 4) {
+          lower[i] = tolower((u8)str[i]);
+          i++;
+      }
+      lower[i] = '\0';
+  
+      if (strcmp(lower, "tcp") == 0) return tcp;
+      if (strcmp(lower, "udp") == 0) return udp;
+      if (strcmp(lower, "icmp") == 0) return icmp;
+  
+      return proto_unknown;
+  
+}
 
 
 int main(int argc,char *argv[]){
@@ -23,12 +43,21 @@ int main(int argc,char *argv[]){
 
    i32 option;
 
-   while(option=getopt_long(argc,argv,"p:",long_options,NULL)!=-1){
+   while((option=getopt_long(argc,argv,"p:",long_options,NULL))!=-1){
               switch(option){
+                    
+                   case 'p':
+                        options->proto=parse_protocal(optarg);
+                        break;
+
+                   default:
+                     break;
                  
               }
    }
 
+    
+   printf("protocal %d",options->proto);
        
    capture_packets();
 
