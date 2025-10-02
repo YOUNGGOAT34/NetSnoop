@@ -15,7 +15,20 @@ int main(int argc,char *argv[]){
    };
 
 
-   
+   Options *options=malloc(sizeof(Options));
+
+   if(!options){
+       error(true,"Failed to allocate memory for options");
+   }
+
+   i32 option;
+
+   while(option=getopt_long(argc,argv,"p:",long_options,NULL)!=-1){
+              switch(option){
+                 
+              }
+   }
+
        
    capture_packets();
 
