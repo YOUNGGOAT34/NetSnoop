@@ -82,6 +82,21 @@ typedef enum {
 
 
 /*
+   enumerate the arguments
+*/
+
+typedef enum{
+     ICMP_P,
+     UDP_P,
+     TCP_P
+}__attribute__((packed)) Protocal;
+
+typedef struct {
+      Protocal proto;
+}__attribute__((packed)) Options;
+
+
+/*
   prototypes
 */
 
