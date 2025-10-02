@@ -34,6 +34,24 @@ void capture_packets(Options *options){
        error(true,"Failed to create a raw socket");
    }
 
+   //bind this raw socket to a specific interface
+
+   struct sockaddr_ll sll={0};
+
+   sll.sll_family=AF_PACKET;
+   sll.sll_protocol=htons(ALL_INTERFACES);
+
+   int index = if_nametoindex("wlan0");
+   if (index == 0) {
+        error(false,"if_nametoindex");
+        exit(1);
+    }
+sll.sll_ifindex = index;
+
+   if(bind(socket_fd,(struct sockaddr *)&sll,sizeof(sll))<0){
+       error(true,"Failed to bind");
+   }
+
    i8 *packet_buffer=malloc(BUFFER_SIZE);
 
    if(!packet_buffer){

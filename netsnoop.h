@@ -7,6 +7,7 @@
 #include <stdbool.h>
 #include <errno.h>
 #include <sys/socket.h>
+#include <net/if.h>
 #include <netinet/if_ether.h>
 #include <linux/if_packet.h>
 #include <arpa/inet.h>
