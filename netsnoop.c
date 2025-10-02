@@ -136,7 +136,6 @@ void process_packet(i8 *data,ssize_t data_size,Options *options){
       }
 
 
-      free(options);
 
 
 }

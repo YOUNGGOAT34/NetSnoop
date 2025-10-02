@@ -62,6 +62,7 @@ int main(int argc,char *argv[]){
     
       
    capture_packets(options);
+   free(options);
 
    printf(WHITE"\n\nNetSnoop Shutting Down\n\n"RESET);
    
