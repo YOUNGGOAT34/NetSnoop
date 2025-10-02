@@ -1,32 +1,339 @@
-[2025-10-02 18:35:30] Captured UDP Packet
+[2025-10-02 18:44:49] Captured ICMP Packet
 	
 
-*************************************UDP Packet*************************************
+*************************************ICMP Packet*************************************
 			
  IP header: 
 
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 78
-	Identification: 5398
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 17
-	Header checksum: 0x2787
-	Source IP: 127.0.0.1
-	Destination IP: 127.0.0.1
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x9733
+	Source IP: 192.168.0.109
+	Destination IP: 172.217.170.206
 		
-UDP Header 
-	Source Port: 44905
-	Destination Port: 53
-	UDP length: 58
-	UDP Checksum: 0xfe4d
-	Payload (50): 
-						00000000  b8 57 01 00 00 01 00 00  00 00 00 00 06 6d 6f 62 | .W...........mob
-						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
-						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 01 | microsoft.com...
-						00000030   00 01               | ..
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0x101f
+	ID: 7187
+	Sequence: 2
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:50] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 0
+	Flags + frag offset: 0x0000
+	TTL: 114
+	Protocol: 1
+	Header checksum: 0x2fec
+	Source IP: 172.217.170.206
+	Destination IP: 192.168.0.109
+		
+ICMP Header 
+	Type: 0 (Echo Reply)
+	Code: 0
+	Checksum: 0x181f
+	ID: 7187
+	Sequence: 2
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:51] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x9733
+	Source IP: 192.168.0.109
+	Destination IP: 172.217.170.206
+		
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0x101e
+	ID: 7187
+	Sequence: 3
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:51] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 0
+	Flags + frag offset: 0x0000
+	TTL: 114
+	Protocol: 1
+	Header checksum: 0x2fec
+	Source IP: 172.217.170.206
+	Destination IP: 192.168.0.109
+		
+ICMP Header 
+	Type: 0 (Echo Reply)
+	Code: 0
+	Checksum: 0x181e
+	ID: 7187
+	Sequence: 3
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:52] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x9733
+	Source IP: 192.168.0.109
+	Destination IP: 172.217.170.206
+		
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0x101d
+	ID: 7187
+	Sequence: 4
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:52] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 0
+	Flags + frag offset: 0x0000
+	TTL: 114
+	Protocol: 1
+	Header checksum: 0x2fec
+	Source IP: 172.217.170.206
+	Destination IP: 192.168.0.109
+		
+ICMP Header 
+	Type: 0 (Echo Reply)
+	Code: 0
+	Checksum: 0x181d
+	ID: 7187
+	Sequence: 4
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:53] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x9733
+	Source IP: 192.168.0.109
+	Destination IP: 172.217.170.206
+		
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0x101c
+	ID: 7187
+	Sequence: 5
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:53] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 0
+	Flags + frag offset: 0x0000
+	TTL: 114
+	Protocol: 1
+	Header checksum: 0x2fec
+	Source IP: 172.217.170.206
+	Destination IP: 192.168.0.109
+		
+ICMP Header 
+	Type: 0 (Echo Reply)
+	Code: 0
+	Checksum: 0x181c
+	ID: 7187
+	Sequence: 5
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:54] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 3000
+	Flags + frag offset: 0x0000
+	TTL: 255
+	Protocol: 1
+	Header checksum: 0x9733
+	Source IP: 192.168.0.109
+	Destination IP: 172.217.170.206
+		
+ICMP Header 
+	Type: 8 (Echo Request)
+	Code: 0
+	Checksum: 0x101b
+	ID: 7187
+	Sequence: 6
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
+						
+	
+
+##############################################################################
+[2025-10-02 18:44:54] Captured ICMP Packet
+	
+
+*************************************ICMP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 84
+	Identification: 0
+	Flags + frag offset: 0x0000
+	TTL: 114
+	Protocol: 1
+	Header checksum: 0x2fec
+	Source IP: 172.217.170.206
+	Destination IP: 192.168.0.109
+		
+ICMP Header 
+	Type: 0 (Echo Reply)
+	Code: 0
+	Checksum: 0x181b
+	ID: 7187
+	Sequence: 6
+	Payload (56): 
+						00000000  47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000010   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000020   47 47 47 47 47 47 47 47  47 47 47 47 47 47 47 47 | GGGGGGGGGGGGGGGG
+						00000030   47 47 47 47 47 47 47 47         | GGGGGGGG
 						
 	
 
