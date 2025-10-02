@@ -7,7 +7,9 @@
 */
 
 
-int main(void){
+int main(int argc,char *argv[]){
+   
+
    capture_packets();
 
    printf(WHITE"\n\nNetSnoop Shutting Down\n\n"RESET);

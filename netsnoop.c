@@ -337,7 +337,7 @@ void showtcp(i8 *data,ssize_t data_size){
 
 
 src_dst_ip *showipheader(IP *ip_header){
-      // IP *ip_header=(IP *)(data+ETHERNET_HEADER_SIZE);
+   
        u16 ipheader_len=ip_header->ihl*4;
        
        struct in_addr src_ip,dst_ip;

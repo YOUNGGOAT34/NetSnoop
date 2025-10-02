@@ -80,9 +80,11 @@ typedef enum {
   PROTO_UDP  = 17
 } ProtocolType;
 
+
 /*
   prototypes
 */
+
 void error(bool with_exit,const i8*);
 void capture_packets();
 void process_packet(i8 *,ssize_t );
