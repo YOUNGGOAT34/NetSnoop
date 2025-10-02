@@ -19,7 +19,7 @@ void error(bool with_exit,const i8* error_message){
 
 }
 
-void capture_packets(){
+void capture_packets(Options *options){
 
    logfile=fopen("log.txt","w");
     
@@ -59,7 +59,7 @@ void capture_packets(){
            error(false,"Error receiving packet");
       }
        
-      process_packet(packet_buffer,received_bytes);
+      process_packet(packet_buffer,received_bytes,options);
       
    }
 
@@ -72,7 +72,7 @@ void capture_packets(){
 }
 
 
-void process_packet(i8 *data,ssize_t data_size){
+void process_packet(i8 *data,ssize_t data_size,Options *options){
       /*
         Extract the ip header from the received data and take action accordiing to the protocal type i.e icmp
       */
@@ -95,25 +95,48 @@ void process_packet(i8 *data,ssize_t data_size){
       if(data_size < (ssize_t)(ETHERNET_HEADER_SIZE + ip_header_len)){
          fprintf(logfile, "%s Packet truncated (not enough data for full IP header): %zd < %zu\n",
                  get_timestamp(), data_size, (size_t)(ETHERNET_HEADER_SIZE + ip_header_len));
-
                  fflush(logfile);
                  return;
          }
 
 
-      switch(ip_header->protocol){
-          case PROTO_ICMP:
-            showicmp(data,data_size);
-            break;
-          case PROTO_UDP:
-             showudp(data,data_size);
-             break;
-          case PROTO_TCP:
-            showtcp(data,data_size);
-            break;
-          default:
-            break;
+      
+      
+      if(options->proto==NONE){
+
+         
+               switch(ip_header->protocol){
+                   case PROTO_ICMP:
+                     showicmp(data,data_size);
+                     break;
+                   case PROTO_UDP:
+                      showudp(data,data_size);
+                      break;
+                   case PROTO_TCP:
+                     showtcp(data,data_size);
+                     break;
+                   default:
+                     break;
+               }
+      }else{
+          switch(options->proto){
+               case icmp:
+               showicmp(data,data_size);
+               break;
+               case tcp:
+               showtcp(data,data_size);
+               break;
+               case udp:
+               showudp(data,data_size);
+               break;
+               
+         
+          }
+          
       }
+
+
+      free(options);
 
 
 }
@@ -337,7 +360,7 @@ void showtcp(i8 *data,ssize_t data_size){
 
 
 src_dst_ip *showipheader(IP *ip_header){
-   
+    
        u16 ipheader_len=ip_header->ihl*4;
        
        struct in_addr src_ip,dst_ip;

@@ -90,6 +90,7 @@ typedef enum{
      icmp,
      tcp,
      udp,
+     NONE,
      proto_unknown
 }__attribute__((packed)) Protocal;
 
@@ -103,8 +104,8 @@ typedef struct {
 */
 
 void error(bool with_exit,const i8*);
-void capture_packets();
-void process_packet(i8 *,ssize_t );
+void capture_packets(Options *);
+void process_packet(i8 *,ssize_t,Options * );
 void showicmp(i8 *,ssize_t);
 void showudp(i8 *,ssize_t);
 src_dst_ip *showipheader(IP *);

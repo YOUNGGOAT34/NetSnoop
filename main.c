@@ -42,6 +42,9 @@ int main(int argc,char *argv[]){
    }
 
    i32 option;
+   
+   
+   options->proto=NONE;
 
    while((option=getopt_long(argc,argv,"p:",long_options,NULL))!=-1){
               switch(option){
@@ -57,9 +60,8 @@ int main(int argc,char *argv[]){
    }
 
     
-   printf("protocal %d",options->proto);
-       
-   capture_packets();
+      
+   capture_packets(options);
 
    printf(WHITE"\n\nNetSnoop Shutting Down\n\n"RESET);
    
