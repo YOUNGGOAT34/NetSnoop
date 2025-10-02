@@ -28,11 +28,78 @@ Protocal parse_protocal(const i8 *str){
 }
 
 
+
+INTERFACES *get_all_interfaces(void){
+     INTERFACES *interfaces=malloc(sizeof(INTERFACES));
+
+     struct ifaddrs *interface_list_head,*current_interface_in_list;
+
+     interfaces->count=0;
+     interfaces->interfaces=NULL;
+
+     if(getifaddrs(&interface_list_head)==-1){
+          return NULL;
+     }
+
+     
+     for(current_interface_in_list=interface_list_head;current_interface_in_list!=NULL;current_interface_in_list=current_interface_in_list->ifa_next){
+             if(current_interface_in_list->ifa_addr==NULL) continue;
+             i32 duplicate=0;
+             for(int i=0;i<interfaces->count;i++){
+                 
+                 if(strcmp(current_interface_in_list->ifa_name,interfaces->interfaces[i])==0){
+                     duplicate+=1;
+                     break;
+                 }
+             }
+
+             if(duplicate) continue;
+
+             interfaces->interfaces=realloc(interfaces->interfaces,sizeof(i8 *)*(interfaces->count+1));
+
+             if(!interfaces->interfaces){
+                  for(int i=0;i<interfaces->count;i++){
+                      free(interfaces->interfaces[i]);
+                  }
+
+                  free(interfaces->interfaces);
+                  free(interfaces);
+                  freeifaddrs(interface_list_head);
+                  
+                  return NULL;
+             }
+
+             interfaces->interfaces[interfaces->count] = strdup(current_interface_in_list->ifa_name);
+             if (!interfaces->interfaces[interfaces->count]) {
+               for(int i=0;i<interfaces->count;i++){
+                  free(interfaces->interfaces[i]);
+              }
+
+              free(interfaces->interfaces);
+              free(interfaces);
+              freeifaddrs(interface_list_head);
+              
+              return NULL;
+
+             }
+
+             interfaces->count+=1;
+
+           }
+
+
+     freeifaddrs(interface_list_head);
+     return interfaces;
+}
+
+
+
 int main(int argc,char *argv[]){
    
    static struct option long_options[]={
          {"protocal",required_argument,0,'p'}
    };
+
 
 
    Options *options=malloc(sizeof(Options));

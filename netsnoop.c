@@ -102,9 +102,7 @@ void process_packet(i8 *data,ssize_t data_size,Options *options){
 
       
       
-      if(options->proto==NONE){
-
-         
+      if(options->proto==NONE){         
                switch(ip_header->protocol){
                    case PROTO_ICMP:
                      showicmp(data,data_size);
@@ -121,35 +119,33 @@ void process_packet(i8 *data,ssize_t data_size,Options *options){
       }else{
           switch(options->proto){
                case icmp:
-               if(ip_header->protocol==PROTO_ICMP){
+                     if(ip_header->protocol==PROTO_ICMP){
 
-                  showicmp(data,data_size);
-               }
-               break;
+                        showicmp(data,data_size);
+                     }
+                     break;
                case tcp:
-               if(ip_header->protocol==PROTO_TCP){
+                     if(ip_header->protocol==PROTO_TCP){
 
-                  showtcp(data,data_size);
-               }
-               break;
+                        showtcp(data,data_size);
+                     }
+                     break;
                case udp:
-               if(ip_header->protocol==PROTO_UDP){
-                  showudp(data,data_size);
-               }
-               break;
+                     if(ip_header->protocol==PROTO_UDP){
+                        showudp(data,data_size);
+                     }
+                     break;
 
                case NONE:
                case proto_unknown:
 
                default:
-               break;
+                     break;
                
          
           }
           
       }
-
-
 
 
 }

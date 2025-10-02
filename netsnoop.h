@@ -81,6 +81,11 @@ typedef enum {
   PROTO_UDP  = 17
 } ProtocolType;
 
+typedef struct {
+     i32 count;
+     i8 **interfaces;
+}__attribute__((packed)) INTERFACES;
+
 
 /*
    enumerate the arguments
