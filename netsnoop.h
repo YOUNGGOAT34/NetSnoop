@@ -102,6 +102,7 @@ typedef enum{
 
 typedef struct {
       Protocal proto;
+      i8 *interface;
 }__attribute__((packed)) Options;
 
 

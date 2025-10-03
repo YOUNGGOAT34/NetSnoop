@@ -103,40 +103,49 @@ INTERFACES *get_all_interfaces(void){
 int main(int argc,char *argv[]){
    
    static struct option long_options[]={
-         {"protocal",required_argument,0,'p'}
+         {"protocal",required_argument,0,'p'},
+         {"interface",required_argument,0,'i'}
    };
 
 
-   // INTERFACES *inter=get_all_interfaces();
+   INTERFACES *interfaces=get_all_interfaces();
    
-
-
    Options *options=malloc(sizeof(Options));
-
+   
    if(!options){
        error(true,"Failed to allocate memory for options");
    }
 
    i32 option;
-   
-   
    options->proto=NONE;
 
-   while((option=getopt_long(argc,argv,"p:",long_options,NULL))!=-1){
+   //by default the first interface(except the loop back ) is selected
+
+   for(int i=0;i<interfaces->count;i++){
+        if(strcmp(interfaces->interfaces[i],"lo")!=0){
+           options->interface=interfaces->interfaces[i];
+           break;
+        }
+   }
+
+
+   while((option=getopt_long(argc,argv,"p:i:",long_options,NULL))!=-1){
               switch(option){
                     
                    case 'p':
                         options->proto=parse_protocal(optarg);
                         break;
-
+                   case 'i':
+                   options->interface=optarg;
+                   break;
                    default:
                      break;
                  
               }
    }
 
-    
-      
+  
+   
    capture_packets(options);
    free(options);
 

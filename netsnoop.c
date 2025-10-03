@@ -41,12 +41,13 @@ void capture_packets(Options *options){
    sll.sll_family=AF_PACKET;
    sll.sll_protocol=htons(ALL_INTERFACES);
 
-   int index = if_nametoindex("wlan0");
+   int index = if_nametoindex(options->interface);
    if (index == 0) {
         error(false,"if_nametoindex");
         exit(1);
-    }
-sll.sll_ifindex = index;
+      }
+      
+   sll.sll_ifindex = index;
 
    if(bind(socket_fd,(struct sockaddr *)&sll,sizeof(sll))<0){
        error(true,"Failed to bind");
