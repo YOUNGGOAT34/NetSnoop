@@ -7,6 +7,14 @@ void handle_signal(__attribute__((unused)) i32 sig){
       keep_sniffing=0;
 }
 
+
+void set_signal_handler(void){
+     struct sigaction sa;
+     sa.sa_handler=handle_signal;
+     sigemptyset(&sa.sa_mask);
+     sa.sa_flags = 0;
+}
+
 void error(bool with_exit,const i8* error_message){
     if(with_exit){
        fprintf(stderr,RED"%s:(%s)\n"RESET,error_message,strerror(errno));
@@ -46,7 +54,7 @@ void capture_packets(Options *options){
         error(false,"if_nametoindex");
         exit(1);
       }
-      
+
    sll.sll_ifindex = index;
 
    if(bind(socket_fd,(struct sockaddr *)&sll,sizeof(sll))<0){
@@ -59,8 +67,9 @@ void capture_packets(Options *options){
        error(true,"Failed to allocate memory for the packet buffer");
    }
 
-   signal(SIGINT,handle_signal);
-
+  
+   set_signal_handler();
+   
    ssize_t  received_bytes;
    SA saddr;
    socklen_t addr_size;

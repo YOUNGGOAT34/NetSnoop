@@ -117,6 +117,7 @@ void showicmp(i8 *,ssize_t);
 void showudp(i8 *,ssize_t);
 src_dst_ip *showipheader(IP *);
 void showtcp(i8 *data,ssize_t data_size);
+void set_signal_handler(void);
 void handle_signal(__attribute__((unused)) i32 );
 void hexdump(void *buff,u16 size);
 const char* get_timestamp(); 
