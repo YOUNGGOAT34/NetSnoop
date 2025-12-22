@@ -100,6 +100,7 @@ void capture_packets(Options *options){
 }
 
 
+
 void process_packet(i8 *data,ssize_t data_size,Options *options){
       /*
         Extract the ip header from the received data and take action accordiing to the protocal type i.e icmp

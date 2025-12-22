@@ -1,4 +1,68 @@
-[2025-10-03 12:07:40] Captured TCP Packet
+[2025-12-22 09:58:58] Captured UDP Packet
+	
+
+*************************************UDP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 184
+	IP Total length: 76
+	Identification: 63892
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 17
+	Header checksum: 0x2f8f
+	Source IP: 10.200.140.183
+	Destination IP: 160.119.216.206
+		
+UDP Header 
+	Source Port: 33039
+	Destination Port: 123
+	UDP length: 56
+	UDP Checksum: 0xb149
+	Payload (48): 
+						00000000  23 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 | #...............
+						00000010   00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 | ................
+						00000020   00 00 00 00 00 00 00 00  a3 ad 11 ed 0f 3a d4 0f | .............:..
+						
+	
+
+##############################################################################
+[2025-12-22 09:58:58] Captured UDP Packet
+	
+
+*************************************UDP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 76
+	Identification: 57646
+	Flags + frag offset: 0x4000
+	TTL: 46
+	Protocol: 17
+	Header checksum: 0x5aad
+	Source IP: 160.119.216.206
+	Destination IP: 10.200.140.183
+		
+UDP Header 
+	Source Port: 123
+	Destination Port: 33039
+	UDP length: 56
+	UDP Checksum: 0x1564
+	Payload (48): 
+						00000000  24 02 00 e8 00 00 01 96  00 00 00 0a a0 77 d9 e9 | $............w..
+						00000010   ec f3 6a 93 f7 1b 6a 3a  a3 ad 11 ed 0f 3a d4 0f | ..j...j:.....:..
+						00000020   ec f3 6a b2 7f 46 4f d1  ec f3 6a b2 7f 47 67 70 | ..j..FO...j..Ggp
+						
+	
+
+##############################################################################
+[2025-12-22 09:59:03] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -8,20 +72,20 @@
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 165
-	Identification: 57037
+	IP Total length: 76
+	Identification: 64635
 	Flags + frag offset: 0x4000
-	TTL: 64
+	TTL: 145
 	Protocol: 6
-	Header checksum: 0xd8a6
-	Source IP: 192.168.0.109
-	Destination IP: 20.189.173.12
+	Header checksum: 0xc689
+	Source IP: 104.18.39.21
+	Destination IP: 10.200.140.183
 		
 TCP Header 
-			Source Port: 57528
-			Destination Port: 443
-			Sequence Number: 1635969393
-			Acknowledge Number: 1998960889
+			Source Port: 443
+			Destination Port: 57410
+			Sequence Number: 222855839
+			Acknowledge Number: 1528682449
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -29,220 +93,17 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 450
-			Checksum       : 28023
+			Window         : 185
+			Checksum       : 55993
 			Urgent Pointer : 0
-			Payload (113): 
-						00000000  17 03 03 00 6c 2e 6e 95  c7 f3 b2 ea b1 c5 2b 9f | ....l.n.......+.
-						00000010   76 cb c5 8c ba 0f db a0  b4 8b e4 74 e5 20 50 60 | v..........t. P`
-						00000020   e7 30 9f 31 70 19 93 13  fe 71 ec 63 e3 98 c3 8b | .0.1p....q.c....
-						00000030   66 73 6b d3 72 59 90 f2  7a a0 af 72 89 c5 a7 53 | fsk.rY..z..r...S
-						00000040   c1 20 a1 87 ac 39 fc 1d  c7 ac 57 25 4d 12 e7 50 | . ...9....W%M..P
-						00000050   20 09 89 27 6e 82 1e 72  5c 92 b4 7c 98 60 fb f6 |  ..'n..r\..|.`..
-						00000060   19 df ca bf 62 c6 72 1c  68 71 bc 00 88 0d 60 f8 | ....b.r.hq....`.
-						00000070   42                | B
+			Payload (24): 
+						00000000  17 03 03 00 13 eb 70 1e  80 5f 57 92 63 96 13 7f | ......p.._W.c...
+						00000010   37 e6 9c a1 c2 8a 64 73         | 7.....ds
 						
 	
 
 ##############################################################################
-[2025-10-03 12:07:40] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 1452
-	Identification: 57038
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0xd39e
-	Source IP: 192.168.0.109
-	Destination IP: 20.189.173.12
-		
-TCP Header 
-			Source Port: 57528
-			Destination Port: 443
-			Sequence Number: 1635969506
-			Acknowledge Number: 1998960889
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 0
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 450
-			Checksum       : 51782
-			Urgent Pointer : 0
-			Payload (1400): 
-						00000000  17 03 03 00 22 b0 0d 6c  31 44 d2 c0 90 a6 af fb | ...."..l1D......
-						00000010   ce 75 d0 2b c7 19 6c c5  82 23 a2 67 db 35 08 3c | .u.+..l..#.g.5.<
-						00000020   d9 c8 11 1c 6d 94 98 17  03 03 07 2d b7 a2 eb 9f | ....m......-....
-						00000030   ac aa 5d 07 a1 87 c6 32  42 da 2a e0 dc 9f dd 8c | ..]....2B.*.....
-						00000040   bd aa f3 94 9f 37 6e 46  fe ed 79 d3 8d 7f 95 5d | .....7nF..y....]
-						00000050   88 36 97 6e b2 14 4d 12  f6 d1 f7 64 23 ca da d4 | .6.n..M....d#...
-						00000060   ce 6f 20 c0 d0 60 0c d7  cb 48 f0 d5 27 49 27 33 | .o ..`...H..'I'3
-						00000070   90 35 ff 68 24 d6 61 23  a3 83 85 7d ad 4d 3a ac | .5.h$.a#...}.M:.
-						00000080   70 26 33 0b 0b 6a 90 7f  34 f8 37 0c 39 52 1b ab | p&3..j..4.7.9R..
-						00000090   56 db 17 37 e2 69 5d c8  6d 87 f1 0c 98 4e f6 9a | V..7.i].m....N..
-						000000a0   5f 1f 61 cd 8c 31 02 dc  15 ea c9 14 ff 7e 4b 39 | _.a..1.......~K9
-						000000b0   9e 3e 8b ad 28 2c ac 5d  d6 e7 77 49 61 82 f3 c5 | .>..(,.]..wIa...
-						000000c0   4b 07 0d 94 80 99 61 fc  69 07 9e cc c1 6d d1 fd | K.....a.i....m..
-						000000d0   b9 19 ef 62 9d 5a 80 2e  a4 59 3f 17 40 f9 66 86 | ...b.Z...Y?.@.f.
-						000000e0   f6 80 47 13 7c e7 bc af  98 fc 47 05 8e 5b 76 c6 | ..G.|.....G..[v.
-						000000f0   ee 62 db b4 88 14 58 c5  ac ec 5d 2f 08 47 c0 e0 | .b....X...]/.G..
-						00000100   58 6a f8 fe d5 5f 23 4e  d9 dc e4 e7 fd 59 19 8e | Xj..._#N.....Y..
-						00000110   d6 9a f1 d8 12 76 c0 00  49 1e b5 03 c7 d7 40 83 | .....v..I.....@.
-						00000120   b9 c8 4c 4c da 14 59 7c  a7 1a 36 6c d1 1a a0 a5 | ..LL..Y|..6l....
-						00000130   42 a3 6b 41 e7 7d 3c a5  27 44 a0 a8 ef 19 34 a4 | B.kA.}<.'D....4.
-						00000140   eb 1b f7 1f 42 83 51 63  3a 04 70 58 ce 2d cd 98 | ....B.Qc:.pX.-..
-						00000150   83 54 08 c5 3e 97 37 37  a1 a0 dc 4d 2e 02 f3 59 | .T..>.77...M...Y
-						00000160   f1 b9 bf d9 a1 d1 ae 27  a0 06 02 81 7c f7 8d 31 | .......'....|..1
-						00000170   78 15 18 28 ab cc 6f 1f  a3 16 c5 bf fe ec 9f 9e | x..(..o.........
-						00000180   0c 33 98 21 34 d6 94 9c  b0 09 c6 4c e8 de 67 b4 | .3.!4......L..g.
-						00000190   06 d7 16 cc fa 61 ed 94  3c 67 43 5d b6 d2 f7 6f | .....a..<gC]...o
-						000001a0   e7 59 50 32 b3 82 39 1a  5c c4 c2 62 10 e2 16 f2 | .YP2..9.\..b....
-						000001b0   60 db 12 66 c3 7f 52 2e  e6 58 07 f0 42 d3 15 3d | `..f..R..X..B..=
-						000001c0   b7 3e d3 23 13 57 9f 39  d4 b3 29 aa 4d 54 11 6c | .>.#.W.9..).MT.l
-						000001d0   74 0c 7a 0e a3 27 e8 4d  fe e2 40 2e 4a ca 6e ab | t.z..'.M..@.J.n.
-						000001e0   6e cd 61 23 25 40 da b9  c9 45 9d ec ee d0 21 7a | n.a#%@...E....!z
-						000001f0   d0 9a b9 03 41 df 93 e2  f4 8a a3 00 ba f6 45 87 | ....A.........E.
-						00000200   3c 32 57 0f 6b 7b 33 d4  8f 95 86 5f 5e e9 10 ee | <2W.k{3...._^...
-						00000210   a5 3d 8e 69 00 0a ef a4  15 f3 bd 59 6d 1f 5a f5 | .=.i.......Ym.Z.
-						00000220   ab 37 03 54 cd fe bf 15  e6 f1 26 b1 68 dd 81 b0 | .7.T......&.h...
-						00000230   af e0 67 69 c9 d6 20 63  8c 7e 29 b3 29 f6 6c 59 | ..gi.. c.~).).lY
-						00000240   66 b5 56 40 9f a5 2f 35  89 32 a1 35 b5 c9 89 80 | f.V@../5.2.5....
-						00000250   c9 fa be f6 be a1 d6 8f  d1 95 0b c5 3d 17 8e ea | ............=...
-						00000260   73 1b 9d eb 09 f6 8f 1f  90 b3 7f be eb c6 34 b1 | s.............4.
-						00000270   ff d5 f8 70 00 94 15 a5  bc 51 53 9e 0c 3a 70 ba | ...p.....QS..:p.
-						00000280   93 89 bc cb 86 61 5b 78  57 14 07 0e 60 1b d5 08 | .....a[xW...`...
-						00000290   42 df ad 3a d3 53 3f 9a  8f d9 ae 5d ae 82 03 2c | B..:.S?....]...,
-						000002a0   b7 07 b8 cf 5d cd 57 bd  6a 86 77 c9 86 74 f6 9e | ....].W.j.w..t..
-						000002b0   f1 01 96 ad 39 89 f7 91  bf bd 7b 4d 3d eb ea af | ....9.....{M=...
-						000002c0   f1 06 f1 43 b0 e3 39 2c  b6 17 d8 07 7d 02 48 9b | ...C..9,....}.H.
-						000002d0   ba 09 d2 f1 ec a8 db 95  6e 65 9c ff 4b 37 56 fc | ........ne..K7V.
-						000002e0   40 51 2d 87 9e de 55 58  ed 6b 03 8d dc 6e 38 a1 | @Q-...UX.k...n8.
-						000002f0   85 4a 20 1d 60 c1 06 49  ed 98 0e 1b e6 e7 01 6c | .J .`..I.......l
-						00000300   f9 10 b8 42 97 35 6d 66  22 84 25 ce 86 c3 fc 01 | ...B.5mf".%.....
-						00000310   f0 d7 0d ca 9e d1 51 d8  6c 54 58 d2 b1 70 d7 52 | ......Q.lTX..p.R
-						00000320   04 00 a3 84 8a 1d 52 49  88 6a 3c be e0 ed df 0b | ......RI.j<.....
-						00000330   47 6a 99 88 62 53 97 96  58 f0 c3 a1 af b8 f4 26 | Gj..bS..X......&
-						00000340   b4 b2 a6 8b fd bc ed 5f  ec 9c d9 19 e4 60 dc 2b | ......._.....`.+
-						00000350   3a a9 94 b7 d8 0b e9 8f  ef b6 4c eb 6b 6c 94 0a | :.........L.kl..
-						00000360   a6 93 1f cc 81 29 98 73  fe 97 58 d1 e3 6e 96 fe | .....).s..X..n..
-						00000370   0e 8d ac 7d e1 3c 29 2e  6f 1e 8b bc 04 6e dc d6 | ...}.<).o....n..
-						00000380   da f0 64 11 e8 d6 ad 95  96 92 80 16 40 d7 85 b2 | ..d.........@...
-						00000390   ad 85 19 06 83 c5 5f 94  0f 53 3f f4 9f dd ef e9 | ......_..S?.....
-						000003a0   2d f9 25 57 32 90 cc 88  a2 59 4f 41 ab 92 7e d3 | -.%W2....YOA..~.
-						000003b0   15 5d af 6f e0 ff b2 ea  a5 77 3f d9 26 6c fe aa | .].o.....w?.&l..
-						000003c0   82 b4 95 15 4b 5a 7d 6c  54 82 ff 8d 4d 9a d8 f4 | ....KZ}lT...M...
-						000003d0   b3 54 e4 06 78 6d bd bf  57 be c6 cb 65 41 35 c8 | .T..xm..W...eA5.
-						000003e0   0d 91 74 2b e6 71 1e 8b  3f 62 a0 18 bd 88 49 0c | ..t+.q..?b....I.
-						000003f0   b5 9a 71 c6 94 c0 3b 7b  96 9b 7d 8c 84 d1 5c 78 | ..q...;{..}...\x
-						00000400   c6 d0 f5 01 64 34 47 67  98 4b 93 03 b3 e4 5d b2 | ....d4Gg.K....].
-						00000410   b5 0b 09 4a 1b 9a cc 02  11 88 93 6e b4 be c1 e8 | ...J.......n....
-						00000420   58 55 90 1d 9d 2b 99 e9  ac 9c a3 4d 6e 62 29 ae | XU...+.....Mnb).
-						00000430   c8 15 53 4b f9 03 58 5a  c5 33 5c a0 06 7f bc 47 | ..SK..XZ.3\....G
-						00000440   91 eb 66 0c 05 90 58 f9  8f 24 be c3 b9 ee 0f d8 | ..f...X..$......
-						00000450   ec bd 21 8a fe 69 6b c4  60 28 ad 39 37 6f 16 f6 | ..!..ik.`(.97o..
-						00000460   1a 11 82 40 a0 bd 41 61  e7 d3 43 5b 04 53 1b 6e | ...@..Aa..C[.S.n
-						00000470   08 5e 7c 22 99 c6 89 24  b9 89 eb 57 55 3f d5 aa | .^|"...$...WU?..
-						00000480   80 c4 75 03 43 9b f3 c6  57 39 c3 af be 0c 15 78 | ..u.C...W9.....x
-						00000490   c0 b0 a8 21 f9 b0 a9 41  ff c8 47 78 9c 46 dc f4 | ...!...A..Gx.F..
-						000004a0   8a d0 11 86 de e9 42 1e  1d 56 28 07 1f 27 eb 4e | ......B..V(..'.N
-						000004b0   e9 99 4a 52 1a 7e cd 77  83 b2 85 e6 ec c7 78 b3 | ..JR.~.w......x.
-						000004c0   7b 7a 7e e3 55 ca f6 64  f6 be 72 8e 1f 65 86 a5 | {z~.U..d..r..e..
-						000004d0   0e 91 11 f1 ac 4d 6c dd  0c 6d 8f a7 12 09 d2 50 | .....Ml..m.....P
-						000004e0   a2 a4 c7 aa 48 d4 42 c7  65 c2 a2 fb 65 c3 fa d5 | ....H.B.e...e...
-						000004f0   07 cc 62 1d fb d5 8a 53  c8 1a 93 9c 66 cc 80 8a | ..b....S....f...
-						00000500   17 31 74 6c 2f 7e a4 52  ca 35 fb aa 8a ef 2e ac | .1tl/~.R.5......
-						00000510   04 59 f7 73 33 b0 95 75  b3 a3 60 4f f0 8b 4d 3e | .Y.s3..u..`O..M>
-						00000520   61 0f 24 65 ef bf 65 4d  0c 06 0f 2b d3 4f da aa | a.$e..eM...+.O..
-						00000530   d1 38 95 19 56 c7 34 48  60 cf d3 5f 42 db 6a fe | .8..V.4H`.._B.j.
-						00000540   77 5a 64 66 e1 22 93 cd  ff c5 92 45 80 fe d9 8c | wZdf.".....E....
-						00000550   c3 54 a2 e3 d7 0a f1 44  bb 44 29 b8 8e b8 b8 92 | .T.....D.D).....
-						00000560   e1 62 de 21 e0 df 70 f1  2e 0c ca fc d8 c7 94 b2 | .b.!..p.........
-						00000570   a4 4f 91 5b 17 30 e0 d3         | .O.[.0..
-						
-	
-
-##############################################################################
-[2025-10-03 12:07:40] Captured TCP Packet
-	
-
-*************************************TCP Packet*************************************
-			
- IP header: 
-
-	IP Version: 4
-	IP header length: 20 bytes
-	Type Of Service: 0
-	IP Total length: 533
-	Identification: 57039
-	Flags + frag offset: 0x4000
-	TTL: 64
-	Protocol: 6
-	Header checksum: 0xd734
-	Source IP: 192.168.0.109
-	Destination IP: 20.189.173.12
-		
-TCP Header 
-			Source Port: 57528
-			Destination Port: 443
-			Sequence Number: 1635970906
-			Acknowledge Number: 1998960889
-			Header Length: 32
-			Urgent Flag          : 0
-			Acknowledgement Flag : 1
-			Push Flag            : 1
-			Reset Flag           : 0
-			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 450
-			Checksum       : 29185
-			Urgent Pointer : 0
-			Payload (481): 
-						00000000  72 e0 83 19 2a f0 83 08  68 e7 5c d6 25 1a 2b 54 | r...*...h.\.%.+T
-						00000010   35 fb a6 b8 53 7e 72 ec  07 a3 e8 e6 09 52 83 b8 | 5...S~r......R..
-						00000020   b4 7e 18 63 87 d0 49 38  b7 5d cf a2 70 71 7b 1c | .~.c..I8.]..pq{.
-						00000030   48 c0 3f 3d 53 89 74 f7  86 70 aa 4c 80 1d 21 40 | H.?=S.t..p.L..!@
-						00000040   48 c6 99 4e fc 7f e2 9d  38 18 d6 6f e9 4b f5 9b | H..N....8..o.K..
-						00000050   83 78 38 bb 31 5e 87 e0  46 73 26 60 7d 10 1d 6a | .x8.1^..Fs&`}..j
-						00000060   1c b0 f2 2b b2 44 a7 f7  e2 cc c8 43 57 69 10 ef | ...+.D.....CWi..
-						00000070   6a 31 35 62 cc 1a cd 1d  9c a4 95 76 66 04 4b b8 | j15b.......vf.K.
-						00000080   7b 65 74 75 9a 7c 43 d7  50 4e 25 5c 4b ee 73 83 | {etu.|C.PN%\K.s.
-						00000090   e8 01 de 4b 06 b8 be 3b  95 57 0c 4d 12 ac 5b 95 | ...K...;.W.M..[.
-						000000a0   f1 a8 84 91 91 c8 14 4b  99 6a 9a db 06 c3 ee 67 | .......K.j.....g
-						000000b0   c7 c3 3e 48 36 60 11 03  c5 bb 3c 74 b1 01 ac e2 | ..>H6`....<t....
-						000000c0   0e 34 4e 8e 6c 63 e8 83  d9 06 bb ab a7 c3 e1 21 | .4N.lc.........!
-						000000d0   97 49 b4 c5 07 34 a1 fd  6e b8 59 d6 a7 e5 6f a1 | .I...4..n.Y...o.
-						000000e0   6d e5 57 c0 43 21 10 51  05 3f 9b a7 51 07 94 28 | m.W.C!.Q.?..Q..(
-						000000f0   7d 28 eb 2f e3 f7 6c 34  9b c6 7e 35 43 8e b4 10 | }(./..l4..~5C...
-						00000100   6d d8 d9 12 e2 05 64 33  62 87 f1 af 9b cd 21 0c | m.....d3b.....!.
-						00000110   e0 a2 46 c8 74 ed f4 2d  8d e7 b2 fe bc f7 80 3e | ..F.t..-.......>
-						00000120   70 14 c5 30 ab 12 05 51  4a 7e 09 0e ae 06 f6 3e | p..0...QJ~.....>
-						00000130   93 37 85 e0 c5 85 84 50  5b 51 7a ff 77 5c bb de | .7.....P[Qz.w\..
-						00000140   fe 1a 80 6d 14 02 16 51  31 69 2d b3 2a dd 22 9a | ...m...Q1i-.*.".
-						00000150   7b 07 d0 53 39 0c a7 87  e5 ff a9 48 67 07 04 4c | {..S9......Hg..L
-						00000160   b7 51 6d 8d 69 0b fd df  e3 52 87 0b f3 59 e3 d5 | .Qm.i....R...Y..
-						00000170   f9 7f bf ab 16 b7 bd 24  cc 2f a4 aa 06 d4 6a a9 | .......$./....j.
-						00000180   16 dc 9a ed 9e c9 e4 5b  9d 5a 7e d0 95 de 24 21 | .......[.Z~...$!
-						00000190   e2 56 23 c8 6e 51 83 f6  dc 34 b7 79 53 65 cd ac | .V#.nQ...4.ySe..
-						000001a0   d3 40 0a 43 2f 17 85 5a  65 5f 78 a7 f3 48 95 61 | .@.C/..Ze_x..H.a
-						000001b0   57 87 e8 35 45 05 95 e6  cc 47 6f aa 9c 99 aa bc | W..5E....Go.....
-						000001c0   f8 a5 25 85 bc ef 61 64  58 41 94 61 ee 6a 3b 0e | ..%...adXA.a.j;.
-						000001d0   25 db 5e e0 37 fa af 51  1e 58 33 12 7b 18 be 2b | %.^.7..Q.X3.{..+
-						000001e0   b7                | .
-						
-	
-
-##############################################################################
-[2025-10-03 12:07:41] Captured TCP Packet
+[2025-12-22 09:59:03] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -253,19 +114,19 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 52
-	Identification: 21541
+	Identification: 15190
 	Flags + frag offset: 0x4000
-	TTL: 96
+	TTL: 64
 	Protocol: 6
-	Header checksum: 0x43c0
-	Source IP: 20.189.173.12
-	Destination IP: 192.168.0.109
+	Header checksum: 0xd8c7
+	Source IP: 10.200.140.183
+	Destination IP: 104.18.39.21
 		
 TCP Header 
-			Source Port: 443
-			Destination Port: 57528
-			Sequence Number: 1998960889
-			Acknowledge Number: 1635970906
+			Source Port: 57410
+			Destination Port: 443
+			Sequence Number: 1528682449
+			Acknowledge Number: 222855863
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -273,14 +134,93 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 16384
-			Checksum       : 24926
+			Window         : 611
+			Checksum       : 29721
 			Urgent Pointer : 0
 			No TCP payload
 	
 
 ##############################################################################
-[2025-10-03 12:07:41] Captured TCP Packet
+[2025-12-22 09:59:03] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 80
+	Identification: 15191
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0xd8aa
+	Source IP: 10.200.140.183
+	Destination IP: 104.18.39.21
+		
+TCP Header 
+			Source Port: 57410
+			Destination Port: 443
+			Sequence Number: 1528682449
+			Acknowledge Number: 222855863
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 1
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 611
+			Checksum       : 13569
+			Urgent Pointer : 0
+			Payload (28): 
+						00000000  17 03 03 00 17 c6 38 77  a6 59 7e 0e 24 2b 69 d4 | ......8w.Y~.$+i.
+						00000010   57 ad dc bd ff 1d 1d 38  41 73 90 17     | W......8As..
+						
+	
+
+##############################################################################
+[2025-12-22 09:59:03] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 52
+	Identification: 64636
+	Flags + frag offset: 0x4000
+	TTL: 145
+	Protocol: 6
+	Header checksum: 0xc6a0
+	Source IP: 104.18.39.21
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 57410
+			Sequence Number: 222855863
+			Acknowledge Number: 1528682477
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 185
+			Checksum       : 29389
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:06] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -291,19 +231,19 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 91
-	Identification: 21542
+	Identification: 50429
 	Flags + frag offset: 0x4000
-	TTL: 96
+	TTL: 145
 	Protocol: 6
-	Header checksum: 0x4398
-	Source IP: 20.189.173.12
-	Destination IP: 192.168.0.109
+	Header checksum: 0x8eb7
+	Source IP: 140.82.114.22
+	Destination IP: 10.200.140.183
 		
 TCP Header 
 			Source Port: 443
-			Destination Port: 57528
-			Sequence Number: 1998960889
-			Acknowledge Number: 1635971387
+			Destination Port: 50904
+			Sequence Number: 19792051
+			Acknowledge Number: 2595570047
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -311,18 +251,18 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 16382
-			Checksum       : 44325
+			Window         : 1562
+			Checksum       : 58296
 			Urgent Pointer : 0
 			Payload (39): 
-						00000000  17 03 03 00 22 ba 4c 96  49 b3 cd c6 f6 a8 e5 31 | ....".L.I......1
-						00000010   39 69 ff 7f 79 98 ac 0f  f3 5b e1 96 92 fd 91 a5 | 9i..y....[......
-						00000020   9f 96 03 14 35 b0 05          | ....5..
+						00000000  17 03 03 00 22 3f 65 d0  68 32 9b bd 8f 46 d9 8c | ...."?e.h2...F..
+						00000010   f8 01 a7 8d f1 44 e3 1b  52 f5 5a df 31 b6 18 05 | .....D..R.Z.1...
+						00000020   23 1f b8 bf ef 23 ec          | #....#.
 						
 	
 
 ##############################################################################
-[2025-10-03 12:07:41] Captured TCP Packet
+[2025-12-22 09:59:06] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -333,34 +273,34 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 52
-	Identification: 57040
+	Identification: 59949
 	Flags + frag offset: 0x4000
 	TTL: 64
 	Protocol: 6
-	Header checksum: 0xd914
-	Source IP: 192.168.0.109
-	Destination IP: 20.189.173.12
+	Header checksum: 0xbaae
+	Source IP: 10.200.140.183
+	Destination IP: 140.82.114.22
 		
 TCP Header 
-			Source Port: 57528
+			Source Port: 50904
 			Destination Port: 443
-			Sequence Number: 1635971387
-			Acknowledge Number: 1998960928
+			Sequence Number: 2595570047
+			Acknowledge Number: 19792090
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
 			Push Flag            : 0
 			Reset Flag           : 0
 			Synchronise Flag     : 0
-			Finish Flag          : 0
-			Window         : 450
-			Checksum       : 39871
+			Finish Flag          : 1
+			Window         : 446
+			Checksum       : 16714
 			Urgent Pointer : 0
 			No TCP payload
 	
 
 ##############################################################################
-[2025-10-03 12:07:41] Captured TCP Packet
+[2025-12-22 09:59:06] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -370,20 +310,20 @@ TCP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 151
-	Identification: 21543
+	IP Total length: 91
+	Identification: 50430
 	Flags + frag offset: 0x4000
-	TTL: 96
+	TTL: 145
 	Protocol: 6
-	Header checksum: 0x435b
-	Source IP: 20.189.173.12
-	Destination IP: 192.168.0.109
+	Header checksum: 0x8eb6
+	Source IP: 140.82.114.22
+	Destination IP: 10.200.140.183
 		
 TCP Header 
 			Source Port: 443
-			Destination Port: 57528
-			Sequence Number: 1998960928
-			Acknowledge Number: 1635971387
+			Destination Port: 50904
+			Sequence Number: 19792051
+			Acknowledge Number: 2595570047
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -391,22 +331,56 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 16382
-			Checksum       : 18835
+			Window         : 1562
+			Checksum       : 58045
 			Urgent Pointer : 0
-			Payload (99): 
-						00000000  17 03 03 00 5e 88 54 60  76 1c dd 44 f8 ba 75 46 | ....^.T`v..D..uF
-						00000010   c2 12 97 10 72 1c d7 1f  a9 50 91 2d e8 d8 6b a0 | ....r....P.-..k.
-						00000020   31 f2 bc 62 cf ae 6e 32  10 aa 70 9e f0 47 13 2b | 1..b..n2..p..G.+
-						00000030   09 eb 29 b7 da f4 0b 47  0f dd 81 80 52 cf 49 ee | ..)....G....R.I.
-						00000040   8c 19 0c cd 4f ea ba 8a  b6 c1 dc 88 24 9d fe d4 | ....O.......$...
-						00000050   f9 6d c2 57 10 c1 f1 8f  70 c7 e8 a6 a7 cc 87 1f | .m.W....p.......
-						00000060   63 b3 55              | c.U
+			Payload (39): 
+						00000000  17 03 03 00 22 3f 65 d0  68 32 9b bd 8f 46 d9 8c | ...."?e.h2...F..
+						00000010   f8 01 a7 8d f1 44 e3 1b  52 f5 5a df 31 b6 18 05 | .....D..R.Z.1...
+						00000020   23 1f b8 bf ef 23 ec          | #....#.
 						
 	
 
 ##############################################################################
-[2025-10-03 12:07:41] Captured TCP Packet
+[2025-12-22 09:59:06] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 64
+	Identification: 59950
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0xbaa1
+	Source IP: 10.200.140.183
+	Destination IP: 140.82.114.22
+		
+TCP Header 
+			Source Port: 50904
+			Destination Port: 443
+			Sequence Number: 2595570048
+			Acknowledge Number: 19792090
+			Header Length: 44
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 446
+			Checksum       : 1411
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:06] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -417,19 +391,19 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 52
-	Identification: 57041
+	Identification: 50431
 	Flags + frag offset: 0x4000
-	TTL: 64
+	TTL: 145
 	Protocol: 6
-	Header checksum: 0xd913
-	Source IP: 192.168.0.109
-	Destination IP: 20.189.173.12
+	Header checksum: 0x8edc
+	Source IP: 140.82.114.22
+	Destination IP: 10.200.140.183
 		
 TCP Header 
-			Source Port: 57528
-			Destination Port: 443
-			Sequence Number: 1635971387
-			Acknowledge Number: 1998961027
+			Source Port: 443
+			Destination Port: 50904
+			Sequence Number: 19792090
+			Acknowledge Number: 2595570048
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -437,14 +411,14 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 450
-			Checksum       : 38967
+			Window         : 1562
+			Checksum       : 15037
 			Urgent Pointer : 0
 			No TCP payload
 	
 
 ##############################################################################
-[2025-10-03 12:07:41] Captured TCP Packet
+[2025-12-22 09:59:07] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -454,20 +428,20 @@ TCP Header
 	IP Version: 4
 	IP header length: 20 bytes
 	Type Of Service: 0
-	IP Total length: 87
-	Identification: 57042
+	IP Total length: 76
+	Identification: 50432
 	Flags + frag offset: 0x4000
-	TTL: 64
+	TTL: 145
 	Protocol: 6
-	Header checksum: 0xd8ef
-	Source IP: 192.168.0.109
-	Destination IP: 20.189.173.12
+	Header checksum: 0x8ec3
+	Source IP: 140.82.114.22
+	Destination IP: 10.200.140.183
 		
 TCP Header 
-			Source Port: 57528
-			Destination Port: 443
-			Sequence Number: 1635971387
-			Acknowledge Number: 1998961027
+			Source Port: 443
+			Destination Port: 50904
+			Sequence Number: 19792090
+			Acknowledge Number: 2595570048
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -475,18 +449,17 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 450
-			Checksum       : 31924
+			Window         : 1562
+			Checksum       : 60709
 			Urgent Pointer : 0
-			Payload (35): 
-						00000000  17 03 03 00 1e c4 cf 92  d3 49 35 1b 84 96 10 bd | .........I5.....
-						00000010   4b f6 cc 91 5a b2 49 9b  8e 4f a0 90 74 fe 8a 80 | K...Z.I..O..t...
-						00000020   e3 0a a7              | ...
+			Payload (24): 
+						00000000  17 03 03 00 13 d4 c4 02  ac 49 d6 29 48 78 aa 1e | .........I.)Hx..
+						00000010   7a 82 2c 28 68 ee d6 0b         | z.,(h...
 						
 	
 
 ##############################################################################
-[2025-10-03 12:07:42] Captured TCP Packet
+[2025-12-22 09:59:07] Captured TCP Packet
 	
 
 *************************************TCP Packet*************************************
@@ -497,19 +470,406 @@ TCP Header
 	IP header length: 20 bytes
 	Type Of Service: 0
 	IP Total length: 52
-	Identification: 21544
+	Identification: 50433
 	Flags + frag offset: 0x4000
-	TTL: 96
+	TTL: 145
 	Protocol: 6
-	Header checksum: 0x43bd
-	Source IP: 20.189.173.12
-	Destination IP: 192.168.0.109
+	Header checksum: 0x8eda
+	Source IP: 140.82.114.22
+	Destination IP: 10.200.140.183
 		
 TCP Header 
 			Source Port: 443
-			Destination Port: 57528
-			Sequence Number: 1998961027
-			Acknowledge Number: 1635971422
+			Destination Port: 50904
+			Sequence Number: 19792114
+			Acknowledge Number: 2595570048
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 1
+			Window         : 1562
+			Checksum       : 14773
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:07] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 40
+	Identification: 0
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0xa4e8
+	Source IP: 10.200.140.183
+	Destination IP: 140.82.114.22
+		
+TCP Header 
+			Source Port: 50904
+			Destination Port: 443
+			Sequence Number: 2595570048
+			Acknowledge Number: 0
+			Header Length: 20
+			Urgent Flag          : 0
+			Acknowledgement Flag : 0
+			Push Flag            : 0
+			Reset Flag           : 1
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 0
+			Checksum       : 29999
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:07] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 40
+	Identification: 0
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0xa4e8
+	Source IP: 10.200.140.183
+	Destination IP: 140.82.114.22
+		
+TCP Header 
+			Source Port: 50904
+			Destination Port: 443
+			Sequence Number: 2595570048
+			Acknowledge Number: 0
+			Header Length: 20
+			Urgent Flag          : 0
+			Acknowledgement Flag : 0
+			Push Flag            : 0
+			Reset Flag           : 1
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 0
+			Checksum       : 29999
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:07] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 52
+	Identification: 50434
+	Flags + frag offset: 0x4000
+	TTL: 145
+	Protocol: 6
+	Header checksum: 0x8ed9
+	Source IP: 140.82.114.22
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 50904
+			Sequence Number: 19792114
+			Acknowledge Number: 2595570048
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 1
+			Window         : 1562
+			Checksum       : 14666
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:07] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 40
+	Identification: 0
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0xa4e8
+	Source IP: 10.200.140.183
+	Destination IP: 140.82.114.22
+		
+TCP Header 
+			Source Port: 50904
+			Destination Port: 443
+			Sequence Number: 2595570048
+			Acknowledge Number: 0
+			Header Length: 20
+			Urgent Flag          : 0
+			Acknowledgement Flag : 0
+			Push Flag            : 0
+			Reset Flag           : 1
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 0
+			Checksum       : 29999
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:07] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 40
+	Identification: 889
+	Flags + frag offset: 0x4000
+	TTL: 93
+	Protocol: 6
+	Header checksum: 0xc270
+	Source IP: 13.89.179.14
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 60102
+			Sequence Number: 3774814599
+			Acknowledge Number: 322898149
+			Header Length: 20
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 1
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 0
+			Checksum       : 21693
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:07] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 76
+	Identification: 50435
+	Flags + frag offset: 0x4000
+	TTL: 145
+	Protocol: 6
+	Header checksum: 0x8ec0
+	Source IP: 140.82.114.22
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 50904
+			Sequence Number: 19792090
+			Acknowledge Number: 2595570048
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 1
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 1
+			Window         : 1562
+			Checksum       : 60344
+			Urgent Pointer : 0
+			Payload (24): 
+						00000000  17 03 03 00 13 d4 c4 02  ac 49 d6 29 48 78 aa 1e | .........I.)Hx..
+						00000010   7a 82 2c 28 68 ee d6 0b         | z.,(h...
+						
+	
+
+##############################################################################
+[2025-12-22 09:59:07] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 40
+	Identification: 0
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0xa4e8
+	Source IP: 10.200.140.183
+	Destination IP: 140.82.114.22
+		
+TCP Header 
+			Source Port: 50904
+			Destination Port: 443
+			Sequence Number: 2595570048
+			Acknowledge Number: 0
+			Header Length: 20
+			Urgent Flag          : 0
+			Acknowledgement Flag : 0
+			Push Flag            : 0
+			Reset Flag           : 1
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 0
+			Checksum       : 29999
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:08] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 52
+	Identification: 26346
+	Flags + frag offset: 0x4000
+	TTL: 145
+	Protocol: 6
+	Header checksum: 0xd892
+	Source IP: 13.107.5.93
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 60376
+			Sequence Number: 291794173
+			Acknowledge Number: 870346286
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 1
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 347
+			Checksum       : 6340
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:12] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 91
+	Identification: 50201
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0x3315
+	Source IP: 10.200.140.183
+	Destination IP: 34.36.137.203
+		
+TCP Header 
+			Source Port: 60396
+			Destination Port: 443
+			Sequence Number: 1605831676
+			Acknowledge Number: 1361912833
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 1
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 495
+			Checksum       : 33775
+			Urgent Pointer : 0
+			Payload (39): 
+						00000000  17 03 03 00 22 ae c6 14  75 56 15 16 ca 5a 2c b9 | ...."...uV...Z,.
+						00000010   e8 54 8d 88 03 66 75 c2  42 cd c5 a9 0e 87 96 c4 | .T...fu.B.......
+						00000020   a1 a0 17 c7 3c 1b a7          | ....<..
+						
+	
+
+##############################################################################
+[2025-12-22 09:59:12] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 52
+	Identification: 17224
+	Flags + frag offset: 0x4000
+	TTL: 145
+	Protocol: 6
+	Header checksum: 0x630d
+	Source IP: 34.36.137.203
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 60396
+			Sequence Number: 1361912833
+			Acknowledge Number: 1605831715
 			Header Length: 32
 			Urgent Flag          : 0
 			Acknowledgement Flag : 1
@@ -517,10 +877,146 @@ TCP Header
 			Reset Flag           : 0
 			Synchronise Flag     : 0
 			Finish Flag          : 0
-			Window         : 16382
-			Checksum       : 22570
+			Window         : 96
+			Checksum       : 24975
 			Urgent Pointer : 0
 			No TCP payload
 	
 
-#######################################################################
+##############################################################################
+[2025-12-22 09:59:12] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 91
+	Identification: 17225
+	Flags + frag offset: 0x4000
+	TTL: 145
+	Protocol: 6
+	Header checksum: 0x62e5
+	Source IP: 34.36.137.203
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 60396
+			Sequence Number: 1361912833
+			Acknowledge Number: 1605831715
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 1
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 97
+			Checksum       : 8901
+			Urgent Pointer : 0
+			Payload (39): 
+						00000000  17 03 03 00 22 e6 1e 84  82 0d 59 3c 82 c4 80 e0 | ....".....Y<....
+						00000010   67 46 39 c5 1a f0 9c 60  db 9e b2 ac 18 a3 63 a2 | gF9....`......c.
+						00000020   7e 7e f1 c9 1a fe 16          | ~~.....
+						
+	
+
+##############################################################################
+[2025-12-22 09:59:12] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 52
+	Identification: 50202
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0x333b
+	Source IP: 10.200.140.183
+	Destination IP: 34.36.137.203
+		
+TCP Header 
+			Source Port: 60396
+			Destination Port: 443
+			Sequence Number: 1605831715
+			Acknowledge Number: 1361912872
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 0
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 495
+			Checksum       : 23990
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:18] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 52
+	Identification: 60941
+	Flags + frag offset: 0x4000
+	TTL: 145
+	Protocol: 6
+	Header checksum: 0x847b
+	Source IP: 150.171.73.16
+	Destination IP: 10.200.140.183
+		
+TCP Header 
+			Source Port: 443
+			Destination Port: 47380
+			Sequence Number: 420746560
+			Acknowledge Number: 2108666512
+			Header Length: 32
+			Urgent Flag          : 0
+			Acknowledgement Flag : 1
+			Push Flag            : 0
+			Reset Flag           : 1
+			Synchronise Flag     : 0
+			Finish Flag          : 0
+			Window         : 939
+			Checksum       : 4717
+			Urgent Pointer : 0
+			No TCP payload
+	
+
+##############################################################################
+[2025-12-22 09:59:20] Captured TCP Packet
+	
+
+*************************************TCP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 52
+	Identification: 45885
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 6
+	Header checksum: 0x2fa0
+	Source IP: 10.200.140.183
+	Destina
