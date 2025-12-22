@@ -6,7 +6,7 @@ void initialize_queue(queue *q){
       q->front=-1;
 }
 
-bool push(queue *q,i8 *buffer){
+bool push(queue *q,packet *buffer){
      if(full(q)){
        return false;
      }
@@ -20,19 +20,19 @@ bool push(queue *q,i8 *buffer){
      }
 
 
-     q->buffer[q->back]=buffer;
+     q->packet[q->back]=buffer;
 
      return true;
 
 }
 
 
-i8* pop(queue *q){
+packet* pop(queue *q){
        if(empty(q)){
           return NULL;
        }
 
-       i8 *buffer=q->buffer[q->front];
+       packet *buffer=q->packet[q->front];
        if(q->back==q->front){
            q->front=-1;
            q->back=-1;

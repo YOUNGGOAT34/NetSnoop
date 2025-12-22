@@ -110,11 +110,14 @@ int main(int argc,char *argv[]){
 
    INTERFACES *interfaces=get_all_interfaces();
    
+
    Options *options=malloc(sizeof(Options));
+   
    
    if(!options){
        error(true,"Failed to allocate memory for options");
    }
+
 
    i32 option;
    options->proto=NONE;
@@ -146,7 +149,8 @@ int main(int argc,char *argv[]){
 
   
    
-   capture_packets(options);
+   start_threads(options);
+//    capture_packets(options);
    free(options);
 
    printf(WHITE"\n\nNetSnoop Shutting Down\n\n"RESET);

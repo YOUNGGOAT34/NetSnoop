@@ -16,6 +16,7 @@
 #include <signal.h>
 #include <unistd.h>
 #include <ctype.h>
+
 /*
 
   get the ip header
@@ -31,6 +32,8 @@
 #include <netinet/udp.h>
 #include <netinet/tcp.h>
 
+
+#define NUM_OF_THREADS 10
 
 #define IS_PRINTABLE_ASCII(c) (((c)>31) && ((c)<127))
 
@@ -106,13 +109,18 @@ typedef struct {
 }__attribute__((packed)) Options;
 
 
+
+
+
+
 /*
   prototypes
 */
 
 void error(bool with_exit,const i8*);
-void capture_packets(Options *);
-void process_packet(i8 *,ssize_t,Options * );
+void start_threads(Options *opts);
+// void capture_packets(Options *);
+void process_packet(i8 *,ssize_t,Options *);
 void showicmp(i8 *,ssize_t);
 void showudp(i8 *,ssize_t);
 src_dst_ip *showipheader(IP *);

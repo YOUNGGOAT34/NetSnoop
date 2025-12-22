@@ -7,6 +7,7 @@
 
 
 
+
 Protocal parse_protocal(const i8 *);
 INTERFACES *get_all_interfaces(void);
 

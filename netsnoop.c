@@ -1,4 +1,7 @@
 #include "netsnoop.h"
+#include "queue.h"
+#include <pthread.h>
+
 
 FILE *logfile;
 volatile sig_atomic_t keep_sniffing=1;                                                                                                                                                        
@@ -27,8 +30,55 @@ void error(bool with_exit,const i8* error_message){
 
 }
 
-void capture_packets(Options *options){
 
+/*
+   This will be thr producer
+   Take a packet from the main capturing loop ,push it to the packets buffer
+
+*/
+
+
+queue *q;
+
+pthread_mutex_t qMutex;
+pthread_cond_t qCond;
+
+
+
+void *process_packets(void *arg){
+
+     Options *options=(Options *)arg;
+     
+      while(true){
+
+         while(empty(q)){
+            pthread_cond_wait(&qCond,&qMutex);
+         }
+
+         packet *_packet_=pop(q);
+         
+         ssize_t received_bytes=_packet_->received_bytes;
+      
+         process_packet(_packet_->buffer,received_bytes,options);
+
+      }
+       
+
+}
+
+
+
+
+
+void *capture_packets(void *arg){
+ 
+
+   Options *options=(Options *)arg;
+
+    
+   q=malloc(sizeof(queue));
+   memset(q,0,sizeof(queue));
+   
    logfile=fopen("log.txt","w");
     
    if(!logfile){
@@ -86,10 +136,33 @@ void capture_packets(Options *options){
          if(errno==EINTR) continue;
            error(false,"Error receiving packet");
       }
+
+       pthread_mutex_lock(&qMutex);
        
-      process_packet(packet_buffer,received_bytes,options);
+       while(full(q)){
+            pthread_cond_wait(&qCond,&qMutex);
+       }
+
+       packet *_packet=malloc(sizeof(packet));
+       _packet->buffer=packet_buffer;
+       _packet->received_bytes=received_bytes;
+      
+       if(push(q,_packet)){
+            pthread_cond_signal(&qCond);
+         
+       }else{
+          fprintf(stderr,"Failed to add buffer to the q\n");
+       }
+
+
+       pthread_mutex_unlock(&qMutex);
+
+      
+       
       
    }
+
+
 
    fflush(logfile);
 
@@ -97,7 +170,39 @@ void capture_packets(Options *options){
    free(packet_buffer);
    close(socket_fd);
 
+
+    return NULL;
+
 }
+
+
+
+void start_threads(Options *options){
+
+     
+
+
+       pthread_mutex_init(&qMutex,NULL);
+       pthread_cond_init(&qCond,NULL);
+      
+      pthread_t threads[NUM_OF_THREADS];
+      for (i32 i=0;i<NUM_OF_THREADS;i++){
+            
+           if(i==0){
+               pthread_create(&threads[i],NULL,&capture_packets,options);
+           }else{
+              
+            pthread_create(&threads[i],NULL,&process_packets,options);
+                
+           }
+      }
+
+
+
+   pthread_mutex_destroy(&qMutex);
+   pthread_cond_destroy(&qCond);
+}
+
 
 
 
@@ -175,8 +280,7 @@ void process_packet(i8 *data,ssize_t data_size,Options *options){
           }
           
       }
-
-
+      
 }
 
 
