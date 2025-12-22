@@ -51,6 +51,8 @@ void *process_packets(void *arg){
      
       while(true){
 
+         pthread_mutex_lock(&qMutex);
+
          while(empty(q)){
             pthread_cond_wait(&qCond,&qMutex);
          }
@@ -76,14 +78,15 @@ void *capture_packets(void *arg){
    Options *options=(Options *)arg;
 
     
-   q=malloc(sizeof(queue));
-   memset(q,0,sizeof(queue));
+
    
    logfile=fopen("log.txt","w");
     
    if(!logfile){
       error(true,"Failed to create the log file");
    }
+
+ 
                      
    //a socket that will sniff on all interfaces ,and all protocals
    i32 socket_fd=socket(PACKETS,SOCK_RAW,htons(ALL_INTERFACES));
@@ -144,8 +147,11 @@ void *capture_packets(void *arg){
        }
 
        packet *_packet=malloc(sizeof(packet));
-       _packet->buffer=packet_buffer;
+       _packet->buffer=malloc(sizeof(received_bytes));
+       memcpy(_packet->buffer,packet_buffer,received_bytes);
        _packet->received_bytes=received_bytes;
+
+       free(packet_buffer);
       
        if(push(q,_packet)){
             pthread_cond_signal(&qCond);
@@ -180,8 +186,8 @@ void *capture_packets(void *arg){
 void start_threads(Options *options){
 
      
-
-
+         q=malloc(sizeof(queue));
+         initialize_queue(q);
        pthread_mutex_init(&qMutex,NULL);
        pthread_cond_init(&qCond,NULL);
       
@@ -197,6 +203,10 @@ void start_threads(Options *options){
            }
       }
 
+
+      for(i32 i=0;i<NUM_OF_THREADS;i++){
+           pthread_join(threads[i],NULL);
+      }
 
 
    pthread_mutex_destroy(&qMutex);
