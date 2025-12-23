@@ -127,7 +127,7 @@ src_dst_ip *showipheader(IP *);
 void showtcp(i8 *data,ssize_t data_size);
 void set_signal_handler(void);
 void handle_signal(__attribute__((unused)) i32 );
-void hexdump(void *buff,u16 size);
+void hexdump(void *buff,u16 size,IP *ip_header);
 const char* get_timestamp(); 
 
 #endif

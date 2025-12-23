@@ -150,7 +150,6 @@ int main(int argc,char *argv[]){
   
    
    start_threads(options);
-//    capture_packets(options);
    free(options);
 
    printf(WHITE"\n\nNetSnoop Shutting Down\n\n"RESET);

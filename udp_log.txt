@@ -1,0 +1,135 @@
+[2025-12-23 18:05:03] Captured UDP Packet
+	
+
+*************************************UDP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 78
+	Identification: 8923
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 17
+	Header checksum: 0x9d32
+	Source IP: 10.171.50.183
+	Destination IP: 10.171.50.133
+[2025-12-23 18:05:03] Captured UDP Packet
+	
+
+*************************************UDP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 78
+	Identification: 8924
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 17
+	Header checksum: 0x9d31
+	Source IP: 10.171.50.183
+	Destination IP: 10.171.50.133
+		
+UDP Header 
+	Source Port: 43295
+	Destination Port: 53
+	UDP length: 58
+	UDP Checksum: 0x5c19
+	Payload (50): 
+						00000000  3f d2 01 00 00 01 00 00  00 00 00 00 06 6d 6f 62 | ?............mob
+						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
+						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f		
+UDP Header 
+ 6d 00 00 01 | microsof	Source Port: 43295
+t	Destination Port: 53
+	UDP length: 58
+	UDP Checksum: 0x8614
+	Payload (50): 
+						00000000 . 15com...
+						 bc00000030   00 01 01    00  00 01 00 00  00 00 00 00      06  6d 6f 62 | .............mob
+						00000010       | ..
+						
+	
+
+##############################################################################
+ 69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
+						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 1c | microsoft.com...
+						00000030   00 01               | ..
+						
+	
+
+##############################################################################
+[2025-12-23 18:05:03] Captured UDP Packet
+	
+
+*************************************UDP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 201
+	Identification: 13884
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 17
+	Header checksum: 0x8956
+	Source IP: 10.171.50.133
+	Destination IP: 10.171.50.183
+		
+UDP Header 
+	Source Port: 53
+	Destination Port: 43295
+	UDP length: 181
+	UDP Checksum: 0x3afa
+	Payload (173): 
+						00000000  3f d2 81 80 00 01 00 03  00 00 00 00 06 6d 6f 62 | ?............mob
+						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
+						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 01 | microsoft.com...
+						00000030   00 01 c0 0c 00 05 00 01  00 00 00 1c 00 27 06 6d | .............'.m
+						00000040   6f 62 69 6c 65 06 65 76  65 6e 74 73 04 64 61 74 | obile.events.dat
+						00000050   61 0e 74 72 61 66 66 69  63 6d 61 6e 61 67 65 72 | a.trafficmanager
+						00000060   03 6e 65 74 00 c0 3e 00  05 00 01 00 00 00 04 00 | .net..>.........
+						00000070   2c 10 6f 6e 65 64 73 63  6f 6c 70 72 64 63 75 73 | ,.onedscolprdcus
+						00000080   30 39 09 63 65 6e 74 72  61 6c 75 73 08 63 6c 6f | 09.centralus.clo
+						00000090   75 64 61 70 70 05 61 7a  75 72 65 c0 29 c0 71 00 | udapp.azure.).q.
+						000000a0   01 00 01 00 00 00 07 00  04 0d 59 b3 09    | ..........Y..
+						
+	
+
+##############################################################################
+[2025-12-23 18:05:03] Captured UDP Packet
+	
+
+*************************************UDP Packet*************************************
+			
+ IP header: 
+
+	IP Version: 4
+	IP header length: 20 bytes
+	Type Of Service: 0
+	IP Total length: 222
+	Identification: 13885
+	Flags + frag offset: 0x4000
+	TTL: 64
+	Protocol: 17
+	Header checksum: 0x8940
+	Source IP: 10.171.50.133
+	Destination IP: 10.171.50.183
+		
+UDP Header 
+	Source Port: 53
+	Destination Port: 43295
+	UDP length: 202
+	UDP Checksum: 0xe438
+	Payload (194): 
+						00000000  15 bc 81 80 00 01 00 03  00 00 00 00 06 6d 6f 62 | .............mob
+						00000010   69 6c 65 06 65 76 65 6e  74 73 04 64 61 74 61 09 | ile.events.data.
+						00000020   6d 69 63 72 6f 73 6f 66  74 03 63 6f 6d 00 00 1c | microsoft.com...
+						00000030   00 01 c0 0c 00 05 00 01  00 00 00 51 
