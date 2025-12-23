@@ -55,7 +55,7 @@ INTERFACES *get_all_interfaces(void){
 
              if(duplicate) continue;
 
-
+              
              if (strncmp(current_interface_in_list->ifa_name, "veth", 4) == 0) continue;
              if (strncmp(current_interface_in_list->ifa_name, "docker", 6) == 0) continue;
              if (strncmp(current_interface_in_list->ifa_name, "br-", 3) == 0) continue;

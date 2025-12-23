@@ -58,6 +58,8 @@ void *process_packets(void *arg){
          }
 
          packet *_packet_=pop(q);
+         pthread_mutex_unlock(&qMutex);
+         pthread_cond_signal(&qCond);
          
          ssize_t received_bytes=_packet_->received_bytes;
       
@@ -70,15 +72,13 @@ void *process_packets(void *arg){
 
 
 
-
-
 void *capture_packets(void *arg){
  
 
    Options *options=(Options *)arg;
 
     
-
+   
    
    logfile=fopen("log.txt","w");
     
@@ -114,11 +114,6 @@ void *capture_packets(void *arg){
        error(true,"Failed to bind");
    }
 
-   i8 *packet_buffer=malloc(BUFFER_SIZE);
-
-   if(!packet_buffer){
-       error(true,"Failed to allocate memory for the packet buffer");
-   }
 
   
    set_signal_handler();
@@ -131,6 +126,13 @@ void *capture_packets(void *arg){
       /* 
         receive the packet ,process it 
       */
+
+
+   i8 *packet_buffer=malloc(BUFFER_SIZE);
+
+   if(!packet_buffer){
+       error(true,"Failed to allocate memory for the packet buffer");
+   }
       
       addr_size=sizeof(saddr);
       received_bytes=recvfrom(socket_fd,packet_buffer,BUFFER_SIZE,0,&saddr,&addr_size);
@@ -147,7 +149,7 @@ void *capture_packets(void *arg){
        }
 
        packet *_packet=malloc(sizeof(packet));
-       _packet->buffer=malloc(sizeof(received_bytes));
+       _packet->buffer=malloc(received_bytes);
        memcpy(_packet->buffer,packet_buffer,received_bytes);
        _packet->received_bytes=received_bytes;
 
@@ -173,7 +175,6 @@ void *capture_packets(void *arg){
    fflush(logfile);
 
    fclose(logfile);
-   free(packet_buffer);
    close(socket_fd);
 
 
