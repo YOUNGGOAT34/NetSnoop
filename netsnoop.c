@@ -502,12 +502,6 @@ void showtcp(i8 *data,ssize_t data_size){
       fflush(tcp_logfile);
       return;
    }
-     fprintf(tcp_logfile, "%s Packet truncated (not enough data for full IP header): %zd < %zu\n",
-                 get_timestamp(), data_size, (size_t)(ETHERNET_HEADER_SIZE + ip_header_len));
-                 fflush(tcp_logfile);
-                 return;
-
-
 
    if(data_size<(ssize_t)(offset+tcp_header_len)){
       fprintf(tcp_logfile, "%s Truncated TCP packet (not enough bytes for options): %zd < %zu\n",
