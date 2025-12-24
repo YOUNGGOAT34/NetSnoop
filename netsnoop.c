@@ -180,15 +180,8 @@ void *capture_packets(void *arg){
           fprintf(stderr,"Failed to add buffer to the q\n");
        }
 
-
-    
-
-      
-       
       
    }
-
-
 
 
    close(socket_fd);
@@ -223,7 +216,7 @@ void start_threads(Options *options){
       pthread_mutex_init(&TcpLogMutex,NULL);
       pthread_mutex_init(&UdpLogMutex,NULL);
 
-      pthread_mutex_init(&PrintMutex,NULL);
+      // pthread_mutex_init(&PrintMutex,NULL);
 
 
       
@@ -253,7 +246,7 @@ void start_threads(Options *options){
    pthread_mutex_destroy(&UdpLogMutex);
    pthread_mutex_destroy(&TcpLogMutex);
 
-   pthread_mutex_destroy(&PrintMutex);
+   // pthread_mutex_destroy(&PrintMutex);
 
 
    fflush(icmp_logfile);
