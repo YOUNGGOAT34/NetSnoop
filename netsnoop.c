@@ -43,9 +43,26 @@ void error(bool with_exit,const i8* error_message){
 
 queue *q;
 
+/*
+  qMutex(queue mutex) will be in charge of how the threads access the queue without causing race conditions
+  qEmptyCond (queue empty condition) will be used by the consumer threads to wait if the queue is empty
+  qFullCond (queue full condition) will be used by the producer threads to wait of the q is full before pushing
+*/
+
 pthread_mutex_t qMutex;
 pthread_cond_t qEmptyCond;
 pthread_cond_t qFullCond;
+
+/* 
+   Each of this mutexes will be used to take care of race conditions per protocol's log file
+   PrintMutex will be used to lock when a thread is printing to the screen
+*/
+pthread_mutex_t IcmpLogMutex;
+pthread_mutex_t TcpLogMutex;
+pthread_mutex_t UdpLogMutex;
+
+pthread_mutex_t PrintMutex;
+
 
 
 
@@ -202,6 +219,13 @@ void start_threads(Options *options){
       pthread_cond_init(&qEmptyCond,NULL);
       pthread_cond_init(&qFullCond,NULL);
 
+      pthread_mutex_init(&IcmpLogMutex,NULL);
+      pthread_mutex_init(&TcpLogMutex,NULL);
+      pthread_mutex_init(&UdpLogMutex,NULL);
+
+      pthread_mutex_init(&PrintMutex,NULL);
+
+
       
       pthread_t threads[NUM_OF_THREADS];
       for (i32 i=0;i<NUM_OF_THREADS;i++){
@@ -224,6 +248,12 @@ void start_threads(Options *options){
    pthread_mutex_destroy(&qMutex);
    pthread_cond_destroy(&qEmptyCond);
    pthread_cond_destroy(&qFullCond);
+
+   pthread_mutex_destroy(&IcmpLogMutex);
+   pthread_mutex_destroy(&UdpLogMutex);
+   pthread_mutex_destroy(&TcpLogMutex);
+
+   pthread_mutex_destroy(&PrintMutex);
 
 
    fflush(icmp_logfile);
@@ -355,6 +385,9 @@ void showicmp(i8 *data,ssize_t data_size){
    u16 ip_header_len=ip_header->ihl*4;
 
    size_t offset=ETHERNET_HEADER_SIZE+ip_header_len;
+    
+
+   pthread_mutex_lock(&IcmpLogMutex);
 
    if(data_size<(ssize_t)(offset+sizeof(ICMP))){
       fprintf(icmp_logfile, "%s Truncated ICMP packet\n", get_timestamp());
@@ -376,9 +409,13 @@ void showicmp(i8 *data,ssize_t data_size){
    inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
    free(ips);
 
+   // pthread_mutex_lock(&PrintMutex);
+
    printf("\n\n");
-   printf(WHITE"%s From %s ,To %s  ICMP packet\n"RESET,get_timestamp(),src_ip_str,dst_ip_str);
+   printf(GREEN"%s From %s ,To %s  ICMP packet\n"RESET,get_timestamp(),src_ip_str,dst_ip_str);
+   
    // sleep(1);
+   // pthread_mutex_unlock(&PrintMutex);
    fprintf(icmp_logfile,"\t\t\nICMP Header \n");
    fprintf(icmp_logfile,"\tType: %d",icmp->type);
    
@@ -418,6 +455,7 @@ void showicmp(i8 *data,ssize_t data_size){
    fprintf(icmp_logfile,"\t\n\n##############################################################################\n");
 
 
+   pthread_mutex_unlock(&IcmpLogMutex);
 
 }
 
@@ -428,6 +466,8 @@ void showudp(i8 *data,ssize_t data_size){
 
 
    size_t offset=ETHERNET_HEADER_SIZE+ip_header_len;
+
+   pthread_mutex_lock(&UdpLogMutex);
 
    if(data_size<(ssize_t)(offset+sizeof(UDP))){
       fprintf(udp_logfile, "%s Truncated UDP packet\n", get_timestamp());
@@ -448,10 +488,11 @@ void showudp(i8 *data,ssize_t data_size){
     inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
     free(ips);
 
+   //  pthread_mutex_lock(&PrintMutex);
     printf("\n\n");
-
-    printf(WHITE"%s From %s on Port %u,To %s  on Port %u UDP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(udp_header->uh_sport),dst_ip_str,ntohs(udp_header->uh_dport));
+    printf(CYAN"%s From %s on Port %u,To %s  on Port %u UDP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(udp_header->uh_sport),dst_ip_str,ntohs(udp_header->uh_dport));
    //  sleep(1);
+   //  pthread_mutex_unlock(&PrintMutex);
    fprintf(udp_logfile,"\t\t\nUDP Header \n");
 
    fprintf(udp_logfile,"\tSource Port: %u\n",ntohs(udp_header->uh_sport));
@@ -474,6 +515,8 @@ void showudp(i8 *data,ssize_t data_size){
 
    fprintf(udp_logfile,"\t\n\n##############################################################################\n");
 
+   pthread_mutex_unlock(&UdpLogMutex);
+
 }
 
 
@@ -482,6 +525,8 @@ void showtcp(i8 *data,ssize_t data_size){
    u16 ip_header_len=ip_header->ihl*4;
 
    size_t offset=ETHERNET_HEADER_SIZE+ip_header_len;
+
+   pthread_mutex_lock(&TcpLogMutex);
 
    if(data_size<(ssize_t)(offset+sizeof(TCP))){
       fprintf(tcp_logfile, "%s Truncated TCP packet (no base tcp header)\n", get_timestamp());
@@ -500,6 +545,7 @@ void showtcp(i8 *data,ssize_t data_size){
    if(tcp_header->doff<5){
       fprintf(tcp_logfile, "%s Invalid TCP header length (doff=%u)\n", get_timestamp(), (unsigned)tcp_header->doff);
       fflush(tcp_logfile);
+      pthread_mutex_unlock(&TcpLogMutex);
       return;
    }
 
@@ -522,10 +568,12 @@ void showtcp(i8 *data,ssize_t data_size){
     
     free(ips);
 
+   //  pthread_mutex_lock(&PrintMutex);
     printf("\n\n");
-    printf(WHITE"%s From %s on Port %u,To %s  on Port %u TCP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(tcp_header->source),dst_ip_str,ntohs(tcp_header->dest));
+    printf(YELLOW"%s From %s on Port %u,To %s  on Port %u TCP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(tcp_header->source),dst_ip_str,ntohs(tcp_header->dest));
 
    //  sleep(1);
+   //  pthread_mutex_unlock(&PrintMutex);
     
    fprintf(tcp_logfile,"\t\t\nTCP Header \n");
    
@@ -558,6 +606,8 @@ void showtcp(i8 *data,ssize_t data_size){
    }
 
    fprintf(tcp_logfile,"\t\n\n##############################################################################\n");
+
+   pthread_mutex_unlock(&TcpLogMutex);
 
 }
 
