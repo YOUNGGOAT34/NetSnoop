@@ -61,7 +61,7 @@ pthread_mutex_t IcmpLogMutex;
 pthread_mutex_t TcpLogMutex;
 pthread_mutex_t UdpLogMutex;
 
-pthread_mutex_t PrintMutex;
+// pthread_mutex_t PrintMutex;
 
 
 
@@ -79,12 +79,14 @@ void *process_packets(void *arg){
          }
 
          packet *_packet_=pop(q);
-         pthread_mutex_unlock(&qMutex);
          pthread_cond_signal(&qEmptyCond);
+         pthread_mutex_unlock(&qMutex);
          
          ssize_t received_bytes=_packet_->received_bytes;
       
          process_packet(_packet_->buffer,received_bytes,options);
+         free(_packet_->buffer);
+         free(_packet_);
 
       }
        
@@ -98,12 +100,6 @@ void *capture_packets(void *arg){
 
    Options *options=(Options *)arg;
 
-    
-   
-   
-
- 
-                     
    //a socket that will sniff on all interfaces ,and all protocals
    i32 socket_fd=socket(PACKETS,SOCK_RAW,htons(ALL_INTERFACES));
 
@@ -169,16 +165,16 @@ void *capture_packets(void *arg){
        memcpy(_packet->buffer,packet_buffer,received_bytes);
        _packet->received_bytes=received_bytes;
 
-       free(packet_buffer);
+         free(packet_buffer);
 
-         pthread_mutex_unlock(&qMutex);
-      
        if(push(q,_packet)){
             pthread_cond_signal(&qFullCond);
          
        }else{
           fprintf(stderr,"Failed to add buffer to the q\n");
        }
+
+       pthread_mutex_unlock(&qMutex);
 
       
    }
@@ -303,19 +299,16 @@ void process_packet(i8 *data,ssize_t data_size,Options *options){
                      fprintf(icmp_logfile, "%s Packet truncated (not enough data for full IP header): %zd < %zu\n",
                      get_timestamp(), data_size, (size_t)(ETHERNET_HEADER_SIZE + ip_header_len));
                      fflush(icmp_logfile);
-                     return;
                break;
                case PROTO_TCP:
                      fprintf(tcp_logfile, "%s Packet truncated (not enough data for full IP header): %zd < %zu\n",
                      get_timestamp(), data_size, (size_t)(ETHERNET_HEADER_SIZE + ip_header_len));
                      fflush(tcp_logfile);
-                     return;
                break;
                case PROTO_UDP:
                      fprintf(udp_logfile, "%s Packet truncated (not enough data for full IP header): %zd < %zu\n",
                      get_timestamp(), data_size, (size_t)(ETHERNET_HEADER_SIZE + ip_header_len));
                      fflush(udp_logfile);
-                     return;
                break;
          }
     
@@ -385,6 +378,7 @@ void showicmp(i8 *data,ssize_t data_size){
    if(data_size<(ssize_t)(offset+sizeof(ICMP))){
       fprintf(icmp_logfile, "%s Truncated ICMP packet\n", get_timestamp());
       fflush(icmp_logfile);
+      pthread_mutex_unlock(&IcmpLogMutex);
       return;
    }
 
@@ -402,13 +396,11 @@ void showicmp(i8 *data,ssize_t data_size){
    inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
    free(ips);
 
-   // pthread_mutex_lock(&PrintMutex);
 
    printf("\n\n");
    printf(GREEN"%s From %s ,To %s  ICMP packet\n"RESET,get_timestamp(),src_ip_str,dst_ip_str);
    
-   // sleep(1);
-   // pthread_mutex_unlock(&PrintMutex);
+ 
    fprintf(icmp_logfile,"\t\t\nICMP Header \n");
    fprintf(icmp_logfile,"\tType: %d",icmp->type);
    
@@ -465,6 +457,7 @@ void showudp(i8 *data,ssize_t data_size){
    if(data_size<(ssize_t)(offset+sizeof(UDP))){
       fprintf(udp_logfile, "%s Truncated UDP packet\n", get_timestamp());
       fflush(udp_logfile);
+      pthread_mutex_unlock(&UdpLogMutex);
       return;
    }
 
@@ -481,11 +474,9 @@ void showudp(i8 *data,ssize_t data_size){
     inet_ntop(AF_INET, &ips->dst, dst_ip_str, INET_ADDRSTRLEN);
     free(ips);
 
-   //  pthread_mutex_lock(&PrintMutex);
     printf("\n\n");
     printf(CYAN"%s From %s on Port %u,To %s  on Port %u UDP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(udp_header->uh_sport),dst_ip_str,ntohs(udp_header->uh_dport));
-   //  sleep(1);
-   //  pthread_mutex_unlock(&PrintMutex);
+
    fprintf(udp_logfile,"\t\t\nUDP Header \n");
 
    fprintf(udp_logfile,"\tSource Port: %u\n",ntohs(udp_header->uh_sport));
@@ -524,6 +515,7 @@ void showtcp(i8 *data,ssize_t data_size){
    if(data_size<(ssize_t)(offset+sizeof(TCP))){
       fprintf(tcp_logfile, "%s Truncated TCP packet (no base tcp header)\n", get_timestamp());
       fflush(tcp_logfile);
+      pthread_mutex_unlock(&TcpLogMutex);
       return;
    }
 
@@ -546,6 +538,7 @@ void showtcp(i8 *data,ssize_t data_size){
       fprintf(tcp_logfile, "%s Truncated TCP packet (not enough bytes for options): %zd < %zu\n",
       get_timestamp(), data_size, (size_t)(offset + tcp_header_len));
       fflush(tcp_logfile);
+      pthread_mutex_unlock(&TcpLogMutex);
       return;
    }
 
@@ -561,12 +554,10 @@ void showtcp(i8 *data,ssize_t data_size){
     
     free(ips);
 
-   //  pthread_mutex_lock(&PrintMutex);
     printf("\n\n");
     printf(YELLOW"%s From %s on Port %u,To %s  on Port %u TCP packet\n"RESET,get_timestamp(),src_ip_str,ntohs(tcp_header->source),dst_ip_str,ntohs(tcp_header->dest));
 
-   //  sleep(1);
-   //  pthread_mutex_unlock(&PrintMutex);
+
     
    fprintf(tcp_logfile,"\t\t\nTCP Header \n");
    

@@ -9,7 +9,7 @@
 
 //Incase the user passes the protocal in uppercase ,I wanna convert it to lower case before enumerating it
 Protocal parse_protocal(const i8 *str){
-   
+    
       i8 lower[5];
       i32 i = 0;
   
