@@ -41,10 +41,10 @@ sudo ./netsnoop [OPTIONS]
 
 ### Options
 
-| Option                    | Description                                                                    |        |                            |
-| ------------------------- | ------------------------------------------------------------------------------ | ------ | -------------------------- |
-| `-i, --interface <iface>` | Specify the network interface to sniff (default: first non-loopback interface) |        |                            |
-| `-p, --protocal <tcp      | udp                                                                            | icmp>` | Filter packets by protocol |
+| Option                    | Description                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------ |
+| `-i, --interface <iface>` | Specify the network interface to sniff (default: first non-loopback interface) |      
+| `-p, --protocal <tcp,udp,icmp>`| Filter packets by protocol |
 
 ### Example
 
